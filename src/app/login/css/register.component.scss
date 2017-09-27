@@ -1,0 +1,92 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+.wrapper{
+	padding:getRem(48) 0 0 0;
+	width:getRem(600);
+	margin:0 auto;
+	.row{
+		padding:getRem(25) 0;
+		height: getRem(87);
+		width: 100%;
+		input{
+			display:block;
+			width: 100%;
+			height: 100%;
+			border:1px solid #979797;
+			border-radius:getRem(19*2);
+			text-indent: getRem(50);
+		}
+	}
+	.code{
+		position:relative;
+		span{
+			position:absolute;
+			right: getRem(-2*2);
+			top:getRem(13*2);
+			display: block;
+			width: getRem(164);
+			height: 65%;
+			background: #fe5164;
+			text-align: center;
+			line-height: getRem(87);
+			color: white;
+			font-size:getRem(28);
+			border-radius:0 getRem(19*2) getRem(19*2) 0 ;
+			font-weight: bold;
+		}
+	}
+	.submit{
+		button{
+			display: block;
+			width: 100%	;
+			height: 100%;
+			color: white;
+			font-size: getRem(32);
+			background: #fe5164;
+			text-align:center;
+			line-height: getRem(87);
+			border:1px solid #fe5164;
+			border-radius:getRem(19*2);
+		}
+	}
+	p{
+			font-size: 12px;
+			label{
+				float: left;
+				width: 50%;
+				text-align: right;
+				color: #9b9b9b;
+			}
+			a{
+				float: right;
+				width: 50%;
+				text-indent: getRem(10);
+				span{
+					color: #fe6a7a;
+				}
+			}
+		}
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */ 
+font-size:getRem(28);
+color:#d2d2d2;
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+font-size:getRem(28);
+color:#d2d2d2;
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+font-size:getRem(28);
+color:#d2d2d2;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+font-size:getRem(28);
+color:#d2d2d2;
+}

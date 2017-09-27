@@ -1,0 +1,62 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+
+footer{
+	height:getRem(98);
+	width:10rem;
+	position:fixed;
+	z-index:99;
+	bottom:0;
+	background: #fcfafa;
+	border-top:1px solid #eee;
+	ul{
+		width: 100%;
+		height: 100%;
+		li{
+			float: left;
+		}
+		a{
+			width: getRem(82);
+			height: getRem(39);
+			display: block;
+			background: url(../../../assets/img/market/index/fo_ico.png) no-repeat;
+			background-size: getRem(427*2) getRem(86*2);
+			color: #666666;
+			font-size: 12px;
+			text-align:center;
+			line-height:getRem(39);
+		}
+		.forIndex{
+			padding:getRem(59) getRem(120) 0 getRem(29);
+			background-position:getRem(-6*2) getRem(-2*2);
+		}
+		.forClassify{
+			background-position:getRem(-135*2) getRem(-2*2);
+			padding:getRem(59) getRem(120) 0 0;
+		}
+		.forShopCart{
+			background-position:getRem(-250*2) getRem(-2*2);
+			padding:getRem(59) getRem(120) 0 0;
+		}
+		.forPersonal{
+			background-position:getRem(-367*2) getRem(-2*2);
+			padding:getRem(59) getRem(27) 0 0;
+		}
+		
+	}
+	.par {
+		li{
+			.active{
+			background-position-y:getRem(-50*2);
+			color: #fe5164;
+			}
+		}
+		
+	}
+}

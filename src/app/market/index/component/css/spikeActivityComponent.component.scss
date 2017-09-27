@@ -1,0 +1,106 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+.spikeActivity{
+	height:getRem(300);
+	border-bottom:getRem(11) solid #eeeeee;
+	width:10rem;
+	.titile{
+		height: getRem(72);
+		width: 100%;
+		div{
+			height: 100%;
+			label{
+				height: 100%;
+			}
+		}
+		.name{
+			width: getRem(57*2);
+			padding:0 getRem(38);
+			float: left;
+			position:relative;
+			span{
+				position:absolute;
+				left:getRem(12*2);
+				top:getRem(13*2);
+				display: block;
+				width: getRem(6);
+				height: getRem(18);
+				background: #fe5164;
+			}
+			label{
+				font-size: getRem(28);
+				color: #666666;
+				display: block;
+				text-align: center;
+				line-height: getRem(72);
+				font-weight: bold;
+			}
+		}
+		.more{
+			width: getRem(48*2);
+			padding: 0 getRem(50);
+			float: right;
+			background: url(../../../../../assets/img/market/index/more.png) no-repeat;
+			background-size:getRem(26*2) getRem(14*2);
+			background-position:getRem(70*2) getRem(11*2);
+			label{
+				font-size: getRem(22);
+				color: #979797;
+				display: block;
+				text-align: center;
+				line-height: getRem(72);
+			}
+		}
+	}
+	.core{
+		width: 100%;
+		height: getRem(228);
+		li{
+			float: left;
+			width: getRem(248);
+			height: 100%;
+			p{
+				padding-top:getRem(144);	
+				label{
+					display: block;
+					font-size:getRem(22);
+					color: #979797;
+					height: getRem(30);
+					line-height: getRem(30);
+					text-align: center;
+				}
+			}
+			span{
+				display: block;
+				line-height: getRem(44);
+				color: #fe5164;
+				font-size: getRem(26);
+				text-align: center;
+				font-weight: bold;
+			}
+		}
+		li:nth-of-type(1){
+				background:url(../../../../../assets/img/market/index/activity/friut_one.png) no-repeat;
+				background-position:center 0;
+				background-size:getRem(86*2) getRem(67*2);
+				border-right:1px solid #eeeeee;	
+		}
+		li:nth-of-type(2){
+				background:url(../../../../../assets/img/market/index/activity/friut_two.png) no-repeat;
+				background-position:center 0;
+			background-size:getRem(86*2) getRem(67*2);	
+			border-right:1px solid #eeeeee;	
+			}
+		li:nth-of-type(3){
+				background:url(../../../../../assets/img/market/index/activity/friut_three.png) no-repeat;
+				background-position:center 0;
+				background-size:getRem(86*2) getRem(67*2);
+		}
+	}
+}

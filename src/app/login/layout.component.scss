@@ -1,0 +1,41 @@
+
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+header{
+	width:10rem;
+	height:getRem(75);
+	position:relative;
+	a{
+		height: getRem(75);
+		width: getRem(53);
+		overflow: hidden;
+		position:absolute;
+		top: 0;
+		left:0;
+		text-decoration:none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-user-select: none;
+		-moz-user-focus: none;
+		-moz-user-select: none;		　　
+		span{
+			width: 20px;
+			height: 100%;
+			float: right;
+			background: url(../../assets/img/common/small_ico_1.png) no-repeat;
+			background-position:-5px 0;
+			background-size:cover;
+		}
+	}
+	h2{
+		color:#333333;
+		font-size: getRem(35);
+		text-align: center;
+		line-height: getRem(75);
+	}
+}

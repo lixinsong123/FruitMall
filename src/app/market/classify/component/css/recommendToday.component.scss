@@ -1,0 +1,60 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.wrapper{
+	width:10rem;
+	height:getRem(528);
+}
+.titile{
+		height: getRem(72);
+		width: 100%;
+		bored
+		div{
+			height: 100%;
+			label{
+				height: 100%;
+			}
+		}
+		.name{
+			width: getRem(57*2);
+			padding:0 getRem(38);
+			float: left;
+			position:relative;
+			span{
+				position:absolute;
+				left:getRem(12*2);
+				top:getRem(13*2);
+				display: block;
+				width: getRem(6);
+				height: getRem(18);
+				background: #fe5164;
+			}
+			label{
+				font-size: getRem(28);
+				color: #666666;
+				display: block;
+				text-align: center;
+				line-height: getRem(72);
+				font-weight: bold;
+			}
+		}
+		.more{
+			width: getRem(48*2);
+			padding: 0 getRem(50);
+			float: right;
+			background: url(../../../../../assets/img/market/index/more.png) no-repeat;
+			background-size:getRem(26*2) getRem(14*2);
+			background-position:getRem(70*2) getRem(11*2);
+			label{
+				font-size: getRem(22);
+				color: #979797;
+				display: block;
+				text-align: center;
+				line-height: getRem(72);
+			}
+		}
+}

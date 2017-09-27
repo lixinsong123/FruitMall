@@ -1,0 +1,80 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+.oneSet{
+	display: block;
+	font-size: getRem(26);
+	line-height: getRem(35);
+	text-align:center;
+}
+
+.newDayWrapper{
+	width:10rem;
+	height:getRem(410);
+	ul{
+		.one{
+			p{
+				strong{
+					color: #fd6446;
+					@extend .oneSet;
+				}
+				span{
+					color:#979797;
+					@extend .oneSet;
+				}
+			}
+		}
+		.two{
+			p{
+				strong{
+					color: #f6a92b;
+					@extend .oneSet;
+				}
+				span{
+					color:#979797;
+					@extend .oneSet;
+				}
+			}
+		}
+		li{
+			float: left;
+			width: getRem(375);
+			height: getRem(220);
+			background:url(../../../../../assets/img/market/index/newToday/friut_ico.png) no-repeat;
+			background-size:getRem(420*2) getRem(194*2);
+		}
+		li:nth-of-type(1){
+			width: getRem(174);
+			padding:getRem(10) getRem(200) getRem(130) 0;
+			height: getRem(70);
+			border-bottom: 1px solid #eeeeee;
+			border-right:1px solid #eeeeee;
+			background-position:getRem(-17*2) getRem(-6*2);
+		}
+		li:nth-of-type(2){
+			width: getRem(174);
+			padding:getRem(10) getRem(200) getRem(130) 0;
+			height: getRem(70);
+			border-bottom: 1px solid #eeeeee;
+			background-position:getRem(-228*2) getRem(-6*2);
+		}
+		li:nth-of-type(3){
+			width: getRem(153);
+			height: getRem(72);
+			padding:getRem(29) getRem(15) getRem(76) getRem(205);
+			border-right: 1px solid #eeeeee;
+			background-position:getRem(-9*2) getRem(-123*2);
+		}
+		li:nth-of-type(4){
+			width: getRem(153);
+			height: getRem(72);
+			padding:getRem(29) getRem(19) getRem(76) getRem(202);
+			background-position:getRem(-213*2) getRem(-123*2);
+		}
+	}
+}

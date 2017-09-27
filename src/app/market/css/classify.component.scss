@@ -1,0 +1,11 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+.parent{
+	margin:getRem(80) 0 getRem(100) 0;
+}

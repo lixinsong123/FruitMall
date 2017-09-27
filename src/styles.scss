@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+body,h1,h2,input,ul,li,p,a{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	-webkit-tap-highlight-color:rgba(255, 255, 255, 0);
+	-webkit-user-select:none;
+	-moz-user-focus:none;
+	-moz-user-select:none;	
+}
+
+// #SJX_UP{
+// 	width: 0px;
+// 	height: 0px;
+// 	overflow: hidden;
+// 	border-left: 20px solid transparent;
+// 	border-right: 20px solid transparent;
+// 	/*兼容IE6*/
+// 	_border-left: 20px solid #fff;
+// 	_border-right: 20px solid #fff;
+// 	border-bottom: 20px solid red;
+// }
+// #SJX_DOWN{
+// 	width: 0px;
+// 	height: 0px;
+// 	overflow: hidden;
+// 	border-left: 20px solid transparent;
+// 	border-right: 20px solid transparent;
+// 	border-top: 20px solid red;
+// }
+// #SJX_RIGHT{
+// 	width: 0px;
+// 	height: 0px;
+// 	overflow: hidden;
+// 	border-top: 20px solid transparent;
+// 	border-bottom: 20px solid transparent;
+// 	border-left: 20px solid red;
+// }
+// #SJX_LEFT{
+// 	width: 0px;
+// 	height: 0px;
+// 	overflow: hidden;
+// 	border-top: 20px solid transparent;
+// 	border-bottom: 20px solid transparent;
+// 	border-right: 20px solid red;
+// }
+
+.clear:after{
+			content: '';
+			display: block;
+			clear: both;
+			
+		}
+		.clear{
+			*zoom:1;
+}
+

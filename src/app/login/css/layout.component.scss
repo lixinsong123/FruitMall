@@ -1,0 +1,73 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+header{
+	width:10rem;
+	height:getRem(75);
+	position:relative;
+	border-bottom:1px solid #e2e2e2;
+	a{
+		height: getRem(75);
+		width: getRem(53);
+		overflow: hidden;
+		position:absolute;
+		top: 0;
+		left:0;
+		text-decoration:none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-user-select: none;
+		-moz-user-focus: none;
+		-moz-user-select: none;		　　
+		span{
+			width: 20px;
+			height: 100%;
+			float: right;
+			background: url(../../../assets/img/common/small_ico_1.png) no-repeat;
+			background-position:-5px 0;
+			background-size:cover;
+		}
+	}
+	h2{
+		color:#333333;
+		font-size: getRem(35);
+		text-align: center;
+		line-height: getRem(75);
+	}
+}
+footer{
+	padding-top:getRem(60);
+	margin:0 auto;
+	width: getRem(425);
+	.third_party{
+		width: 100%;
+		height: getRem(20);
+		background: url(../../../assets/img/common/third_party.png) no-repeat no-repeat;
+		background-size:cover;
+	}
+	.third_login{
+		padding:0 getRem(28*2);
+		height: getRem(60);
+		padding-top:getRem(24);
+		a{
+			float: left;
+			width: getRem(104);
+			height: 100%;
+			background: url(../../../assets/img/common/small_ico_1.png) no-repeat no-repeat;
+			background-size:cover;
+		}
+		a:nth-of-type(1){
+			background-position:getRem(-17*2) 0;
+		}
+		a:nth-of-type(2){
+			background-position:getRem(-70*2) 0;
+		}
+		a:nth-of-type(3){
+			background-position:getRem(-116*2) 0;
+		}
+	}
+}
