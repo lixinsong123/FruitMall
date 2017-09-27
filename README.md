@@ -27,10 +27,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-##完成了登录<->注册->首页<->分类
+## 完成了登录<->注册->首页<->分类
+
 完成了登录页面，注册页面，首页页面，分类页面。
 各页面的路由可自由跳转。
-##dist包
+
+## dist包
+
 是已经打包好的项目，可直接放入服务器中运行
 
 
