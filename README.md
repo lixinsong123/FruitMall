@@ -1,0 +1,2 @@
+# FruitMall
+这是一个用angular2且用angular-cli写的一个水果商城项目
