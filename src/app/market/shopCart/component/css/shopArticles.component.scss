@@ -1,0 +1,109 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+ul{
+	width:10rem;
+	li{
+		width: 100%;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.button{
+		width:getRem(118);
+		background:url(../../../../../assets/img/market/index/shopCart/no_active.png) no-repeat ;
+		background-size:getRem(194*2) getRem(34*2) ;
+		background-position:getRem(-151*2) center;
+	}
+	.active{
+		background-position-x:getRem(13*2);
+	}
+	.picView{
+		width:getRem(201);
+		height: getRem(200);
+		padding: getRem(25) getRem(56)  getRem(25) 0;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.contentView{
+		width:getRem(375);
+		height:getRem(250-17);
+		position: relative;
+		padding:getRem(17) 0 0 0;
+		.title{
+			line-height: getRem(38);
+			font-size: getRem(28);
+			color: #333333;
+		}
+		.link{
+			font-size: getRem(22);
+			color: #979797;
+			line-height: getRem(33);
+		}
+		.label{
+			padding:getRem(14) 0 getRem(23) 0;
+			overflow-x: auto;
+			label{
+				float: left;
+				border:1px solid #fe5164;
+				padding:getRem(9);
+				color:#fe5164; 
+				font-size: getRem(22);
+				margin-right: getRem(8);
+			}
+		}
+		.originalPrice{
+			font-size: getRem(22);
+			color: #979797;
+			line-height: getRem(32);
+			b{
+				text-decoration:line-through;
+				text-decoration-color: #918c8c;
+				font-weight: normal;
+			}
+		}
+		.actualPrice{
+			font-size: getRem(22);
+			color: #fe5164;
+			line-height: getRem(33);
+			strong{
+				font-size: getRem(33);
+			}
+		}
+		.numController{
+			position:absolute;
+			bottom:getRem(25);
+			right: getRem(24);
+			span{
+				height: getRem(41);
+				float: left;
+			}
+			.reduce{
+				width: getRem(42);
+				background:url(../../../../../assets/img/market/index/shopCart/num_ico.png) no-repeat  ;
+				background-size:getRem(30*2) getRem(43*2);
+			}
+			.num{
+				width: getRem(48);
+				font-size: getRem(26);
+				color: #fe5164;
+				text-align: center;
+				line-height: getRem(41);
+			}
+			.add{
+				width: getRem(42);
+				background:url(../../../../../assets/img/market/index/shopCart/num_ico.png) no-repeat  ;
+				background-size:getRem(30*2) getRem(43*2);
+				background-position:0 getRem(-23*2);
+			}
+		}
+	}
+}
+li>div{
+	float:left;
+	height:getRem(250);
+}

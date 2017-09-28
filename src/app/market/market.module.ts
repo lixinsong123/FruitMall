@@ -23,6 +23,9 @@ import {newTodayComponent}  from './index/component/newToday.component';
 //分类下属组件
 import {typeClassifyComponent} from './classify/component/typeClassfy.component'
 import {recommendTodayComponent} from './classify/component/recommendToday.component'
+//购物车下属组件
+import{moneySettlementComponent} from './shopCart/component/moneySettlement.component';
+import{shopArticlesComponent}    from './shopCart/component/shopArticles.component';
 
 //复用组件
 //头部组件一
@@ -48,7 +51,9 @@ import {headOneComponent} from './repeatComponent/headOne.component'
     recommendTodayComponent,
     headOneComponent,
     personalComponent,
-    shopCartComponent
+    shopCartComponent,
+    moneySettlementComponent,
+    shopArticlesComponent
   ]
 })
 export class MarketModule {}

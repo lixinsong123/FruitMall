@@ -1,0 +1,60 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+
+.moneyWrapper{
+	position:fixed;
+	width:10rem;
+	bottom:getRem(100);
+	height:getRem(98);
+	border-top:1px solid #eee;
+	z-index:99;
+	.state{
+		padding-left: getRem(81);
+		width: getRem(66);
+		line-height: getRem(98);
+		text-align: center;
+		font-size: getRem(22);
+		color: #666666;
+		background:url(../../../../../assets/img/market/index/shopCart/no_active.png) no-repeat;
+		background-size:getRem(194*2) getRem(26*2);
+		background-position:getRem(-154*2) getRem(10*2);
+	}
+	.active{
+		background-position-x:getRem(13*2);
+	}
+	.view{
+		float: left;
+	}
+	.moneyTotal{
+		width: getRem(259);
+		p{
+			font-size: getRem(26);
+			text-align: center;
+			line-height: getRem(98);
+			color: #333333;
+			b{
+				color: #fe5164;
+				font-weight: normal;
+			}
+			strong{
+				color: #fe5164;
+			}
+		}
+	}
+	.controller{
+		float: right;
+		width: getRem(260);
+		background: #fe5164;
+		color: #ffffff;
+		font-weight: bold;
+		text-align: center;
+		font-size: getRem(32);
+		line-height: getRem(98);
+	}
+}

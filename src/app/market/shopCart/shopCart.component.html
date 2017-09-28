@@ -1,1 +1,9 @@
 <head-one [title]="title"></head-one>
+
+<div class="parent">
+	<!-- 购物车物品显示及操作组件 -->
+	<shop-articles [_allSelect]='allSelect'  (onVoted)="onVoted($event)"></shop-articles>
+	
+</div>
+<!-- 结算组件 -->
+<money-settlement [_total]="total" (onVoted)="onSelect($event)" ></money-settlement>
