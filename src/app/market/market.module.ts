@@ -1,14 +1,15 @@
 import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
  
+//个人模块
+import {PersonalModule}  from './personal/persona.module';
 
 import {MarketRoutingModule} from './market-routing.module';
 //首页
 import {indexComponent}  from './index/index.component';
 //分类
 import {classifyComponent} from './classify/classify.component';
-//个人
-import {personalComponent} from './personal/personal.component';
+
 //购物车
 import {shopCartComponent} from './shopCart/shopCart.component';
 //bar图移动指令
@@ -27,6 +28,7 @@ import {recommendTodayComponent} from './classify/component/recommendToday.compo
 import{moneySettlementComponent} from './shopCart/component/moneySettlement.component';
 import{shopArticlesComponent}    from './shopCart/component/shopArticles.component';
 
+
 //复用组件
 //头部组件一
 import {headOneComponent} from './repeatComponent/headOne.component'
@@ -38,7 +40,7 @@ import {headOneComponent} from './repeatComponent/headOne.component'
   	FormsModule,
     CommonModule,
     MarketRoutingModule,
-
+    PersonalModule
   ],
   declarations: [
     marKetComponent,
@@ -50,7 +52,6 @@ import {headOneComponent} from './repeatComponent/headOne.component'
     typeClassifyComponent,
     recommendTodayComponent,
     headOneComponent,
-    personalComponent,
     shopCartComponent,
     moneySettlementComponent,
     shopArticlesComponent

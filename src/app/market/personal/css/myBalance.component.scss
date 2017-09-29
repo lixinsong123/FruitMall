@@ -1,0 +1,82 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.headParent{
+	border-bottom:1px solid #eeeeee;
+	position:relative;
+	.bgBack{
+		position:absolute;
+		left:0;
+		width: getRem(65);
+		height: getRem(60);
+		padding: getRem(10) 0;
+		top:0;
+		img{
+			float: left;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.currencyHead{
+	line-height:getRem(80);
+	width:getRem(525);
+	margin:0 auto;
+	font-size:getRem(36);
+	color:#333333;
+	text-align:center;
+	font-weight:bold;
+}
+.core{
+	width:getRem(525);
+	margin:0 auto;
+	.moneyTilte{
+		font-size: getRem(28);
+		color: #666666;
+		line-height: getRem(46);
+		text-align: center;
+	}
+	.specificMoney{
+		font-size: getRem(22);
+		color: #fe5164;
+		line-height: getRem(49);
+		text-align: center;
+		strong{
+			font-size: getRem(38);
+		}
+		padding-bottom:getRem(47);
+	}
+	.laout{
+		padding:getRem(27) 0;
+		width: 100%;		
+		font-size:getRem(36);
+		line-height: getRem(90);		
+		text-align: center;
+		strong{
+			border:1px solid #fe5164;
+			display: block;
+			border-radius: getRem(28*2);
+		}
+	}
+	.recharge{
+		color: white;
+		background: #fe5164;
+	}
+	.withdrawals{
+		color:#fe5164; 
+	}
+}
+.picLink{
+	width:getRem(118);
+	height:getRem(94);
+	margin:0 auto;
+	padding:getRem(40) 0;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}

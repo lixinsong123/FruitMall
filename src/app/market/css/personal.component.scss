@@ -1,0 +1,194 @@
+
+$rem:75;
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+
+.personHeader{
+	width:10rem;
+	background: #fe5164;
+	.headPortrait{
+		width: getRem(155);
+		height: getRem(155);
+		padding: getRem(98) getRem(298) 0 getRem(297);
+		img{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+	}
+	.link{
+		padding-bottom: getRem(8);
+		label{
+			float: left;
+			width: getRem(256);
+			line-height: getRem(88);
+			font-size: getRem(32);
+			color: #ffffff;
+			text-align: center;
+			padding-left:getRem(122*2);
+			font-weight: bold;
+		}
+		span{
+			float: right;
+			width: getRem(249);
+			height: getRem(88);
+			background:url(../../../assets/img/market/index/Personal/all_ico.png) no-repeat;
+			background-size: getRem(451*2) getRem(558*2);
+    		background-position: getRem(-306*2) getRem(-6*2);
+		}
+	}
+
+}
+@mixin myInforFont($var){
+			font-size: getRem(26);
+			color: $var;
+			line-height: getRem(30);
+			text-align: center;
+}
+.parent{
+	width:10rem;
+	border-bottom:getRem(10) solid #eeeeee;
+}
+.myInformation{
+	@extend .parent;
+	li{
+		width: getRem(250);
+		padding:getRem(73) 0 getRem(16) 0;
+		float: left;
+		background:url(../../../assets/img/market/index/Personal/all_ico.png) no-repeat;
+		background-size: getRem(483*2) getRem(494*2); 
+		.View{
+			@include myInforFont(#fe5164);
+		} 
+		.Title{
+			@include myInforFont(#979797);
+		}	
+	}
+	li:nth-of-type(1){
+		width:getRem(248);
+		border-right: 1px solid #e2e2e2;
+		background-position: getRem(-22*2) getRem(-56*2);
+	}
+	li:nth-of-type(2){
+		width:getRem(248);
+		border-right: 1px solid #e2e2e2;
+		background-position: getRem(-185*2) getRem(-56*2);
+	}
+	li:nth-of-type(3){
+		background-position: getRem(-349*2) getRem(-56*2);
+	}
+}
+.myOrder{
+	@extend .parent;
+	.orderHead{
+		width: 100%;
+		height: getRem(66);
+		border-bottom:1px solid #eee;
+		h2{
+			float: left;
+			font-size: getRem(28);
+			color: #666666;
+			line-height: getRem(66);
+			width: getRem(157);
+			text-align:center;
+		}
+		a{
+			float: right;
+			width: getRem(115);
+			padding-right:getRem(32);
+			line-height: getRem(66);
+			color: #979797;
+			font-size: getRem(22);
+			background:url(../../../assets/img/market/index/more.png) no-repeat;
+			background-size: getRem(23*2) getRem(16*2);
+  			background-position: getRem(47*2) getRem(8*2);
+		}
+	}
+	.navOrder{
+		li{
+			padding:getRem(67) 0 getRem(9) 0;
+			width: getRem(185);
+			border-right:1px solid #eee;
+			line-height: getRem(57);
+			color: #969696;
+			font-size: getRem(22);
+			text-align: center;
+			float: left;
+			background:url(../../../assets/img/market/index/Personal/all_ico.png) no-repeat;
+			background-size: getRem(406*2) getRem(497*2); 
+		}
+		li:nth-of-type(1){
+			background-position:getRem(-6*2) getRem(-182*2);
+		}
+		li:nth-of-type(2){
+			background-position:getRem(-109*2) getRem(-182*2);
+		}
+		li:nth-of-type(3){
+			background-position:getRem(-211*2) getRem(-182*2);
+		}
+		li:nth-of-type(4){
+			background-position:getRem(-319*2) getRem(-182*2);
+			width: getRem(187);
+			border:none;
+		}
+	}
+}
+@mixin division($var){
+		display: block;
+		width: 10rem;
+		height: getRem($var);
+		background: #eeeeee;
+}
+.jumpOptions{
+	a:nth-of-type(1) p:nth-of-type(1){
+		background-position:0 getRem(-255*2);
+	}
+ 	a:nth-of-type(2) p:nth-of-type(1){
+		background-position:0 getRem(-300*2);
+	}
+	a:nth-of-type(3) p:nth-of-type(1){
+		background-position:0 getRem(-350*2);
+	}
+	a:nth-of-type(4) p:nth-of-type(1){
+		background-position:0 getRem(-400*2);
+	}
+	a:nth-of-type(5) p:nth-of-type(1){
+		background-position:0 getRem(-446*2);
+	}
+	.division{
+		@include division(10);
+	}
+	.divisionTwo{
+		@include division(80);
+	}
+	.brBottom{
+		border-bottom:1px solid #eeeeee;
+	}
+}
+
+.layout{
+	display: block;
+	p{
+		float: left;
+		font-size: getRem(28);
+		color: #666666;
+		line-height: getRem(86);
+		padding-left:getRem(58+23);
+		width: getRem(212);
+		text-align:left;
+		background:url(../../../assets/img/market/index/Personal/all_ico.png) no-repeat;
+		background-size:getRem(377*2) getRem(490*2);
+	}
+	span{
+		float: right;
+		width: getRem(65);
+		height: getRem(86);
+		background:url(../../../assets/img/market/index/more.png) no-repeat;
+		background-size: getRem(28*2) getRem(22*2);
+    	background-position: getRem(2*2)getRem(12*2);
+	}
+}

@@ -39,11 +39,11 @@ var AppRoutingModule = (function () {
 AppRoutingModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
             )
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]
         ]
     })
 ], AppRoutingModule);
@@ -258,10 +258,10 @@ var AdminRoutingModule = (function () {
 AdminRoutingModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(adminRoutes)
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild(adminRoutes)
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]
         ]
     })
 ], AdminRoutingModule);
@@ -319,7 +319,7 @@ loginComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/login/css/layout.component.scss"), __webpack_require__("../../../../../src/app/login/css/login.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
 ], loginComponent);
 
 var _a;
@@ -633,7 +633,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".personHeader {\n  width: 10rem;\n  background: #fe5164; }\n  .personHeader .headPortrait {\n    width: 2.06666667rem;\n    height: 2.06666667rem;\n    padding: 1.30666667rem 3.97333333rem 0 3.96rem; }\n    .personHeader .headPortrait img {\n      width: 100%;\n      height: 100%;\n      border-radius: 50%; }\n  .personHeader .link {\n    padding-bottom: 0.10666667rem; }\n    .personHeader .link label {\n      float: left;\n      width: 3.41333333rem;\n      line-height: 1.17333333rem;\n      font-size: 0.42666667rem;\n      color: #ffffff;\n      text-align: center;\n      padding-left: 3.25333333rem;\n      font-weight: bold; }\n    .personHeader .link span {\n      float: right;\n      width: 3.32rem;\n      height: 1.17333333rem;\n      background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/Personal/all_ico.png") + ") no-repeat;\n      background-size: 12.02666667rem 14.88rem;\n      background-position: -8.16rem -0.16rem; }\n\n.parent, .myInformation, .myOrder {\n  width: 10rem;\n  border-bottom: 0.13333333rem solid #eeeeee; }\n\n.myInformation li {\n  width: 3.33333333rem;\n  padding: 0.97333333rem 0 0.21333333rem 0;\n  float: left;\n  background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/Personal/all_ico.png") + ") no-repeat;\n  background-size: 12.88rem 13.17333333rem; }\n  .myInformation li .View {\n    font-size: 0.34666667rem;\n    color: #fe5164;\n    line-height: 0.4rem;\n    text-align: center; }\n  .myInformation li .Title {\n    font-size: 0.34666667rem;\n    color: #979797;\n    line-height: 0.4rem;\n    text-align: center; }\n\n.myInformation li:nth-of-type(1) {\n  width: 3.30666667rem;\n  border-right: 1px solid #e2e2e2;\n  background-position: -0.58666667rem -1.49333333rem; }\n\n.myInformation li:nth-of-type(2) {\n  width: 3.30666667rem;\n  border-right: 1px solid #e2e2e2;\n  background-position: -4.93333333rem -1.49333333rem; }\n\n.myInformation li:nth-of-type(3) {\n  background-position: -9.30666667rem -1.49333333rem; }\n\n.myOrder .orderHead {\n  width: 100%;\n  height: 0.88rem;\n  border-bottom: 1px solid #eee; }\n  .myOrder .orderHead h2 {\n    float: left;\n    font-size: 0.37333333rem;\n    color: #666666;\n    line-height: 0.88rem;\n    width: 2.09333333rem;\n    text-align: center; }\n  .myOrder .orderHead a {\n    float: right;\n    width: 1.53333333rem;\n    padding-right: 0.42666667rem;\n    line-height: 0.88rem;\n    color: #979797;\n    font-size: 0.29333333rem;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/more.png") + ") no-repeat;\n    background-size: 0.61333333rem 0.42666667rem;\n    background-position: 1.25333333rem 0.21333333rem; }\n\n.myOrder .navOrder li {\n  padding: 0.89333333rem 0 0.12rem 0;\n  width: 2.46666667rem;\n  border-right: 1px solid #eee;\n  line-height: 0.76rem;\n  color: #969696;\n  font-size: 0.29333333rem;\n  text-align: center;\n  float: left;\n  background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/Personal/all_ico.png") + ") no-repeat;\n  background-size: 10.82666667rem 13.25333333rem; }\n\n.myOrder .navOrder li:nth-of-type(1) {\n  background-position: -0.16rem -4.85333333rem; }\n\n.myOrder .navOrder li:nth-of-type(2) {\n  background-position: -2.90666667rem -4.85333333rem; }\n\n.myOrder .navOrder li:nth-of-type(3) {\n  background-position: -5.62666667rem -4.85333333rem; }\n\n.myOrder .navOrder li:nth-of-type(4) {\n  background-position: -8.50666667rem -4.85333333rem;\n  width: 2.49333333rem;\n  border: none; }\n\n.jumpOptions a:nth-of-type(1) p:nth-of-type(1) {\n  background-position: 0 -6.8rem; }\n\n.jumpOptions a:nth-of-type(2) p:nth-of-type(1) {\n  background-position: 0 -8rem; }\n\n.jumpOptions a:nth-of-type(3) p:nth-of-type(1) {\n  background-position: 0 -9.33333333rem; }\n\n.jumpOptions a:nth-of-type(4) p:nth-of-type(1) {\n  background-position: 0 -10.66666667rem; }\n\n.jumpOptions a:nth-of-type(5) p:nth-of-type(1) {\n  background-position: 0 -11.89333333rem; }\n\n.jumpOptions .division {\n  display: block;\n  width: 10rem;\n  height: 0.13333333rem;\n  background: #eeeeee; }\n\n.jumpOptions .divisionTwo {\n  display: block;\n  width: 10rem;\n  height: 1.06666667rem;\n  background: #eeeeee; }\n\n.jumpOptions .brBottom {\n  border-bottom: 1px solid #eeeeee; }\n\n.layout {\n  display: block; }\n  .layout p {\n    float: left;\n    font-size: 0.37333333rem;\n    color: #666666;\n    line-height: 1.14666667rem;\n    padding-left: 1.08rem;\n    width: 2.82666667rem;\n    text-align: left;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/Personal/all_ico.png") + ") no-repeat;\n    background-size: 10.05333333rem 13.06666667rem; }\n  .layout span {\n    float: right;\n    width: 0.86666667rem;\n    height: 1.14666667rem;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/more.png") + ") no-repeat;\n    background-size: 0.74666667rem 0.58666667rem;\n    background-position: 0.05333333rem 0.32rem; }\n", ""]);
 
 // exports
 
@@ -992,7 +992,7 @@ var marketRoutes = [
             },
             {
                 path: 'personal',
-                component: __WEBPACK_IMPORTED_MODULE_5__personal_personal_component__["a" /* personalComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_5__personal_personal_component__["a" /* personalComponent */],
             },
             {
                 path: 'shopCart',
@@ -1009,10 +1009,10 @@ var MarketRoutingModule = (function () {
 MarketRoutingModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild(marketRoutes)
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild(marketRoutes)
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]
         ]
     })
 ], MarketRoutingModule);
@@ -1060,10 +1060,10 @@ marKetComponent = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MarketModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__market_routing_module__ = __webpack_require__("../../../../../src/app/market/market-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_index_component__ = __webpack_require__("../../../../../src/app/market/index/index.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__classify_classify_component__ = __webpack_require__("../../../../../src/app/market/classify/classify.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__personal_personal_component__ = __webpack_require__("../../../../../src/app/market/personal/personal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personal_persona_module__ = __webpack_require__("../../../../../src/app/market/personal/persona.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__market_routing_module__ = __webpack_require__("../../../../../src/app/market/market-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__index_index_component__ = __webpack_require__("../../../../../src/app/market/index/index.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classify_classify_component__ = __webpack_require__("../../../../../src/app/market/classify/classify.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shopCart_shopCart_component__ = __webpack_require__("../../../../../src/app/market/shopCart/shopCart.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directive_move_directive__ = __webpack_require__("../../../../../src/app/market/directive/move.directive.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
@@ -1083,12 +1083,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
+//个人模块
+
 
 //首页
 
 //分类
-
-//个人
 
 //购物车
 
@@ -1119,19 +1119,19 @@ MarketModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_2__market_routing_module__["a" /* MarketRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_3__market_routing_module__["a" /* MarketRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_2__personal_persona_module__["a" /* PersonalModule */]
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_9__market_component__["a" /* marKetComponent */],
-            __WEBPACK_IMPORTED_MODULE_3__index_index_component__["a" /* indexComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__index_index_component__["a" /* indexComponent */],
             __WEBPACK_IMPORTED_MODULE_7__directive_move_directive__["a" /* MoveDirective */],
             __WEBPACK_IMPORTED_MODULE_10__index_component_spikeActivity_component__["a" /* spikeActivityComponent */],
             __WEBPACK_IMPORTED_MODULE_11__index_component_newToday_component__["a" /* newTodayComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__classify_classify_component__["a" /* classifyComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__classify_classify_component__["a" /* classifyComponent */],
             __WEBPACK_IMPORTED_MODULE_12__classify_component_typeClassfy_component__["a" /* typeClassifyComponent */],
             __WEBPACK_IMPORTED_MODULE_13__classify_component_recommendToday_component__["a" /* recommendTodayComponent */],
             __WEBPACK_IMPORTED_MODULE_16__repeatComponent_headOne_component__["a" /* headOneComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__personal_personal_component__["a" /* personalComponent */],
             __WEBPACK_IMPORTED_MODULE_6__shopCart_shopCart_component__["a" /* shopCartComponent */],
             __WEBPACK_IMPORTED_MODULE_14__shopCart_component_moneySettlement_component__["a" /* moneySettlementComponent */],
             __WEBPACK_IMPORTED_MODULE_15__shopCart_component_shopArticles_component__["a" /* shopArticlesComponent */]
@@ -1143,10 +1143,250 @@ MarketModule = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/market/personal/component/header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return personalHeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var personalHeaderComponent = (function () {
+    function personalHeaderComponent() {
+    }
+    return personalHeaderComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", Object)
+], personalHeaderComponent.prototype, "title", void 0);
+personalHeaderComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'personal-header',
+        template: "\n  \t\t<div class=\"headParent\">\n\t\t\t<div class=\"currencyHead\">\n\t\t\t\t{{title}}\n\t\t\t</div>\n\t\t\t<div class=\"bgBack\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/back2.png\" alt=\"\" />\n\t\t\t</div>\n  \t\t</div>\t\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myBalance.component.scss")]
+    })
+], personalHeaderComponent);
+
+//# sourceMappingURL=header.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/css/myBalance.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".headParent {\n  border-bottom: 1px solid #eeeeee;\n  position: relative; }\n  .headParent .bgBack {\n    position: absolute;\n    left: 0;\n    width: 0.86666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0; }\n    .headParent .bgBack img {\n      float: left;\n      width: 100%;\n      height: 100%; }\n\n.currencyHead {\n  line-height: 1.06666667rem;\n  width: 7rem;\n  margin: 0 auto;\n  font-size: 0.48rem;\n  color: #333333;\n  text-align: center;\n  font-weight: bold; }\n\n.core {\n  width: 7rem;\n  margin: 0 auto; }\n  .core .moneyTilte {\n    font-size: 0.37333333rem;\n    color: #666666;\n    line-height: 0.61333333rem;\n    text-align: center; }\n  .core .specificMoney {\n    font-size: 0.29333333rem;\n    color: #fe5164;\n    line-height: 0.65333333rem;\n    text-align: center;\n    padding-bottom: 0.62666667rem; }\n    .core .specificMoney strong {\n      font-size: 0.50666667rem; }\n  .core .laout {\n    padding: 0.36rem 0;\n    width: 100%;\n    font-size: 0.48rem;\n    line-height: 1.2rem;\n    text-align: center; }\n    .core .laout strong {\n      border: 1px solid #fe5164;\n      display: block;\n      border-radius: 0.74666667rem; }\n  .core .recharge {\n    color: white;\n    background: #fe5164; }\n  .core .withdrawals {\n    color: #fe5164; }\n\n.picLink {\n  width: 1.57333333rem;\n  height: 1.25333333rem;\n  margin: 0 auto;\n  padding: 0.53333333rem 0; }\n  .picLink img {\n    width: 100%;\n    height: 100%; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/css/myCoupon.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".core {\n  background: #eee; }\n  .core .layout {\n    width: 7.64rem;\n    margin: 0 auto;\n    padding: 0.49333333rem 0;\n    height: 2rem; }\n  .core .par {\n    width: 100%;\n    height: 100%;\n    background: #fff;\n    border-radius: 0.24rem; }\n    .core .par p {\n      float: left; }\n    .core .par .name {\n      font-size: 0.29333333rem;\n      color: #fe5164;\n      width: 0.73333333rem;\n      padding: 0.26666667rem 0;\n      text-align: center; }\n    .core .par .money {\n      width: 1.86666667rem;\n      background: #fe5164;\n      line-height: 1.89333333rem;\n      font-size: 0.34666667rem;\n      color: #ffffff;\n      text-align: center; }\n      .core .par .money strong {\n        font-size: 0.66666667rem; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/myBalance/myBalance.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return myBalanceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var myBalanceComponent = (function () {
+    function myBalanceComponent() {
+        this.title = "我的余额";
+    }
+    return myBalanceComponent;
+}());
+myBalanceComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t\t<personal-header [title]=\"title\"></personal-header>\n\t\t<div class=\"core\">\n\t\t\t<div class=\"picLink\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/Personal/myBalancePic.png\" alt=\"\" />\n\t\t\t</div>\n\t\t\t<p class=\"moneyTilte\">\u6211\u7684\u4F59\u989D</p>\n\t\t\t<p class=\"specificMoney\">\uFFE5<strong>163.86</strong></p>\n\t\t\t<div class=\" laout\">\n\t\t\t\t\t<strong class=\"recharge\">\u5145\u503C</strong>\n\t\t\t</div>\n\t\t\t<div class=\"withdrawals laout\">\n\t\t\t\t\t<strong class=\"withdrawals\">\u63D0\u73B0</strong>\n\t\t\t</div>\n\t\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myBalance.component.scss")]
+    })
+], myBalanceComponent);
+
+//# sourceMappingURL=myBalance.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/myCoupon/myCoupon.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return myCouponComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var myCouponComponent = (function () {
+    function myCouponComponent() {
+        this.title = "我的优惠券";
+    }
+    return myCouponComponent;
+}());
+myCouponComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<personal-header [title]=\"title\"></personal-header>\n\t<div class=\"core\">\n\t\t<div class=\"layout\">\n\t\t\t<div class=\"par clear\">\n\t\t\t\t<p class=\"name\">\n\t\t\t\t\t\u6EE1 \u51CF \u5238\n\t\t\t\t</p>\n\t\t\t\t<p class=\"money\">\n\t\t\t\t\t\uFFE5<strong>80</strong>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myCoupon.component.scss")]
+    })
+], myCouponComponent);
+
+//# sourceMappingURL=myCoupon.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/persona.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonalModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personal_routing_module__ = __webpack_require__("../../../../../src/app/market/personal/personal-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__myBalance_myBalance_component__ = __webpack_require__("../../../../../src/app/market/personal/myBalance/myBalance.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__myCoupon_myCoupon_component__ = __webpack_require__("../../../../../src/app/market/personal/myCoupon/myCoupon.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__personal_component__ = __webpack_require__("../../../../../src/app/market/personal/personal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_header_component__ = __webpack_require__("../../../../../src/app/market/personal/component/header.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+//个人余额模块
+
+//个人优惠券模块
+
+//个人
+
+//通用组件
+
+var PersonalModule = (function () {
+    function PersonalModule() {
+    }
+    return PersonalModule;
+}());
+PersonalModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_2__personal_routing_module__["a" /* personalRoutingModule */],
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_5__personal_component__["a" /* personalComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__component_header_component__["a" /* personalHeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_3__myBalance_myBalance_component__["a" /* myBalanceComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__myCoupon_myCoupon_component__["a" /* myCouponComponent */]
+        ]
+    })
+], PersonalModule);
+
+//# sourceMappingURL=persona.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/personal-routing.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return personalRoutingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__myBalance_myBalance_component__ = __webpack_require__("../../../../../src/app/market/personal/myBalance/myBalance.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__myCoupon_myCoupon_component__ = __webpack_require__("../../../../../src/app/market/personal/myCoupon/myCoupon.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var marketRoutes = [
+    {
+        path: 'personal',
+        children: [
+            {
+                path: 'myBalance',
+                component: __WEBPACK_IMPORTED_MODULE_2__myBalance_myBalance_component__["a" /* myBalanceComponent */]
+            },
+            {
+                path: 'myCoupon',
+                component: __WEBPACK_IMPORTED_MODULE_3__myCoupon_myCoupon_component__["a" /* myCouponComponent */]
+            }
+        ]
+    },
+];
+var personalRoutingModule = (function () {
+    function personalRoutingModule() {
+    }
+    return personalRoutingModule;
+}());
+personalRoutingModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild(marketRoutes)
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]
+        ]
+    })
+], personalRoutingModule);
+
+//# sourceMappingURL=personal-routing.module.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/market/personal/personal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hello Personal</h1>"
+module.exports = "<div class=\"personHeader\">\r\n\t<div class=\"headPortrait\">\r\n\t\t<img src=\"../../../assets/img/market/index/Personal/head_one.jpg\" alt=\"\">\r\n\t</div>\r\n\t<div class=\"link clear\">\r\n\t\t<label>追逐繁星的孩子</label>\r\n\t\t<span></span>\r\n\t</div>\r\n</div>\r\n<ul class=\"myInformation clear\">\r\n\t<li (click)=\"gotoPage('myBalance')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>163.86</strong>\r\n\t\t\t元\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的余额\r\n\t\t</p>\r\n\t</li>\r\n\t<li (click)=\"gotoPage('myCoupon')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>1</strong>\r\n\t\t\t张\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的优惠券\r\n\t\t</p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>160</strong>\r\n\t\t\t分\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的积分\r\n\t\t</p>\r\n\t</li>\r\n</ul>\r\n<div class='myOrder'>\r\n\t<div class=\"orderHead clear\">\r\n\t\t\t<h2>我的订单</h2>\r\n\t\t\t<a href=\"###\">查看全部</a>\r\n\t</div>\r\n\t<ul class=\"navOrder clear\">\r\n\t\t<li>\r\n\t\t\t待付款\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待发货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待收货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待评价\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"jumpOptions\">\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t收货地址管理\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t我的收藏\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"division\"> \t\r\n\t</span>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t礼品卡\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t兑换券\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t设置\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"divisionTwo\"> \t\r\n\t</span>\r\n</div>"
 
 /***/ }),
 
@@ -1156,25 +1396,40 @@ module.exports = "<h1>Hello Personal</h1>"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return personalComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var personalComponent = (function () {
-    function personalComponent() {
+    function personalComponent(router, route) {
+        this.router = router;
+        this.route = route;
     }
+    //相对导航函数
+    personalComponent.prototype.gotoPage = function (route) {
+        //第二种"[routerLink]="[route]"如果我们用RouterLink来代替Router服务进行导航，就要使用相同的链接参数数组，
+        //不过不再需要提供relativeTo属性。 ActivatedRoute已经隐含在了RouterLink指令中。
+        this.router.navigate([route], { relativeTo: this.route });
+    };
     return personalComponent;
 }());
 personalComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         template: __webpack_require__("../../../../../src/app/market/personal/personal.component.html"),
         styles: [__webpack_require__("../../../../../src/app/market/css/personal.component.scss")]
-    })
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
 ], personalComponent);
 
+var _a, _b;
 //# sourceMappingURL=personal.component.js.map
 
 /***/ }),
@@ -1242,7 +1497,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".moneyWrapper {\n  position: fixed;\n  width: 10rem;\n  bottom: 1.33333333rem;\n  height: 1.30666667rem;\n  border-top: 1px solid #eee;\n  z-index: 99; }\n  .moneyWrapper .state {\n    padding-left: 1.08rem;\n    width: 0.88rem;\n    line-height: 1.30666667rem;\n    text-align: center;\n    font-size: 0.29333333rem;\n    color: #666666;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/shopCart/no_active.png") + ") no-repeat;\n    background-size: 5.17333333rem 0.69333333rem;\n    background-position: -4.10666667rem 0.26666667rem; }\n  .moneyWrapper .active {\n    background-position-x: 0.34666667rem; }\n  .moneyWrapper .view {\n    float: left; }\n  .moneyWrapper .moneyTotal {\n    width: 3.45333333rem; }\n    .moneyWrapper .moneyTotal p {\n      font-size: 0.34666667rem;\n      text-align: center;\n      line-height: 1.30666667rem;\n      color: #333333; }\n      .moneyWrapper .moneyTotal p b {\n        color: #fe5164;\n        font-weight: normal; }\n      .moneyWrapper .moneyTotal p strong {\n        color: #fe5164; }\n  .moneyWrapper .controller {\n    float: right;\n    width: 3.46666667rem;\n    background: #fe5164;\n    color: #ffffff;\n    font-weight: bold;\n    text-align: center;\n    font-size: 0.42666667rem;\n    line-height: 1.30666667rem; }\n", ""]);
+exports.push([module.i, ".moneyWrapper {\n  position: fixed;\n  width: 10rem;\n  bottom: 1.33333333rem;\n  height: 1.30666667rem;\n  border-top: 1px solid #eee;\n  z-index: 99;\n  background: #fcfafa; }\n  .moneyWrapper .state {\n    padding-left: 1.08rem;\n    width: 0.88rem;\n    line-height: 1.30666667rem;\n    text-align: center;\n    font-size: 0.29333333rem;\n    color: #666666;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/index/shopCart/no_active.png") + ") no-repeat;\n    background-size: 5.17333333rem 0.69333333rem;\n    background-position: -4.10666667rem 0.26666667rem; }\n  .moneyWrapper .active {\n    background-position-x: 0.34666667rem; }\n  .moneyWrapper .view {\n    float: left; }\n  .moneyWrapper .moneyTotal {\n    width: 3.45333333rem; }\n    .moneyWrapper .moneyTotal p {\n      font-size: 0.34666667rem;\n      text-align: center;\n      line-height: 1.30666667rem;\n      color: #333333; }\n      .moneyWrapper .moneyTotal p b {\n        color: #fe5164;\n        font-weight: normal; }\n      .moneyWrapper .moneyTotal p strong {\n        color: #fe5164; }\n  .moneyWrapper .controller {\n    float: right;\n    width: 3.46666667rem;\n    background: #fe5164;\n    color: #ffffff;\n    font-weight: bold;\n    text-align: center;\n    font-size: 0.42666667rem;\n    line-height: 1.30666667rem; }\n", ""]);
 
 // exports
 
@@ -1398,6 +1653,101 @@ var shopArticlesComponent = (function () {
                 num: 1,
                 delete: false
             },
+            {
+                //是否选中
+                isSelect: false,
+                //图片路径
+                imgSrc: '../../../../assets/img/market/index/shopCart/shopPic_three.png',
+                //标题
+                title: '美国佛罗里达州黑提4斤/盒',
+                //信息
+                link: '享受清爽汁水融进齿间感觉',
+                //标签
+                label: [{ sonLabel: '2件包邮' }],
+                //原价
+                originalPrice: '120.8',
+                //会员价
+                actualPrice: '108.8',
+                //数量
+                num: 1,
+                delete: false
+            },
+            {
+                //是否选中
+                isSelect: false,
+                //图片路径
+                imgSrc: '../../../../assets/img/market/index/shopCart/shopPic_three.png',
+                //标题
+                title: '美国佛罗里达州黑提4斤/盒',
+                //信息
+                link: '享受清爽汁水融进齿间感觉',
+                //标签
+                label: [{ sonLabel: '2件包邮' }],
+                //原价
+                originalPrice: '120.8',
+                //会员价
+                actualPrice: '108.8',
+                //数量
+                num: 1,
+                delete: false
+            },
+            {
+                //是否选中
+                isSelect: false,
+                //图片路径
+                imgSrc: '../../../../assets/img/market/index/shopCart/shopPic_three.png',
+                //标题
+                title: '美国佛罗里达州黑提4斤/盒',
+                //信息
+                link: '享受清爽汁水融进齿间感觉',
+                //标签
+                label: [{ sonLabel: '2件包邮' }],
+                //原价
+                originalPrice: '120.8',
+                //会员价
+                actualPrice: '108.8',
+                //数量
+                num: 1,
+                delete: false
+            },
+            {
+                //是否选中
+                isSelect: false,
+                //图片路径
+                imgSrc: '../../../../assets/img/market/index/shopCart/shopPic_three.png',
+                //标题
+                title: '美国佛罗里达州黑提4斤/盒',
+                //信息
+                link: '享受清爽汁水融进齿间感觉',
+                //标签
+                label: [{ sonLabel: '2件包邮' }],
+                //原价
+                originalPrice: '120.8',
+                //会员价
+                actualPrice: '108.8',
+                //数量
+                num: 1,
+                delete: false
+            },
+            {
+                //是否选中
+                isSelect: false,
+                //图片路径
+                imgSrc: '../../../../assets/img/market/index/shopCart/shopPic_three.png',
+                //标题
+                title: '美国佛罗里达州黑提4斤/盒',
+                //信息
+                link: '享受清爽汁水融进齿间感觉',
+                //标签
+                label: [{ sonLabel: '2件包邮' }],
+                //原价
+                originalPrice: '120.8',
+                //会员价
+                actualPrice: '108.8',
+                //数量
+                num: 1,
+                delete: false
+            }
         ];
         this.onVoted = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
     }
@@ -1570,6 +1920,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAuCAYAAABu
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "nav_ico.b6c22d0de80b6eecf85b.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/market/index/Personal/all_ico.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "all_ico.5a3cf0e1cd00ff41c756.png";
 
 /***/ }),
 

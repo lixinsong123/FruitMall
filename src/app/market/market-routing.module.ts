@@ -4,8 +4,11 @@ import {indexComponent}  from './index/index.component';
 import {marKetComponent} from './market.component';
 import {classifyComponent} from './classify/classify.component';
 
+
 import {personalComponent} from './personal/personal.component';
+
 import {shopCartComponent} from './shopCart/shopCart.component';
+
 const marketRoutes: Routes = [
   {
     path: '',
@@ -21,7 +24,7 @@ const marketRoutes: Routes = [
       },
       {
         path:'personal',
-        component:personalComponent
+        component:personalComponent,
       },
       {
         path:'shopCart',
