@@ -1,0 +1,21 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.address{
+	padding:getRem(20) 0;
+	width:10rem;
+	background:#eeeeee;
+	.linkShow{
+		background: white;
+		border-bottom:1px solid #eee;
+		height: getRem(108);
+	}
+	.operation{
+		background: white;
+		height: getRem(65);
+	}
+}

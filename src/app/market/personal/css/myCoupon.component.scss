@@ -27,6 +27,7 @@ $rem:75;
 			width: getRem(55);
 			padding: getRem(20) 0;
 			text-align:center;
+			letter-spacing: getRem(4);
 		}
 		.money{
 			width: getRem(140);
@@ -38,6 +39,27 @@ $rem:75;
 			strong{
 				font-size:getRem(50);
 			} 
+		}
+		.specificLink{
+			float: right;
+			padding:getRem(32) 0 0 getRem(60);
+			width: getRem(318);
+			height: getRem(97);
+			.introduce{
+				font-size: getRem(28);
+				color: #333333;
+				line-height: getRem(36);
+			}
+			.condition{
+				font-size: getRem(22);
+				color: #666666;
+				line-height: getRem(30);
+			}
+			.effectiveTime{
+				font-size: getRem(22);
+				color: #c6c6c6;
+				line-height: getRem(30);
+			}
 		}
 	}
 }

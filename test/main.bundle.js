@@ -1149,6 +1149,7 @@ MarketModule = __decorate([
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return personalHeaderComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1159,24 +1160,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var personalHeaderComponent = (function () {
-    function personalHeaderComponent() {
+    function personalHeaderComponent(router, route) {
+        this.router = router;
+        this.route = route;
+        this.rightContro = false;
     }
+    personalHeaderComponent.prototype.goBack = function () {
+        this.router.navigate(['/personal']);
+    };
+    personalHeaderComponent.prototype.ngOnInit = function () {
+        if (this.right) {
+            this.rightContro = true;
+        }
+        else {
+            this.rightContro = false;
+        }
+    };
     return personalHeaderComponent;
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
     __metadata("design:type", Object)
 ], personalHeaderComponent.prototype, "title", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", Object)
+], personalHeaderComponent.prototype, "right", void 0);
 personalHeaderComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'personal-header',
-        template: "\n  \t\t<div class=\"headParent\">\n\t\t\t<div class=\"currencyHead\">\n\t\t\t\t{{title}}\n\t\t\t</div>\n\t\t\t<div class=\"bgBack\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/back2.png\" alt=\"\" />\n\t\t\t</div>\n  \t\t</div>\t\n  ",
+        template: "\n  \t\t<div class=\"headParent\">\n\t\t\t<div class=\"currencyHead\">\n\t\t\t\t{{title}}\n\t\t\t</div>\n\t\t\t<div class=\"bgBack\" (click)=\"goBack()\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/back2.png\" alt=\"\" />\n\t\t\t</div>\n\t\t\t\n\t\t\t<div *ngIf=\"rightContro\" class=\"right\" >\n\t\t\t\t{{right.name}}\n\t\t\t</div>\n\n  \t\t</div>\t\n  ",
         styles: [__webpack_require__("../../../../../src/app/market/personal/css/myBalance.component.scss")]
-    })
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
 ], personalHeaderComponent);
 
+var _a, _b;
 //# sourceMappingURL=header.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/css/deliveryAddress.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".address {\n  padding: 0.26666667rem 0;\n  width: 10rem;\n  background: #eeeeee; }\n  .address .linkShow {\n    background: white;\n    border-bottom: 1px solid #eee;\n    height: 1.44rem; }\n  .address .operation {\n    background: white;\n    height: 0.86666667rem; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -1188,7 +1228,25 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".headParent {\n  border-bottom: 1px solid #eeeeee;\n  position: relative; }\n  .headParent .bgBack {\n    position: absolute;\n    left: 0;\n    width: 0.86666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0; }\n    .headParent .bgBack img {\n      float: left;\n      width: 100%;\n      height: 100%; }\n\n.currencyHead {\n  line-height: 1.06666667rem;\n  width: 7rem;\n  margin: 0 auto;\n  font-size: 0.48rem;\n  color: #333333;\n  text-align: center;\n  font-weight: bold; }\n\n.core {\n  width: 7rem;\n  margin: 0 auto; }\n  .core .moneyTilte {\n    font-size: 0.37333333rem;\n    color: #666666;\n    line-height: 0.61333333rem;\n    text-align: center; }\n  .core .specificMoney {\n    font-size: 0.29333333rem;\n    color: #fe5164;\n    line-height: 0.65333333rem;\n    text-align: center;\n    padding-bottom: 0.62666667rem; }\n    .core .specificMoney strong {\n      font-size: 0.50666667rem; }\n  .core .laout {\n    padding: 0.36rem 0;\n    width: 100%;\n    font-size: 0.48rem;\n    line-height: 1.2rem;\n    text-align: center; }\n    .core .laout strong {\n      border: 1px solid #fe5164;\n      display: block;\n      border-radius: 0.74666667rem; }\n  .core .recharge {\n    color: white;\n    background: #fe5164; }\n  .core .withdrawals {\n    color: #fe5164; }\n\n.picLink {\n  width: 1.57333333rem;\n  height: 1.25333333rem;\n  margin: 0 auto;\n  padding: 0.53333333rem 0; }\n  .picLink img {\n    width: 100%;\n    height: 100%; }\n", ""]);
+exports.push([module.i, ".headParent {\n  border-bottom: 1px solid #eeeeee;\n  position: relative; }\n  .headParent .bgBack {\n    position: absolute;\n    left: 0;\n    width: 0.86666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0; }\n    .headParent .bgBack img {\n      float: left;\n      width: 100%;\n      height: 100%; }\n  .headParent .right {\n    position: absolute;\n    right: 0;\n    width: 1.26666667rem;\n    line-height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0;\n    color: #666666;\n    font-size: 0.34666667rem;\n    text-align: center; }\n\n.currencyHead {\n  line-height: 1.06666667rem;\n  width: 7rem;\n  margin: 0 auto;\n  font-size: 0.48rem;\n  color: #333333;\n  text-align: center;\n  font-weight: bold; }\n\n.core {\n  width: 7rem;\n  margin: 0 auto; }\n  .core .moneyTilte {\n    font-size: 0.37333333rem;\n    color: #666666;\n    line-height: 0.61333333rem;\n    text-align: center; }\n  .core .specificMoney {\n    font-size: 0.29333333rem;\n    color: #fe5164;\n    line-height: 0.65333333rem;\n    text-align: center;\n    padding-bottom: 0.62666667rem; }\n    .core .specificMoney strong {\n      font-size: 0.50666667rem; }\n  .core .laout {\n    padding: 0.36rem 0;\n    width: 100%;\n    font-size: 0.48rem;\n    line-height: 1.2rem;\n    text-align: center; }\n    .core .laout strong {\n      border: 1px solid #fe5164;\n      display: block;\n      border-radius: 0.74666667rem; }\n  .core .recharge {\n    color: white;\n    background: #fe5164; }\n  .core .withdrawals {\n    color: #fe5164; }\n\n.picLink {\n  width: 1.57333333rem;\n  height: 1.25333333rem;\n  margin: 0 auto;\n  padding: 0.53333333rem 0; }\n  .picLink img {\n    width: 100%;\n    height: 100%; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/css/myCollection.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".classIfication_p_font, .classIfication .collected, .classIfication .beOverdue {\n  font-size: 0.37333333rem;\n  line-height: 1.06666667rem;\n  text-align: center;\n  font-weight: bold;\n  color: #666666; }\n\n.classIfication {\n  width: 10rem;\n  border-bottom: 1px solid #e2e2e2; }\n  .classIfication p {\n    float: left;\n    width: 4.97333333rem;\n    height: 100%; }\n  .classIfication .active {\n    color: #fe5164; }\n  .classIfication .collected {\n    border-right: 2px solid #e2e2e2; }\n\n.specificItem {\n  width: 10rem;\n  height: 3.56rem;\n  border-bottom: 1px solid #eee; }\n  .specificItem .picShow {\n    float: left;\n    padding: 0 0.26666667rem;\n    width: 4.37333333rem;\n    height: 100%; }\n    .specificItem .picShow img {\n      width: 100%;\n      height: 100%; }\n  .specificItem .linkShow {\n    float: right;\n    padding: 0.26666667rem 0 0 0.08rem;\n    width: 5.01333333rem; }\n    .specificItem .linkShow .name {\n      font-size: 0.37333333rem;\n      color: #333333;\n      line-height: 0.54666667rem;\n      font-weight: bold; }\n    .specificItem .linkShow .describe {\n      font-size: 0.29333333rem;\n      color: #979797;\n      line-height: 0.46666667rem; }\n    .specificItem .linkShow .labelLink {\n      padding: 0.14666667rem 0;\n      overflow: hidden;\n      height: 0.50666667rem; }\n      .specificItem .linkShow .labelLink span {\n        float: left;\n        border: 1px solid #fe5164;\n        width: 1.57333333rem;\n        line-height: 0.50666667rem;\n        text-align: center;\n        margin-right: 0.32rem;\n        font-size: 0.29333333rem;\n        color: #fe5164; }\n    .specificItem .linkShow .priceBtn {\n      line-height: 1.16rem;\n      font-size: 0.34666667rem;\n      color: #fe5164;\n      position: relative; }\n      .specificItem .linkShow .priceBtn strong {\n        font-size: 0.50666667rem;\n        color: #fe5164; }\n      .specificItem .linkShow .priceBtn .originalPrice {\n        font-size: 0.29333333rem;\n        color: #979797; }\n        .specificItem .linkShow .priceBtn .originalPrice b {\n          font-size: 0.34666667rem;\n          text-decoration: line-through;\n          font-weight: normal; }\n      .specificItem .linkShow .priceBtn .btn {\n        position: absolute;\n        right: 0.06666667rem;\n        top: 0;\n        display: block;\n        width: 1.49333333rem;\n        height: 100%; }\n        .specificItem .linkShow .priceBtn .btn img {\n          width: 100%;\n          height: 100%; }\n", ""]);
 
 // exports
 
@@ -1206,13 +1264,47 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".core {\n  background: #eee; }\n  .core .layout {\n    width: 7.64rem;\n    margin: 0 auto;\n    padding: 0.49333333rem 0;\n    height: 2rem; }\n  .core .par {\n    width: 100%;\n    height: 100%;\n    background: #fff;\n    border-radius: 0.24rem; }\n    .core .par p {\n      float: left; }\n    .core .par .name {\n      font-size: 0.29333333rem;\n      color: #fe5164;\n      width: 0.73333333rem;\n      padding: 0.26666667rem 0;\n      text-align: center; }\n    .core .par .money {\n      width: 1.86666667rem;\n      background: #fe5164;\n      line-height: 1.89333333rem;\n      font-size: 0.34666667rem;\n      color: #ffffff;\n      text-align: center; }\n      .core .par .money strong {\n        font-size: 0.66666667rem; }\n", ""]);
+exports.push([module.i, ".core {\n  background: #eee; }\n  .core .layout {\n    width: 7.64rem;\n    margin: 0 auto;\n    padding: 0.49333333rem 0;\n    height: 2rem; }\n  .core .par {\n    width: 100%;\n    height: 100%;\n    background: #fff;\n    border-radius: 0.24rem; }\n    .core .par p {\n      float: left; }\n    .core .par .name {\n      font-size: 0.29333333rem;\n      color: #fe5164;\n      width: 0.73333333rem;\n      padding: 0.26666667rem 0;\n      text-align: center;\n      letter-spacing: 0.05333333rem; }\n    .core .par .money {\n      width: 1.86666667rem;\n      background: #fe5164;\n      line-height: 1.89333333rem;\n      font-size: 0.34666667rem;\n      color: #ffffff;\n      text-align: center; }\n      .core .par .money strong {\n        font-size: 0.66666667rem; }\n    .core .par .specificLink {\n      float: right;\n      padding: 0.42666667rem 0 0 0.8rem;\n      width: 4.24rem;\n      height: 1.29333333rem; }\n      .core .par .specificLink .introduce {\n        font-size: 0.37333333rem;\n        color: #333333;\n        line-height: 0.48rem; }\n      .core .par .specificLink .condition {\n        font-size: 0.29333333rem;\n        color: #666666;\n        line-height: 0.4rem; }\n      .core .par .specificLink .effectiveTime {\n        font-size: 0.29333333rem;\n        color: #c6c6c6;\n        line-height: 0.4rem; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/deliveryAddress/deliveryAddress.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return deliveryAddressComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var deliveryAddressComponent = (function () {
+    function deliveryAddressComponent() {
+        this.title = "收货地址管理";
+        this.right = {
+            name: '添加',
+            url: ''
+        };
+    }
+    return deliveryAddressComponent;
+}());
+deliveryAddressComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t\t<personal-header [title]=\"title\" [right]=\"right\"></personal-header>\n\t\t<div class=\"address\">\n\t\t\t<div class=\"linkShow\">\n\t\t\t</div>\n\t\t\t<div class=\"operation\">\n\t\t\t</div>\n\t\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/deliveryAddress.component.scss")]
+    })
+], deliveryAddressComponent);
+
+//# sourceMappingURL=deliveryAddress.component.js.map
 
 /***/ }),
 
@@ -1246,6 +1338,125 @@ myBalanceComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/market/personal/myCollection/myCollection.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return myCollectionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var myCollectionComponent = (function () {
+    function myCollectionComponent() {
+        this.title = "我的收藏";
+        this.ificationIsClick = true;
+        this.showData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_one.png',
+                name: '意大利绿奇异果3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份', '今日特价'],
+                presentPrice: 35.9,
+                originalPrice: 55.9
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_two.png',
+                name: '黔阳冰糖橙3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份'],
+                presentPrice: 45.9,
+                originalPrice: 65.9
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_three.png',
+                name: '黔阳冰糖橙3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份'],
+                presentPrice: 45.9,
+                originalPrice: 65.9
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_four.png',
+                name: '黔阳冰糖橙3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份'],
+                presentPrice: 45.9,
+                originalPrice: 65.9
+            }
+        ];
+        this.collectedData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_one.png',
+                name: '意大利绿奇异果3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份', '今日特价'],
+                presentPrice: 35.9,
+                originalPrice: 55.9
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_two.png',
+                name: '黔阳冰糖橙3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份'],
+                presentPrice: 45.9,
+                originalPrice: 65.9
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_three.png',
+                name: '黔阳冰糖橙3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份'],
+                presentPrice: 45.9,
+                originalPrice: 65.9
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_four.png',
+                name: '黔阳冰糖橙3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份'],
+                presentPrice: 45.9,
+                originalPrice: 65.9
+            }
+        ];
+        this.beOverdueData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/collection/friut_four.png',
+                name: '意大利绿奇异果3200g/20个',
+                describe: '享受清爽汁水融进齿间感觉',
+                labelLink: ['限每人2份', '今日特价'],
+                presentPrice: 35.9,
+                originalPrice: 55.9
+            },
+        ];
+    }
+    //处理收藏和过期的方法。
+    myCollectionComponent.prototype.ificationControl = function (index) {
+        this.ificationIsClick = !this.ificationIsClick;
+        if (index == 1) {
+            this.showData = this.collectedData;
+        }
+        else {
+            this.showData = this.beOverdueData;
+        }
+    };
+    return myCollectionComponent;
+}());
+myCollectionComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<personal-header [title]=\"title\"></personal-header>\n\t<div class=\"classIfication clear\">\n\t\t<p class=\"collected\" [class.active]=\"ificationIsClick\" (click)=\"ificationControl(1)\">\u5DF2\u6536\u85CF\uFF084\uFF09</p>\n\t\t<p class=\"beOverdue\" [class.active]=\"!ificationIsClick\" (click)=\"ificationControl(2)\" >\u5DF2\u8FC7\u671F\uFF081\uFF09</p>\n\t</div>\n\t<div class=\"specificItem clear\" *ngFor=\"let item of showData\">\n\t\t<div class=\"picShow\">\n\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t</div>\n\t\t<div class=\"linkShow\">\n\t\t\t<p  class='name'>\n\t\t\t\t{{item.name}}\n\t\t\t</p>\n\t\t\t<p class=\"describe\">\n\t\t\t\t{{item.describe}}\n\t\t\t</p>\n\t\t\t<p class=\"labelLink clear\" >\n\t\t\t\t<span *ngFor=\"let son of item.labelLink\">{{son}}</span>\n\t\t\t</p>\n\t\t\t<p class=\"priceBtn\">\n\t\t\t\t\uFFE5<strong>{{item.presentPrice}}</strong>\n\t\t\t\t<span class=\"originalPrice\">\uFFE5<b>{{item.originalPrice}}</b></span>\n\t\t\t\t<span class=\"btn\">\n\t\t\t\t\t<img src=\"../../../../assets/img/market/index/Personal/collection/sunbtn.png\" alt=\"\" />\n\t\t\t\t</span>\n\t\t\t</p>\n\t\t</div>\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myCollection.component.scss")]
+    })
+], myCollectionComponent);
+
+//# sourceMappingURL=myCollection.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/market/personal/myCoupon/myCoupon.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1262,12 +1473,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var myCouponComponent = (function () {
     function myCouponComponent() {
         this.title = "我的优惠券";
+        //优惠券数据
+        this.couponData = [
+            {
+                name: '满减券',
+                money: 80,
+                introduce: 80,
+                condition: 99,
+                effectiveTime: '2017-02-24'
+            },
+            {
+                name: '满减券',
+                money: 100,
+                introduce: 100,
+                condition: 120,
+                effectiveTime: '2017-02-24'
+            },
+        ];
     }
     return myCouponComponent;
 }());
 myCouponComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: "\n\t<personal-header [title]=\"title\"></personal-header>\n\t<div class=\"core\">\n\t\t<div class=\"layout\">\n\t\t\t<div class=\"par clear\">\n\t\t\t\t<p class=\"name\">\n\t\t\t\t\t\u6EE1 \u51CF \u5238\n\t\t\t\t</p>\n\t\t\t\t<p class=\"money\">\n\t\t\t\t\t\uFFE5<strong>80</strong>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        template: "\n\t<personal-header [title]=\"title\"></personal-header>\n\t<div class=\"core\">\n\t\t<div class=\"layout\" *ngFor=\"let item of couponData\">\n\t\t\t<div class=\"par clear\">\n\t\t\t\t<p class=\"name\">\n\t\t\t\t\t{{item.name}}\n\t\t\t\t</p>\n\t\t\t\t<p class=\"money\">\n\t\t\t\t\t\uFFE5<strong>{{item.money}}</strong>\n\t\t\t\t</p>\n\t\t\t\t<div class=\"specificLink\">\n\t\t\t\t\t<p class=\"introduce\">\u6BCF\u65E5\u9C9C\u4E30{{item.introduce}}\u5143\u4F18\u60E0\u5238</p>\n\t\t\t\t\t<p class=\"condition\">\u8BA2\u5355\u6EE1{{item.condition}}\u5143\u53EF\u7528</p>\n\t\t\t\t\t<p class=\"effectiveTime\">\u6709\u6548\u671F\u81F3\uFF1A{{item.effectiveTime}}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
         styles: [__webpack_require__("../../../../../src/app/market/personal/css/myCoupon.component.scss")]
     })
 ], myCouponComponent);
@@ -1286,8 +1514,10 @@ myCouponComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personal_routing_module__ = __webpack_require__("../../../../../src/app/market/personal/personal-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__myBalance_myBalance_component__ = __webpack_require__("../../../../../src/app/market/personal/myBalance/myBalance.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__myCoupon_myCoupon_component__ = __webpack_require__("../../../../../src/app/market/personal/myCoupon/myCoupon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__personal_component__ = __webpack_require__("../../../../../src/app/market/personal/personal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_header_component__ = __webpack_require__("../../../../../src/app/market/personal/component/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__myCollection_myCollection_component__ = __webpack_require__("../../../../../src/app/market/personal/myCollection/myCollection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__deliveryAddress_deliveryAddress_component__ = __webpack_require__("../../../../../src/app/market/personal/deliveryAddress/deliveryAddress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__personal_component__ = __webpack_require__("../../../../../src/app/market/personal/personal.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__component_header_component__ = __webpack_require__("../../../../../src/app/market/personal/component/header.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1300,6 +1530,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //个人余额模块
 
 //个人优惠券模块
+
+//个人收藏模块
+
+//个人收货地址管理模块
 
 //个人
 
@@ -1317,10 +1551,12 @@ PersonalModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__personal_routing_module__["a" /* personalRoutingModule */],
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__personal_component__["a" /* personalComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__component_header_component__["a" /* personalHeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__personal_component__["a" /* personalComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__component_header_component__["a" /* personalHeaderComponent */],
             __WEBPACK_IMPORTED_MODULE_3__myBalance_myBalance_component__["a" /* myBalanceComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__myCoupon_myCoupon_component__["a" /* myCouponComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__myCoupon_myCoupon_component__["a" /* myCouponComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__myCollection_myCollection_component__["a" /* myCollectionComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__deliveryAddress_deliveryAddress_component__["a" /* deliveryAddressComponent */]
         ]
     })
 ], PersonalModule);
@@ -1338,12 +1574,16 @@ PersonalModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__myBalance_myBalance_component__ = __webpack_require__("../../../../../src/app/market/personal/myBalance/myBalance.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__myCoupon_myCoupon_component__ = __webpack_require__("../../../../../src/app/market/personal/myCoupon/myCoupon.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__myCollection_myCollection_component__ = __webpack_require__("../../../../../src/app/market/personal/myCollection/myCollection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__deliveryAddress_deliveryAddress_component__ = __webpack_require__("../../../../../src/app/market/personal/deliveryAddress/deliveryAddress.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1359,6 +1599,14 @@ var marketRoutes = [
             {
                 path: 'myCoupon',
                 component: __WEBPACK_IMPORTED_MODULE_3__myCoupon_myCoupon_component__["a" /* myCouponComponent */]
+            },
+            {
+                path: 'myCollection',
+                component: __WEBPACK_IMPORTED_MODULE_4__myCollection_myCollection_component__["a" /* myCollectionComponent */]
+            },
+            {
+                path: 'deliveryAddress',
+                component: __WEBPACK_IMPORTED_MODULE_5__deliveryAddress_deliveryAddress_component__["a" /* deliveryAddressComponent */]
             }
         ]
     },
@@ -1386,7 +1634,7 @@ personalRoutingModule = __decorate([
 /***/ "../../../../../src/app/market/personal/personal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"personHeader\">\r\n\t<div class=\"headPortrait\">\r\n\t\t<img src=\"../../../assets/img/market/index/Personal/head_one.jpg\" alt=\"\">\r\n\t</div>\r\n\t<div class=\"link clear\">\r\n\t\t<label>追逐繁星的孩子</label>\r\n\t\t<span></span>\r\n\t</div>\r\n</div>\r\n<ul class=\"myInformation clear\">\r\n\t<li (click)=\"gotoPage('myBalance')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>163.86</strong>\r\n\t\t\t元\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的余额\r\n\t\t</p>\r\n\t</li>\r\n\t<li (click)=\"gotoPage('myCoupon')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>1</strong>\r\n\t\t\t张\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的优惠券\r\n\t\t</p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>160</strong>\r\n\t\t\t分\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的积分\r\n\t\t</p>\r\n\t</li>\r\n</ul>\r\n<div class='myOrder'>\r\n\t<div class=\"orderHead clear\">\r\n\t\t\t<h2>我的订单</h2>\r\n\t\t\t<a href=\"###\">查看全部</a>\r\n\t</div>\r\n\t<ul class=\"navOrder clear\">\r\n\t\t<li>\r\n\t\t\t待付款\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待发货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待收货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待评价\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"jumpOptions\">\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t收货地址管理\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t我的收藏\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"division\"> \t\r\n\t</span>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t礼品卡\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t兑换券\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t设置\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"divisionTwo\"> \t\r\n\t</span>\r\n</div>"
+module.exports = "<div class=\"personHeader\">\r\n\t<div class=\"headPortrait\">\r\n\t\t<img src=\"../../../assets/img/market/index/Personal/head_one.jpg\" alt=\"\">\r\n\t</div>\r\n\t<div class=\"link clear\">\r\n\t\t<label>追逐繁星的孩子</label>\r\n\t\t<span></span>\r\n\t</div>\r\n</div>\r\n<ul class=\"myInformation clear\">\r\n\t<li (click)=\"gotoPage('myBalance')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>163.86</strong>\r\n\t\t\t元\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的余额\r\n\t\t</p>\r\n\t</li>\r\n\t<li (click)=\"gotoPage('myCoupon')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>1</strong>\r\n\t\t\t张\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的优惠券\r\n\t\t</p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>160</strong>\r\n\t\t\t分\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的积分\r\n\t\t</p>\r\n\t</li>\r\n</ul>\r\n<div class='myOrder'>\r\n\t<div class=\"orderHead clear\">\r\n\t\t\t<h2>我的订单</h2>\r\n\t\t\t<a href=\"###\">查看全部</a>\r\n\t</div>\r\n\t<ul class=\"navOrder clear\">\r\n\t\t<li>\r\n\t\t\t待付款\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待发货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待收货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待评价\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"jumpOptions\">\r\n\t<a (click)=\"gotoPage('deliveryAddress')\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t收货地址管理\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a (click)=\"gotoPage('myCollection')\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t我的收藏\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"division\"> \t\r\n\t</span>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t礼品卡\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t兑换券\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t设置\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"divisionTwo\"> \t\r\n\t</span>\r\n</div>"
 
 /***/ }),
 

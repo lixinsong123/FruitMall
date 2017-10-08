@@ -21,6 +21,17 @@ $rem:75;
 			height: 100%;
 		}
 	}
+	.right{
+		position:absolute;
+		right: 0;
+		width: getRem(95);
+		line-height: getRem(60);
+		padding: getRem(10) 0;
+		top:0;
+		color: #666666;
+		font-size:getRem(26);
+		text-align: center;
+	}
 }
 .currencyHead{
 	line-height:getRem(80);

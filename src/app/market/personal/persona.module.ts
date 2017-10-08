@@ -8,6 +8,11 @@ import {myBalanceComponent} from './myBalance/myBalance.component';
 
 //个人优惠券模块
 import {myCouponComponent}  from './myCoupon/myCoupon.component';
+//个人收藏模块
+import {myCollectionComponent} from './myCollection/myCollection.component';
+//个人收货地址管理模块
+import {deliveryAddressComponent} from './deliveryAddress/deliveryAddress.component';
+
 //个人
 import {personalComponent} from './personal.component';
 
@@ -24,7 +29,9 @@ import {personalHeaderComponent} from './component/header.component';
   personalComponent,
   personalHeaderComponent,
   myBalanceComponent,
-  myCouponComponent
+  myCouponComponent,
+  myCollectionComponent,
+  deliveryAddressComponent
   ]
 })
 export class PersonalModule {}
