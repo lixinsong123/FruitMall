@@ -12,10 +12,57 @@ $rem:75;
 	.linkShow{
 		background: white;
 		border-bottom:1px solid #eee;
-		height: getRem(108);
+		padding:0 getRem(25);
+		.namePhone{
+			font-size:getRem(28);
+			color: #333333;
+			font-weight: bold;
+			line-height: getRem(56);
+			.phone{
+				margin-left: getRem(50);
+			}
+		}
+		.adress{
+			font-size: getRem(26);
+			color:#666666;
+			line-height: getRem(56);
+		}
 	}
 	.operation{
 		background: white;
-		height: getRem(65);
+		padding:0 getRem(25);
+		.setDefault{
+			padding:0 0 0 getRem(38);
+			font-size: getRem(22);
+			color: #979797;
+			float: left;
+			line-height: getRem(67);
+			background:url(../../../../assets/img/market/index/shopCart/no_active.png) no-repeat;
+			background-position: getRem(-92*2) getRem(14);
+			 background-size: getRem(110*2) getRem(19*2);
+		}
+		.active{
+			   background-position: 0 getRem(14);	  
+		}
+		.tool{
+			float: right;
+			span{
+				float: left;
+				width: getRem(108-36);
+				height: 100%;
+				padding:0 0 0 getRem(36);
+				font-size:getRem(22);
+				color: #979797;
+				line-height: getRem(65);
+				background:url(../../../../assets/img/market/index/tool.png) no-repeat;
+				background-size:getRem(84*2) getRem(19*2);
+			}
+			span:nth-of-type(1){
+				background-position:0 getRem(8*2);
+			}
+			span:nth-of-type(2){
+				background-position:getRem(-63*2) getRem(8*2);
+			}
+		}
 	}
 }

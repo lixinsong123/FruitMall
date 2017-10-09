@@ -12,10 +12,13 @@ import {myCouponComponent}  from './myCoupon/myCoupon.component';
 import {myCollectionComponent} from './myCollection/myCollection.component';
 //个人收货地址管理模块
 import {deliveryAddressComponent} from './deliveryAddress/deliveryAddress.component';
-
+import {addAddressComponent}  from './deliveryAddress/addAddress.component';
+//个人设置模块
+import {setUpComponent} from './setUp/setUp.component';
 //个人
 import {personalComponent} from './personal.component';
-
+//个人订单模块
+import {myOrderComponent} from './myOrder/myOrder.component';
 //通用组件
 import {personalHeaderComponent} from './component/header.component';
 
@@ -31,7 +34,10 @@ import {personalHeaderComponent} from './component/header.component';
   myBalanceComponent,
   myCouponComponent,
   myCollectionComponent,
-  deliveryAddressComponent
+  deliveryAddressComponent,
+  addAddressComponent,
+  setUpComponent,
+  myOrderComponent
   ]
 })
 export class PersonalModule {}

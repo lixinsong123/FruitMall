@@ -26,6 +26,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## 登录账户
+账户123456
+密码123456
 
 ## 完成了登录<->注册->首页<->分类
 
@@ -45,11 +48,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 个人页面布局完成
 静态界面布局。没有使用组件。
 
-##把个人重构为一个模块(Module)-->有自己的路由模块(routing.module)。其他3个后面也会重构为模块。
+## 把个人重构为一个模块(Module)-->有自己的路由模块(routing.module)。其他3个后面也会重构为模块。
 个人下有许多的子页面，为模块后，方便管理和书写。
 下属的-->我的余额组件完成--->建立一个通用的头部组件
 
-##我的优惠券，我的收藏页面前端页面完成。
+## 我的优惠券，我的收藏页面前端页面完成。
+
+## 个人设置页面。收货地址管理和添加地址页面完成且路由配置完成。
 
 
 	

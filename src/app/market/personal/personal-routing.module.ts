@@ -7,6 +7,9 @@ import {myCollectionComponent} from './myCollection/myCollection.component';
 
 import {deliveryAddressComponent} from './deliveryAddress/deliveryAddress.component';
 
+import {addAddressComponent}  from './deliveryAddress/addAddress.component';
+import {setUpComponent} from './setUp/setUp.component';
+import {myOrderComponent} from './myOrder/myOrder.component';
 const marketRoutes: Routes = [
   {
     path: 'personal',
@@ -24,8 +27,20 @@ const marketRoutes: Routes = [
         component:myCollectionComponent
       },
       {
+        path:'setUp',
+        component:setUpComponent
+      },
+      {
+         path:'myOrder',
+        component:myOrderComponent
+      },
+      {
         path:'deliveryAddress',
-        component:deliveryAddressComponent
+        component:deliveryAddressComponent,
+      },
+      {
+           path:'deliveryAddress/add',
+           component:addAddressComponent
       }
     ]
   },

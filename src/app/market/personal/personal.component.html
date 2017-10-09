@@ -39,7 +39,7 @@
 <div class='myOrder'>
 	<div class="orderHead clear">
 			<h2>我的订单</h2>
-			<a href="###">查看全部</a>
+			<a (click)="gotoPage('myOrder')">查看全部</a>
 	</div>
 	<ul class="navOrder clear">
 		<li>
@@ -91,7 +91,7 @@
 			
 		</span>
 	</a>
-	<a href="" class="layout clear">
+	<a (click)="gotoPage('setUp')" class="layout clear">
 		<p>
 			设置
 		</p>

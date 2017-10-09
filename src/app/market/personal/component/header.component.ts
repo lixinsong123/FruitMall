@@ -11,7 +11,7 @@ import { ActivatedRoute,Router} from '@angular/router';
 				<img src="../../../../assets/img/market/index/back2.png" alt="" />
 			</div>
 			
-			<div *ngIf="rightContro" class="right" >
+			<div *ngIf="rightContro" class="right" (click)=gotoPage(right.url)>
 				{{right.name}}
 			</div>
 
@@ -37,5 +37,11 @@ export class personalHeaderComponent implements OnInit{
 		}else{
 			this.rightContro=false;
 		}
+	}
+	//相对导航函数
+	gotoPage(route){
+		  //第二种"[routerLink]="[route]"如果我们用RouterLink来代替Router服务进行导航，就要使用相同的链接参数数组，
+		  //不过不再需要提供relativeTo属性。 ActivatedRoute已经隐含在了RouterLink指令中。
+		  this.router.navigate([route], { relativeTo: this.route });
 	}
 }

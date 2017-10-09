@@ -1,0 +1,42 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.information{
+	line-height:getRem(86);
+	border-bottom:1px solid #eeeeee;
+	label{
+		float: left;
+		text-indent: getRem(25);
+		width: getRem(149);
+		font-size:getRem(26);
+		color: #333333;
+	}
+	input{
+		float: right;
+		border:none;
+		width: getRem(596);
+		line-height:getRem(86);
+	}
+	input:focus{
+		border:none;
+		outline: none;
+	}
+}
+.sumbit{
+	background: #eeeeee;
+	padding:getRem(65) getRem(25);	
+	span{
+		display: block;
+		width: 100%;
+		line-height: getRem(90);
+		background: #fe5164;
+		color: #ffffff;
+		font-size: getRem(28);
+		border-radius:getRem(16);
+		text-align: center;
+	}
+}

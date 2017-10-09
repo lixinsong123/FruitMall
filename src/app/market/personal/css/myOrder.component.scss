@@ -1,0 +1,74 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.menu{
+	border:1px solid #eeeeee;
+	li{
+		float: left;
+		width: getRem(186);
+		line-height: getRem(80);
+		text-align: center;
+		font-size: getRem(28);
+		color: #666666;
+		font-weight: bold;
+	}
+	.active{
+		color: #fe5164;
+	}
+}
+.pendingPayment{
+	.common{
+		border-bottom: getRem(10) solid #eeeeee;
+		padding: 0 getRem(25);
+		.show{
+			border-bottom:1px solid #eeeeee;
+			height: getRem(263);
+			img{
+				height: getRem(263);
+				width: getRem(324);
+				float: left;
+			}
+			.link{
+				padding:getRem(20) 0 0 0;
+				float:right;
+				width: getRem(358);
+				.title{
+					font-size: getRem(28);
+					color: #333333;
+					line-height: getRem(40);
+				}
+				.content{
+					font-size: getRem(22);
+					color: #979797;
+					line-height: getRem(34);
+				}
+				.price{
+					line-height: getRem(93);
+					padding:getRem(58) 0 0 0;
+					.today{
+						font-size: getRem(26);
+						color: #fe5164;
+						strong{
+							font-size: getRem(38);
+						}
+					}
+					.origin{
+						font-size: getRem(26);
+						color: #979797;
+						b{
+							font-size:getRem(26);
+							text-decoration: line-through;
+						}
+					}
+				}
+			}
+		}
+		.tool{
+			height: getRem(80);
+		}
+	}
+}
