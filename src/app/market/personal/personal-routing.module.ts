@@ -35,6 +35,10 @@ const marketRoutes: Routes = [
         component:myOrderComponent
       },
       {
+         path:'myOrder/:id',
+        component:myOrderComponent
+      },
+      {
         path:'deliveryAddress',
         component:deliveryAddressComponent,
       },

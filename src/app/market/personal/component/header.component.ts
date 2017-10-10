@@ -1,5 +1,6 @@
 import { Component,Input,OnInit} from '@angular/core';
 import { ActivatedRoute,Router} from '@angular/router';
+import { Location }                 from '@angular/common';
 @Component({
   selector: 'personal-header',
   template:`
@@ -26,10 +27,10 @@ export class personalHeaderComponent implements OnInit{
 
 	rightContro=false;
 
-	constructor(private router:Router, private route: ActivatedRoute){
+	constructor(private router:Router, private route: ActivatedRoute, private location: Location){
 	}
 	goBack(){
-		this.router.navigate(['/personal']);
+		 this.location.back();
 	}
 	ngOnInit(){
 		if(this.right){

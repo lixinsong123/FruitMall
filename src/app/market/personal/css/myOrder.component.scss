@@ -20,8 +20,7 @@ $rem:75;
 		color: #fe5164;
 	}
 }
-.pendingPayment{
-	.common{
+.common{
 		border-bottom: getRem(10) solid #eeeeee;
 		padding: 0 getRem(25);
 		.show{
@@ -68,7 +67,53 @@ $rem:75;
 			}
 		}
 		.tool{
-			height: getRem(80);
+			padding: getRem(14) 0;
+			span{
+				float: right;
+				width: getRem(160);
+				line-height: getRem(51);
+				border:1px solid #eeeeee;
+				font-size: getRem(26);
+				text-align: center;
+				border-radius: getRem(28);
+				margin-right: getRem(25);
+				color: #666666;
+				border-color:#666666;
+			}
+		}
+}
+.pendingPayment{
+	.tool{
+		.cancellation{		
+	
+		}
+		.pay{
+				color:#ffffff;
+				background: #fe5164;
+				border-color:#fe5164;
+				
+		}
+	}			
+}
+.pendingDeliverGoods{
+	.tool{
+	}
+}
+.pendingGoodsReceipt{
+	.tool{
+		.confirm{
+				color:#ffffff;
+				background: #fe5164;
+				border-color:#fe5164;
+		}
+	}
+}
+.pendingeValuate{
+	.tool{
+		.evaluate{
+				color:#ffffff;
+				background: #fe5164;
+				border-color:#fe5164;
 		}
 	}
 }

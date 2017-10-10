@@ -42,16 +42,16 @@
 			<a (click)="gotoPage('myOrder')">查看全部</a>
 	</div>
 	<ul class="navOrder clear">
-		<li>
+		<li (click)="gotoPage('myOrder/Payment')">
 			待付款
 		</li>
-		<li>
+		<li (click)="gotoPage('myOrder/deliverGoods')">
 			待发货
 		</li>
-		<li>
+		<li (click)="gotoPage('myOrder/goodsReceipt')">
 			待收货
 		</li>
-		<li>
+		<li (click)="gotoPage('myOrder/evaluate')">
 			待评价
 		</li>
 	</ul>
