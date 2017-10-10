@@ -16,6 +16,10 @@ $rem:75;
 		color: #666666;
 		font-weight: bold;
 	}
+	li:focus{
+	    border:none;
+	    outline:none;
+	}
 	.active{
 		color: #fe5164;
 	}

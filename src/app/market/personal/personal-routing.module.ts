@@ -10,6 +10,12 @@ import {deliveryAddressComponent} from './deliveryAddress/deliveryAddress.compon
 import {addAddressComponent}  from './deliveryAddress/addAddress.component';
 import {setUpComponent} from './setUp/setUp.component';
 import {myOrderComponent} from './myOrder/myOrder.component';
+
+
+import {payMentComponent} from './myOrder/component/Payment.component';
+import {evaluateComponent} from './myOrder/component/evaluate.component';
+import {deliverGoodsComponent} from './myOrder/component/DeliverGoods.component';
+import {goodsReceiptComponent} from './myOrder/component/GoodsReceipt.component';
 const marketRoutes: Routes = [
   {
     path: 'personal',
@@ -32,11 +38,29 @@ const marketRoutes: Routes = [
       },
       {
          path:'myOrder',
-        component:myOrderComponent
-      },
-      {
-         path:'myOrder/:id',
-        component:myOrderComponent
+        component:myOrderComponent,
+        children:[
+          {
+            path:'',
+            component:payMentComponent
+          },
+          {
+            path:'payment',
+            component:payMentComponent
+          },
+          {
+            path:'evaluate',
+            component:evaluateComponent
+          },
+          {
+            path:'deliverGoods',
+            component:deliverGoodsComponent
+          },
+          {
+             path:'goodsReceipt',
+             component:goodsReceiptComponent
+          }
+        ]
       },
       {
         path:'deliveryAddress',

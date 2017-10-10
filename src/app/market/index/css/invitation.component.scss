@@ -1,0 +1,60 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+
+.bg{
+		width: 10rem;
+		height: getRem(764);
+		background: url(../../../../assets/img/market/reallyIndex/invitation/bg.png) no-repeat;
+		background-size:cover;
+		background-position:0 0;
+}
+.rewardDescription{
+	font-size:getRem(22);
+	color:#979797;
+	line-height:getRem(81);
+	text-align:center;
+}
+.footer{
+	border-top:1px solid #eeeeee;
+	line-height:getRem(100);
+	text-align:center;
+	font-size:getRem(26);
+	color:#666666;
+}
+.nav{
+	height:getRem(262);
+	padding:0 getRem(83);
+	p{
+		float: left;
+		width: getRem(192);
+		label{
+			font-size: getRem(26);
+			color: #333333;
+			text-align:center;
+			line-height: getRem(105);
+			display: block;
+			font-weight: bold;
+		}
+		span{
+			display: block;
+			width: getRem(192);
+			height: getRem(157);
+			background: url(../../../../assets/img/market/reallyIndex/invitation/ico.png) no-repeat;
+			background-size:cover;
+		}	
+	}
+	p:nth-of-type(1) span{
+		background-position:getRem(-54*2) 0;
+	}
+	p:nth-of-type(2) span{
+		background-position:getRem(-165*2) 0;
+	}
+	p:nth-of-type(3) span{
+		background-position:getRem(-281*2) 0;
+	}
+}

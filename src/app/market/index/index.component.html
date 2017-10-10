@@ -14,7 +14,7 @@
 	</div>
 </header>
  <!-- myMove 移动指令 -->
-<div class="bar">
+<div class="bar" myMove>
 	<ul class="view" >
 			<li>
 				<img src="../../../assets/img/market/index/bar_1.png" alt="">
@@ -35,7 +35,7 @@
 </div>
 <div class="navWrapper">
 	<ul class="clear">
-		<li>
+		<li [routerLink]="['groupPurchase']">
 			<label>团购</label>
 		</li>
 		<li>
@@ -44,7 +44,7 @@
 		<li>
 			<label>进口</label>
 		</li>
-		<li>
+		<li [routerLink]="['invitation']">
 			<label>邀请</label>
 		</li>
 	</ul>

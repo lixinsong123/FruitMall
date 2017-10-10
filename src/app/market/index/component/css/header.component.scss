@@ -1,0 +1,47 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.headParent{
+	border-bottom:1px solid #eeeeee;
+	position:relative;
+	.bgBack{
+		position:absolute;
+		left:0;
+		width: getRem(65);
+		height: getRem(60);
+		padding: getRem(10) 0;
+		top:0;
+		img{
+			float: left;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.right{
+		position:absolute;
+		right: 0;
+		width: getRem(95);
+		height: getRem(60);
+		padding: getRem(10) 0;
+		top:0;
+		color: #666666;
+		font-size:getRem(26);
+		text-align: center;
+		background: url(../../../../../assets/img/market/reallyIndex/invitation/invitationIco.png) no-repeat;
+		background-size:cover;
+		background-position:0 0;
+	}
+}
+.currencyHead{
+	line-height:getRem(80);
+	width:getRem(525);
+	margin:0 auto;
+	font-size:getRem(36);
+	color:#333333;
+	text-align:center;
+	font-weight:bold;
+}

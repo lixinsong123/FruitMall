@@ -58,9 +58,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 收货地址管理和添加地址页面完成且路由配置完成。
 
-## 我的订单页面完成。
+## 我的订单页面完成
+
 代付款-代发货-待收货-待评价。目前是在myOrder组件中的通过一个变量配合*ngIf控制.（改用子路由配置）
 个人-》我的订单跳转相关路由完成 
 
+## 我的订单页面重构完成
+
+重构为根据路由导航内容,优化了导航
+<ul class="menu clear">
+	<li routerLinkActive="active" [routerLink]="['payment']" >待付款</li>
+	<li routerLinkActive="active" [routerLink]="['deliverGoods']" >待发货</li>
+	<li routerLinkActive="active" [routerLink]="['goodsReceipt']" >待收货</li>
+	<li routerLinkActive="active" [routerLink]="['evaluate']"> 待评价</li>
+</ul>
+<router-outlet></router-outlet>
+
+## 开始做首页下的子模块
+  
+邀请页面已完成。首页使用了子路由导航。把首页重构为了一个Module
 
 	

@@ -19,6 +19,10 @@ import {setUpComponent} from './setUp/setUp.component';
 import {personalComponent} from './personal.component';
 //个人订单模块
 import {myOrderComponent} from './myOrder/myOrder.component';
+import {payMentComponent} from './myOrder/component/Payment.component';
+import {evaluateComponent} from './myOrder/component/evaluate.component';
+import {deliverGoodsComponent} from './myOrder/component/DeliverGoods.component';
+import {goodsReceiptComponent} from './myOrder/component/GoodsReceipt.component';
 //通用组件
 import {personalHeaderComponent} from './component/header.component';
 
@@ -37,7 +41,11 @@ import {personalHeaderComponent} from './component/header.component';
   deliveryAddressComponent,
   addAddressComponent,
   setUpComponent,
-  myOrderComponent
+  myOrderComponent,
+  payMentComponent,
+  evaluateComponent,
+  deliverGoodsComponent,
+  goodsReceiptComponent
   ]
 })
 export class PersonalModule {}

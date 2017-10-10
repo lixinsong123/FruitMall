@@ -818,6 +818,24 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/market/index/component/css/header.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".headParent {\n  border-bottom: 1px solid #eeeeee;\n  position: relative; }\n  .headParent .bgBack {\n    position: absolute;\n    left: 0;\n    width: 0.86666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0; }\n    .headParent .bgBack img {\n      float: left;\n      width: 100%;\n      height: 100%; }\n  .headParent .right {\n    position: absolute;\n    right: 0;\n    width: 1.26666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0;\n    color: #666666;\n    font-size: 0.34666667rem;\n    text-align: center;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/invitationIco.png") + ") no-repeat;\n    background-size: cover;\n    background-position: 0 0; }\n\n.currencyHead {\n  line-height: 1.06666667rem;\n  width: 7rem;\n  margin: 0 auto;\n  font-size: 0.48rem;\n  color: #333333;\n  text-align: center;\n  font-weight: bold; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../src/app/market/index/component/css/newToday.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -851,6 +869,74 @@ exports.push([module.i, ".spikeActivity {\n  height: 4rem;\n  border-bottom: 0.1
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/component/header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return indexHeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var indexHeaderComponent = (function () {
+    function indexHeaderComponent(router, route, location) {
+        this.router = router;
+        this.route = route;
+        this.location = location;
+        this.rightContro = false;
+    }
+    indexHeaderComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    indexHeaderComponent.prototype.ngOnInit = function () {
+        if (this.right) {
+            this.rightContro = true;
+        }
+        else {
+            this.rightContro = false;
+        }
+    };
+    //相对导航函数
+    indexHeaderComponent.prototype.gotoPage = function (route) {
+        //第二种"[routerLink]="[route]"如果我们用RouterLink来代替Router服务进行导航，就要使用相同的链接参数数组，
+        //不过不再需要提供relativeTo属性。 ActivatedRoute已经隐含在了RouterLink指令中。
+        this.router.navigate([route], { relativeTo: this.route });
+    };
+    return indexHeaderComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", Object)
+], indexHeaderComponent.prototype, "title", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+    __metadata("design:type", Object)
+], indexHeaderComponent.prototype, "right", void 0);
+indexHeaderComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'index-header',
+        template: "\n  \t\t<div class=\"headParent\">\n\t\t\t<div class=\"currencyHead\">\n\t\t\t\t{{title}}\n\t\t\t</div>\n\t\t\t<div class=\"bgBack\" (click)=\"goBack()\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/back2.png\" alt=\"\" />\n\t\t\t</div>\n\t\t\t\n\t\t\t<div  class=\"right\" (click)=gotoPage(right.url)>\n\t\t\t\t\n\t\t\t</div>\n\n  \t\t</div>\t\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/index/component/css/header.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _c || Object])
+], indexHeaderComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=header.component.js.map
 
 /***/ }),
 
@@ -916,10 +1002,131 @@ spikeActivityComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/market/index/css/groupPurchase.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/css/invitation.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg {\n  width: 10rem;\n  height: 10.18666667rem;\n  background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/bg.png") + ") no-repeat;\n  background-size: cover;\n  background-position: 0 0; }\n\n.rewardDescription {\n  font-size: 0.29333333rem;\n  color: #979797;\n  line-height: 1.08rem;\n  text-align: center; }\n\n.footer {\n  border-top: 1px solid #eeeeee;\n  line-height: 1.33333333rem;\n  text-align: center;\n  font-size: 0.34666667rem;\n  color: #666666; }\n\n.nav {\n  height: 3.49333333rem;\n  padding: 0 1.10666667rem; }\n  .nav p {\n    float: left;\n    width: 2.56rem; }\n    .nav p label {\n      font-size: 0.34666667rem;\n      color: #333333;\n      text-align: center;\n      line-height: 1.4rem;\n      display: block;\n      font-weight: bold; }\n    .nav p span {\n      display: block;\n      width: 2.56rem;\n      height: 2.09333333rem;\n      background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/ico.png") + ") no-repeat;\n      background-size: cover; }\n  .nav p:nth-of-type(1) span {\n    background-position: -1.44rem 0; }\n  .nav p:nth-of-type(2) span {\n    background-position: -4.4rem 0; }\n  .nav p:nth-of-type(3) span {\n    background-position: -7.49333333rem 0; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/groupPurchase/groupPurchase.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return groupPurchaseComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var groupPurchaseComponent = (function () {
+    function groupPurchaseComponent() {
+        this.title = "团购";
+    }
+    return groupPurchaseComponent;
+}());
+groupPurchaseComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t  <index-header [title]='title'></index-header>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/index/css/groupPurchase.component.scss")]
+    })
+], groupPurchaseComponent);
+
+//# sourceMappingURL=groupPurchase.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/index-routing.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return indexRoutingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invitation_invitation_component__ = __webpack_require__("../../../../../src/app/market/index/invitation/invitation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__groupPurchase_groupPurchase_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/groupPurchase.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+//邀请
+
+
+var marketRoutes = [
+    {
+        path: 'index',
+        children: [
+            {
+                path: 'invitation',
+                component: __WEBPACK_IMPORTED_MODULE_2__invitation_invitation_component__["a" /* invitationComponent */]
+            },
+            {
+                path: 'groupPurchase',
+                component: __WEBPACK_IMPORTED_MODULE_3__groupPurchase_groupPurchase_component__["a" /* groupPurchaseComponent */]
+            }
+        ]
+    },
+];
+var indexRoutingModule = (function () {
+    function indexRoutingModule() {
+    }
+    return indexRoutingModule;
+}());
+indexRoutingModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild(marketRoutes)
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]
+        ]
+    })
+], indexRoutingModule);
+
+//# sourceMappingURL=index-routing.module.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/market/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"index clear\">\r\n\t<div class=\"city\">\r\n\t\t<label>北京</label>\r\n\t\t<span id=\"SJX_DOWN\"></span>\r\n\t</div>\r\n\t<div class=\"search\">\r\n\t\t<div>\r\n\t\t\t<span class=\"search_ico\"></span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"customer\">\r\n\t\t<span class=\"customer_ico\">\t\r\n\t\t</span>\r\n\t</div>\r\n</header>\r\n <!-- myMove 移动指令 -->\r\n<div class=\"bar\">\r\n\t<ul class=\"view\" >\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_1.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_2.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_3.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t</ul>\r\n\t<ul class=\"controller\">\r\n\t\t<li class=\"active\"></li>\r\n\t\t<li></li>\r\n\t\t<li></li>\r\n\t</ul>\r\n</div>\r\n<div class=\"navWrapper\">\r\n\t<ul class=\"clear\">\r\n\t\t<li>\r\n\t\t\t<label>团购</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>秒杀</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>进口</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>邀请</label>\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"componentParent\">\r\n\t<!-- 秒杀活动组件-->\r\n\t<spike-activity></spike-activity>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n</div>\r\n"
+module.exports = "<header class=\"index clear\">\r\n\t<div class=\"city\">\r\n\t\t<label>北京</label>\r\n\t\t<span id=\"SJX_DOWN\"></span>\r\n\t</div>\r\n\t<div class=\"search\">\r\n\t\t<div>\r\n\t\t\t<span class=\"search_ico\"></span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"customer\">\r\n\t\t<span class=\"customer_ico\">\t\r\n\t\t</span>\r\n\t</div>\r\n</header>\r\n <!-- myMove 移动指令 -->\r\n<div class=\"bar\" myMove>\r\n\t<ul class=\"view\" >\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_1.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_2.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_3.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t</ul>\r\n\t<ul class=\"controller\">\r\n\t\t<li class=\"active\"></li>\r\n\t\t<li></li>\r\n\t\t<li></li>\r\n\t</ul>\r\n</div>\r\n<div class=\"navWrapper\">\r\n\t<ul class=\"clear\">\r\n\t\t<li [routerLink]=\"['groupPurchase']\">\r\n\t\t\t<label>团购</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>秒杀</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>进口</label>\r\n\t\t</li>\r\n\t\t<li [routerLink]=\"['invitation']\">\r\n\t\t\t<label>邀请</label>\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"componentParent\">\r\n\t<!-- 秒杀活动组件-->\r\n\t<spike-activity></spike-activity>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -949,6 +1156,84 @@ indexComponent = __decorate([
 ], indexComponent);
 
 //# sourceMappingURL=index.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/index.modules.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IndexModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_routing_module__ = __webpack_require__("../../../../../src/app/market/index/index-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__invitation_invitation_component__ = __webpack_require__("../../../../../src/app/market/index/invitation/invitation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__groupPurchase_groupPurchase_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/groupPurchase.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_header_component__ = __webpack_require__("../../../../../src/app/market/index/component/header.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+//邀请
+
+//团购
+
+
+var IndexModule = (function () {
+    function IndexModule() {
+    }
+    return IndexModule;
+}());
+IndexModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+            __WEBPACK_IMPORTED_MODULE_2__index_routing_module__["a" /* indexRoutingModule */],
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_5__component_header_component__["a" /* indexHeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_3__invitation_invitation_component__["a" /* invitationComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__groupPurchase_groupPurchase_component__["a" /* groupPurchaseComponent */]
+        ]
+    })
+], IndexModule);
+
+//# sourceMappingURL=index.modules.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/invitation/invitation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return invitationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var invitationComponent = (function () {
+    function invitationComponent() {
+        this.title = "邀请好友";
+    }
+    return invitationComponent;
+}());
+invitationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t  <index-header [title]='title'></index-header>\n\t  <div class=\"bg\"> \n\t  </div>\n\t  <div class=\"rewardDescription\">\n\t\t\t\u5956\u52B1\u8BF4\u660E >\n\t  </div>\n\t  <div class='nav clear'>\n\t\t  <p>\n\t\t  \t<span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\t\u5FAE\u535A\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t\t  <p>\n\t\t \t <span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\t\u5FAE\u4FE1\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t\t  <p>\n\t\t  \t<span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\tqq\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t  </div>\n\t  <div class=\"footer\">\n\t\t\u60A8\u5DF2\u6210\u529F\u9080\u8BF7<span>2</span>\u4EBA\uFF0C\u7D2F\u8BA1\u83B7\u5F97\u73B0\u91D1<span>50.0</span>\u5143\uFF0C<span>1</span>\u5F20\u5151\u6362\u5238\n\t  </div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/index/css/invitation.component.scss")]
+    })
+], invitationComponent);
+
+//# sourceMappingURL=invitation.component.js.map
 
 /***/ }),
 
@@ -1061,20 +1346,21 @@ marKetComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personal_persona_module__ = __webpack_require__("../../../../../src/app/market/personal/persona.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__market_routing_module__ = __webpack_require__("../../../../../src/app/market/market-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__index_index_component__ = __webpack_require__("../../../../../src/app/market/index/index.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classify_classify_component__ = __webpack_require__("../../../../../src/app/market/classify/classify.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shopCart_shopCart_component__ = __webpack_require__("../../../../../src/app/market/shopCart/shopCart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directive_move_directive__ = __webpack_require__("../../../../../src/app/market/directive/move.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__market_component__ = __webpack_require__("../../../../../src/app/market/market.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__index_component_spikeActivity_component__ = __webpack_require__("../../../../../src/app/market/index/component/spikeActivity.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__index_component_newToday_component__ = __webpack_require__("../../../../../src/app/market/index/component/newToday.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__classify_component_typeClassfy_component__ = __webpack_require__("../../../../../src/app/market/classify/component/typeClassfy.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__classify_component_recommendToday_component__ = __webpack_require__("../../../../../src/app/market/classify/component/recommendToday.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__shopCart_component_moneySettlement_component__ = __webpack_require__("../../../../../src/app/market/shopCart/component/moneySettlement.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shopCart_component_shopArticles_component__ = __webpack_require__("../../../../../src/app/market/shopCart/component/shopArticles.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__repeatComponent_headOne_component__ = __webpack_require__("../../../../../src/app/market/repeatComponent/headOne.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_index_modules__ = __webpack_require__("../../../../../src/app/market/index/index.modules.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__market_routing_module__ = __webpack_require__("../../../../../src/app/market/market-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index_index_component__ = __webpack_require__("../../../../../src/app/market/index/index.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__classify_classify_component__ = __webpack_require__("../../../../../src/app/market/classify/classify.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shopCart_shopCart_component__ = __webpack_require__("../../../../../src/app/market/shopCart/shopCart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directive_move_directive__ = __webpack_require__("../../../../../src/app/market/directive/move.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__market_component__ = __webpack_require__("../../../../../src/app/market/market.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__index_component_spikeActivity_component__ = __webpack_require__("../../../../../src/app/market/index/component/spikeActivity.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__index_component_newToday_component__ = __webpack_require__("../../../../../src/app/market/index/component/newToday.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__classify_component_typeClassfy_component__ = __webpack_require__("../../../../../src/app/market/classify/component/typeClassfy.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__classify_component_recommendToday_component__ = __webpack_require__("../../../../../src/app/market/classify/component/recommendToday.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shopCart_component_moneySettlement_component__ = __webpack_require__("../../../../../src/app/market/shopCart/component/moneySettlement.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__shopCart_component_shopArticles_component__ = __webpack_require__("../../../../../src/app/market/shopCart/component/shopArticles.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__repeatComponent_headOne_component__ = __webpack_require__("../../../../../src/app/market/repeatComponent/headOne.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1084,6 +1370,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //个人模块
+
+//首页模块
 
 
 //首页
@@ -1117,24 +1405,25 @@ var MarketModule = (function () {
 MarketModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_3__market_routing_module__["a" /* MarketRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_2__personal_persona_module__["a" /* PersonalModule */]
+            __WEBPACK_IMPORTED_MODULE_4__market_routing_module__["a" /* MarketRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_2__personal_persona_module__["a" /* PersonalModule */],
+            __WEBPACK_IMPORTED_MODULE_3__index_index_modules__["a" /* IndexModule */]
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_9__market_component__["a" /* marKetComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__index_index_component__["a" /* indexComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__directive_move_directive__["a" /* MoveDirective */],
-            __WEBPACK_IMPORTED_MODULE_10__index_component_spikeActivity_component__["a" /* spikeActivityComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__index_component_newToday_component__["a" /* newTodayComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__classify_classify_component__["a" /* classifyComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__classify_component_typeClassfy_component__["a" /* typeClassifyComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__classify_component_recommendToday_component__["a" /* recommendTodayComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__repeatComponent_headOne_component__["a" /* headOneComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__shopCart_shopCart_component__["a" /* shopCartComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__shopCart_component_moneySettlement_component__["a" /* moneySettlementComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__shopCart_component_shopArticles_component__["a" /* shopArticlesComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__market_component__["a" /* marKetComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__index_index_component__["a" /* indexComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__directive_move_directive__["a" /* MoveDirective */],
+            __WEBPACK_IMPORTED_MODULE_11__index_component_spikeActivity_component__["a" /* spikeActivityComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__index_component_newToday_component__["a" /* newTodayComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__classify_classify_component__["a" /* classifyComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__classify_component_typeClassfy_component__["a" /* typeClassifyComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__classify_component_recommendToday_component__["a" /* recommendTodayComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__repeatComponent_headOne_component__["a" /* headOneComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__shopCart_shopCart_component__["a" /* shopCartComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__shopCart_component_moneySettlement_component__["a" /* moneySettlementComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__shopCart_component_shopArticles_component__["a" /* shopArticlesComponent */]
         ]
     })
 ], MarketModule);
@@ -1150,6 +1439,7 @@ MarketModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return personalHeaderComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1161,14 +1451,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var personalHeaderComponent = (function () {
-    function personalHeaderComponent(router, route) {
+    function personalHeaderComponent(router, route, location) {
         this.router = router;
         this.route = route;
+        this.location = location;
         this.rightContro = false;
     }
     personalHeaderComponent.prototype.goBack = function () {
-        this.router.navigate(['/personal']);
+        this.location.back();
     };
     personalHeaderComponent.prototype.ngOnInit = function () {
         if (this.right) {
@@ -1200,10 +1492,10 @@ personalHeaderComponent = __decorate([
         template: "\n  \t\t<div class=\"headParent\">\n\t\t\t<div class=\"currencyHead\">\n\t\t\t\t{{title}}\n\t\t\t</div>\n\t\t\t<div class=\"bgBack\" (click)=\"goBack()\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/back2.png\" alt=\"\" />\n\t\t\t</div>\n\t\t\t\n\t\t\t<div *ngIf=\"rightContro\" class=\"right\" (click)=gotoPage(right.url)>\n\t\t\t\t{{right.name}}\n\t\t\t</div>\n\n  \t\t</div>\t\n  ",
         styles: [__webpack_require__("../../../../../src/app/market/personal/css/myBalance.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]) === "function" && _c || Object])
 ], personalHeaderComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=header.component.js.map
 
 /***/ }),
@@ -1288,7 +1580,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".menu {\n  border: 1px solid #eeeeee; }\n  .menu li {\n    float: left;\n    width: 2.48rem;\n    line-height: 1.06666667rem;\n    text-align: center;\n    font-size: 0.37333333rem;\n    color: #666666;\n    font-weight: bold; }\n  .menu .active {\n    color: #fe5164; }\n\n.pendingPayment .common {\n  border-bottom: 0.13333333rem solid #eeeeee;\n  padding: 0 0.33333333rem; }\n  .pendingPayment .common .show {\n    border-bottom: 1px solid #eeeeee;\n    height: 3.50666667rem; }\n    .pendingPayment .common .show img {\n      height: 3.50666667rem;\n      width: 4.32rem;\n      float: left; }\n    .pendingPayment .common .show .link {\n      padding: 0.26666667rem 0 0 0;\n      float: right;\n      width: 4.77333333rem; }\n      .pendingPayment .common .show .link .title {\n        font-size: 0.37333333rem;\n        color: #333333;\n        line-height: 0.53333333rem; }\n      .pendingPayment .common .show .link .content {\n        font-size: 0.29333333rem;\n        color: #979797;\n        line-height: 0.45333333rem; }\n      .pendingPayment .common .show .link .price {\n        line-height: 1.24rem;\n        padding: 0.77333333rem 0 0 0; }\n        .pendingPayment .common .show .link .price .today {\n          font-size: 0.34666667rem;\n          color: #fe5164; }\n          .pendingPayment .common .show .link .price .today strong {\n            font-size: 0.50666667rem; }\n        .pendingPayment .common .show .link .price .origin {\n          font-size: 0.34666667rem;\n          color: #979797; }\n          .pendingPayment .common .show .link .price .origin b {\n            font-size: 0.34666667rem;\n            text-decoration: line-through; }\n  .pendingPayment .common .tool {\n    height: 1.06666667rem; }\n", ""]);
+exports.push([module.i, ".menu {\n  border: 1px solid #eeeeee; }\n  .menu li {\n    float: left;\n    width: 2.48rem;\n    line-height: 1.06666667rem;\n    text-align: center;\n    font-size: 0.37333333rem;\n    color: #666666;\n    font-weight: bold; }\n  .menu li:focus {\n    border: none;\n    outline: none; }\n  .menu .active {\n    color: #fe5164; }\n\n.common {\n  border-bottom: 0.13333333rem solid #eeeeee;\n  padding: 0 0.33333333rem; }\n  .common .show {\n    border-bottom: 1px solid #eeeeee;\n    height: 3.50666667rem; }\n    .common .show img {\n      height: 3.50666667rem;\n      width: 4.32rem;\n      float: left; }\n    .common .show .link {\n      padding: 0.26666667rem 0 0 0;\n      float: right;\n      width: 4.77333333rem; }\n      .common .show .link .title {\n        font-size: 0.37333333rem;\n        color: #333333;\n        line-height: 0.53333333rem; }\n      .common .show .link .content {\n        font-size: 0.29333333rem;\n        color: #979797;\n        line-height: 0.45333333rem; }\n      .common .show .link .price {\n        line-height: 1.24rem;\n        padding: 0.77333333rem 0 0 0; }\n        .common .show .link .price .today {\n          font-size: 0.34666667rem;\n          color: #fe5164; }\n          .common .show .link .price .today strong {\n            font-size: 0.50666667rem; }\n        .common .show .link .price .origin {\n          font-size: 0.34666667rem;\n          color: #979797; }\n          .common .show .link .price .origin b {\n            font-size: 0.34666667rem;\n            text-decoration: line-through; }\n  .common .tool {\n    padding: 0.18666667rem 0; }\n    .common .tool span {\n      float: right;\n      width: 2.13333333rem;\n      line-height: 0.68rem;\n      border: 1px solid #eeeeee;\n      font-size: 0.34666667rem;\n      text-align: center;\n      border-radius: 0.37333333rem;\n      margin-right: 0.33333333rem;\n      color: #666666;\n      border-color: #666666; }\n\n.pendingPayment .tool .pay {\n  color: #ffffff;\n  background: #fe5164;\n  border-color: #fe5164; }\n\n.pendingGoodsReceipt .tool .confirm {\n  color: #ffffff;\n  background: #fe5164;\n  border-color: #fe5164; }\n\n.pendingeValuate .tool .evaluate {\n  color: #ffffff;\n  background: #fe5164;\n  border-color: #fe5164; }\n", ""]);
 
 // exports
 
@@ -1636,11 +1928,11 @@ myCouponComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/market/personal/myOrder/myOrder.component.ts":
+/***/ "../../../../../src/app/market/personal/myOrder/component/DeliverGoods.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return myOrderComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return deliverGoodsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1649,19 +1941,288 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
+var deliverGoodsComponent = (function () {
+    function deliverGoodsComponent() {
+        // 代付款数据
+        this.paymentData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_two.png',
+                title: '黔阳冰糖橙3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '66.9',
+                priceOrigin: '99.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_three.png',
+                title: '菲律宾龙眼3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '45.9',
+                priceOrigin: '85.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            }
+        ];
+    }
+    return deliverGoodsComponent;
+}());
+deliverGoodsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<div class=\"pendingDeliverGoods\" >\n\t\t<div class=\"common\" *ngFor=\"let item of paymentData\">\n\t\t\t<div class=\"show clear\">\n\t\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t\t\t<div class=\"link\">\n\t\t\t\t\t<p class=\"title\">\n\t\t\t\t\t\t{{item.title}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"content\">\n\t\t\t\t\t\t{{item.content}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"price\">\n\t\t\t\t\t\t<span class=\"today\">\uFFE5<strong>{{item.priceToday}}</strong></span>\n\t\t\t\t\t\t<span class=\"origin\">\uFFE5<b>{{item.priceOrigin}}</b></span>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"tool clear\">\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u53D6\u6D88\u8BA2\u5355\n\t\t\t\t\t</span>\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u63D0\u9192\u53D1\u8D27\n\t\t\t\t\t</span>\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u8054\u7CFB\u5356\u5BB6\n\t\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myOrder.component.scss")]
+    })
+], deliverGoodsComponent);
+
+//# sourceMappingURL=DeliverGoods.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/myOrder/component/GoodsReceipt.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return goodsReceiptComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var goodsReceiptComponent = (function () {
+    function goodsReceiptComponent() {
+        // 代付款数据
+        this.paymentData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_two.png',
+                title: '黔阳冰糖橙3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '66.9',
+                priceOrigin: '99.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_three.png',
+                title: '菲律宾龙眼3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '45.9',
+                priceOrigin: '85.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            }
+        ];
+    }
+    return goodsReceiptComponent;
+}());
+goodsReceiptComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<div class=\"pendingGoodsReceipt\" >\n\t\t<div class=\"common\" *ngFor=\"let item of paymentData\">\n\t\t\t<div class=\"show clear\">\n\t\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t\t\t<div class=\"link\">\n\t\t\t\t\t<p class=\"title\">\n\t\t\t\t\t\t{{item.title}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"content\">\n\t\t\t\t\t\t{{item.content}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"price\">\n\t\t\t\t\t\t<span class=\"today\">\uFFE5<strong>{{item.priceToday}}</strong></span>\n\t\t\t\t\t\t<span class=\"origin\">\uFFE5<b>{{item.priceOrigin}}</b></span>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"tool clear\">\n\t\t\t\t\t<span class=\"confirm\">\n\t\t\t\t\t\t\u786E\u8BA4\u6536\u8D27\n\t\t\t\t\t</span>\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u6279\u91CF\u9000\u6B3E\n\t\t\t\t\t</span>\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u67E5\u770B\u7269\u6D41\n\t\t\t\t\t</span>\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myOrder.component.scss")]
+    })
+], goodsReceiptComponent);
+
+//# sourceMappingURL=GoodsReceipt.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/myOrder/component/Payment.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return payMentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var payMentComponent = (function () {
+    function payMentComponent() {
+        // 代付款数据
+        this.paymentData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_two.png',
+                title: '黔阳冰糖橙3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '66.9',
+                priceOrigin: '99.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_three.png',
+                title: '菲律宾龙眼3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '45.9',
+                priceOrigin: '85.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            }
+        ];
+    }
+    payMentComponent.prototype.ngOnInit = function () {
+    };
+    return payMentComponent;
+}());
+payMentComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<div class=\"pendingPayment\">\n\t\t<div class=\"common\" *ngFor=\"let item of paymentData\">\n\t\t\t<div class=\"show clear\">\n\t\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t\t\t<div class=\"link\">\n\t\t\t\t\t<p class=\"title\">\n\t\t\t\t\t\t{{item.title}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"content\">\n\t\t\t\t\t\t{{item.content}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"price\">\n\t\t\t\t\t\t<span class=\"today\">\uFFE5<strong>{{item.priceToday}}</strong></span>\n\t\t\t\t\t\t<span class=\"origin\">\uFFE5<b>{{item.priceOrigin}}</b></span>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"tool clear\">\n\t\t\t\t<span class=\"pay\">\n\t\t\t\t\t\u53BB\u652F\u4ED8\n\t\t\t\t</span>\n\t\t\t\t<span class=\"cancellation\">\n\t\t\t\t\t\u53D6\u6D88\u8BA2\u5355\n\t\t\t\t</span>\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myOrder.component.scss")]
+    })
+], payMentComponent);
+
+//# sourceMappingURL=Payment.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/myOrder/component/evaluate.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return evaluateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var evaluateComponent = (function () {
+    function evaluateComponent() {
+        // 代付款数据
+        this.paymentData = [
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_two.png',
+                title: '黔阳冰糖橙3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '66.9',
+                priceOrigin: '99.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_three.png',
+                title: '菲律宾龙眼3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '45.9',
+                priceOrigin: '85.9',
+            },
+            {
+                imgUrl: '../../../../assets/img/market/index/Personal/myOrder/friut_one.png',
+                title: '意大利绿奇异果3200g/20个',
+                content: '享受清爽汁水融进齿间感觉',
+                priceToday: '35.9',
+                priceOrigin: '55.9',
+            }
+        ];
+    }
+    return evaluateComponent;
+}());
+evaluateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<div class=\"pendingeValuate\" >\n\t\t<div class=\"common\" *ngFor=\"let item of paymentData\">\n\t\t\t<div class=\"show clear\">\n\t\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t\t\t<div class=\"link\">\n\t\t\t\t\t<p class=\"title\">\n\t\t\t\t\t\t{{item.title}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"content\">\n\t\t\t\t\t\t{{item.content}}\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"price\">\n\t\t\t\t\t\t<span class=\"today\">\uFFE5<strong>{{item.priceToday}}</strong></span>\n\t\t\t\t\t\t<span class=\"origin\">\uFFE5<b>{{item.priceOrigin}}</b></span>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"tool clear\">\n\t\t\t\t\t<span class=\"evaluate\">\n\t\t\t\t\t\t\u8BC4\u4EF7\n\t\t\t\t\t</span>\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u5220\u9664\u8BA2\u5355\n\t\t\t\t\t</span>\n\t\t\t\t\t<span>\n\t\t\t\t\t\t\u5F00\u7968\u7533\u8BF7\n\t\t\t\t\t</span>\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/personal/css/myOrder.component.scss")]
+    })
+], evaluateComponent);
+
+//# sourceMappingURL=evaluate.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/personal/myOrder/myOrder.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return myOrderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 var myOrderComponent = (function () {
-    function myOrderComponent() {
+    function myOrderComponent(route, router) {
+        this.route = route;
+        this.router = router;
         this.title = "我的订单";
     }
+    // //控制显示那一类别的数据
+    // menuControlle={
+    // 	payment:true,
+    // 	deliverGoods:false,
+    // 	goodsReceipt:false,
+    // 	evaluate:false
+    // };
+    myOrderComponent.prototype.ngOnInit = function () {
+        // this.route.params.subscribe(params => {
+        //           console.log(params); 
+        //           let id =params.id;
+        //           if(id==undefined){
+        //           	//默认
+        //           }else{
+        //           	 this.showMenu(id);
+        //           }
+        //       });
+    };
     return myOrderComponent;
 }());
 myOrderComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: "\n\t<personal-header [title]=\"title\"></personal-header>\n\t<ul class=\"menu clear\">\n\t\t<li class=\"active\">\u5F85\u4ED8\u6B3E</li>\n\t\t<li>\u5F85\u53D1\u8D27</li>\n\t\t<li>\u5F85\u6536\u8D27</li>\n\t\t<li>\u5F85\u8BC4\u4EF7</li>\n\t</ul>\n\t<div class=\"pendingPayment\">\n\t\t<div class=\"common\">\n\t\t\t<div class=\"show clear\">\n\t\t\t\t<img src=\"../../../../assets/img/market/index/Personal/myOrder/friut_one.png\" alt=\"\" />\n\t\t\t\t<div class=\"link\">\n\t\t\t\t\t<p class=\"title\">\n\t\t\t\t\t\t\u610F\u5927\u5229\u7EFF\u5947\u5F02\u679C3200g/20\u4E2A\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"content\">\n\t\t\t\t\t\t\u4EAB\u53D7\u6E05\u723D\u6C41\u6C34\u878D\u8FDB\u9F7F\u95F4\u611F\u89C9\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"price\">\n\t\t\t\t\t\t<span class=\"today\">\uFFE5<strong>35.9</strong></span>\n\t\t\t\t\t\t<span class=\"origin\">\uFFE5<b>55.9</b></span>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"tool\">\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n  ",
+        template: "\n\t<personal-header [title]=\"title\"></personal-header>\n\t<ul class=\"menu clear\">\n\t\t<li routerLinkActive=\"active\" [routerLink]=\"['payment']\" >\u5F85\u4ED8\u6B3E</li>\n\t\t<li routerLinkActive=\"active\" [routerLink]=\"['deliverGoods']\" >\u5F85\u53D1\u8D27</li>\n\t\t<li routerLinkActive=\"active\" [routerLink]=\"['goodsReceipt']\" >\u5F85\u6536\u8D27</li>\n\t\t<li routerLinkActive=\"active\" [routerLink]=\"['evaluate']\"> \u5F85\u8BC4\u4EF7</li>\n\t</ul>\n  \t<router-outlet></router-outlet>\n\t\n  ",
         styles: [__webpack_require__("../../../../../src/app/market/personal/css/myOrder.component.scss")]
-    })
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], myOrderComponent);
 
+var _a, _b;
 //# sourceMappingURL=myOrder.component.js.map
 
 /***/ }),
@@ -1682,7 +2243,11 @@ myOrderComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__setUp_setUp_component__ = __webpack_require__("../../../../../src/app/market/personal/setUp/setUp.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__personal_component__ = __webpack_require__("../../../../../src/app/market/personal/personal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__myOrder_myOrder_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/myOrder.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__component_header_component__ = __webpack_require__("../../../../../src/app/market/personal/component/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__myOrder_component_Payment_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/Payment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__myOrder_component_evaluate_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/evaluate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__myOrder_component_DeliverGoods_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/DeliverGoods.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__myOrder_component_GoodsReceipt_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/GoodsReceipt.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__component_header_component__ = __webpack_require__("../../../../../src/app/market/personal/component/header.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1707,6 +2272,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 //个人订单模块
 
+
+
+
+
 //通用组件
 
 var PersonalModule = (function () {
@@ -1722,14 +2291,18 @@ PersonalModule = __decorate([
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_9__personal_component__["a" /* personalComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__component_header_component__["a" /* personalHeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__component_header_component__["a" /* personalHeaderComponent */],
             __WEBPACK_IMPORTED_MODULE_3__myBalance_myBalance_component__["a" /* myBalanceComponent */],
             __WEBPACK_IMPORTED_MODULE_4__myCoupon_myCoupon_component__["a" /* myCouponComponent */],
             __WEBPACK_IMPORTED_MODULE_5__myCollection_myCollection_component__["a" /* myCollectionComponent */],
             __WEBPACK_IMPORTED_MODULE_6__deliveryAddress_deliveryAddress_component__["a" /* deliveryAddressComponent */],
             __WEBPACK_IMPORTED_MODULE_7__deliveryAddress_addAddress_component__["a" /* addAddressComponent */],
             __WEBPACK_IMPORTED_MODULE_8__setUp_setUp_component__["a" /* setUpComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__myOrder_myOrder_component__["a" /* myOrderComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__myOrder_myOrder_component__["a" /* myOrderComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__myOrder_component_Payment_component__["a" /* payMentComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__myOrder_component_evaluate_component__["a" /* evaluateComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__myOrder_component_DeliverGoods_component__["a" /* deliverGoodsComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__myOrder_component_GoodsReceipt_component__["a" /* goodsReceiptComponent */]
         ]
     })
 ], PersonalModule);
@@ -1752,12 +2325,20 @@ PersonalModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__deliveryAddress_addAddress_component__ = __webpack_require__("../../../../../src/app/market/personal/deliveryAddress/addAddress.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__setUp_setUp_component__ = __webpack_require__("../../../../../src/app/market/personal/setUp/setUp.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__myOrder_myOrder_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/myOrder.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myOrder_component_Payment_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/Payment.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__myOrder_component_evaluate_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/evaluate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__myOrder_component_DeliverGoods_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/DeliverGoods.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__myOrder_component_GoodsReceipt_component__ = __webpack_require__("../../../../../src/app/market/personal/myOrder/component/GoodsReceipt.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -1789,7 +2370,29 @@ var marketRoutes = [
             },
             {
                 path: 'myOrder',
-                component: __WEBPACK_IMPORTED_MODULE_8__myOrder_myOrder_component__["a" /* myOrderComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_8__myOrder_myOrder_component__["a" /* myOrderComponent */],
+                children: [
+                    {
+                        path: '',
+                        component: __WEBPACK_IMPORTED_MODULE_9__myOrder_component_Payment_component__["a" /* payMentComponent */]
+                    },
+                    {
+                        path: 'payment',
+                        component: __WEBPACK_IMPORTED_MODULE_9__myOrder_component_Payment_component__["a" /* payMentComponent */]
+                    },
+                    {
+                        path: 'evaluate',
+                        component: __WEBPACK_IMPORTED_MODULE_10__myOrder_component_evaluate_component__["a" /* evaluateComponent */]
+                    },
+                    {
+                        path: 'deliverGoods',
+                        component: __WEBPACK_IMPORTED_MODULE_11__myOrder_component_DeliverGoods_component__["a" /* deliverGoodsComponent */]
+                    },
+                    {
+                        path: 'goodsReceipt',
+                        component: __WEBPACK_IMPORTED_MODULE_12__myOrder_component_GoodsReceipt_component__["a" /* goodsReceiptComponent */]
+                    }
+                ]
             },
             {
                 path: 'deliveryAddress',
@@ -1825,7 +2428,7 @@ personalRoutingModule = __decorate([
 /***/ "../../../../../src/app/market/personal/personal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"personHeader\">\r\n\t<div class=\"headPortrait\">\r\n\t\t<img src=\"../../../assets/img/market/index/Personal/head_one.jpg\" alt=\"\">\r\n\t</div>\r\n\t<div class=\"link clear\">\r\n\t\t<label>追逐繁星的孩子</label>\r\n\t\t<span></span>\r\n\t</div>\r\n</div>\r\n<ul class=\"myInformation clear\">\r\n\t<li (click)=\"gotoPage('myBalance')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>163.86</strong>\r\n\t\t\t元\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的余额\r\n\t\t</p>\r\n\t</li>\r\n\t<li (click)=\"gotoPage('myCoupon')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>1</strong>\r\n\t\t\t张\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的优惠券\r\n\t\t</p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>160</strong>\r\n\t\t\t分\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的积分\r\n\t\t</p>\r\n\t</li>\r\n</ul>\r\n<div class='myOrder'>\r\n\t<div class=\"orderHead clear\">\r\n\t\t\t<h2>我的订单</h2>\r\n\t\t\t<a (click)=\"gotoPage('myOrder')\">查看全部</a>\r\n\t</div>\r\n\t<ul class=\"navOrder clear\">\r\n\t\t<li>\r\n\t\t\t待付款\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待发货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待收货\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t待评价\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"jumpOptions\">\r\n\t<a (click)=\"gotoPage('deliveryAddress')\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t收货地址管理\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a (click)=\"gotoPage('myCollection')\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t我的收藏\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"division\"> \t\r\n\t</span>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t礼品卡\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t兑换券\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a (click)=\"gotoPage('setUp')\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t设置\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"divisionTwo\"> \t\r\n\t</span>\r\n</div>"
+module.exports = "<div class=\"personHeader\">\r\n\t<div class=\"headPortrait\">\r\n\t\t<img src=\"../../../assets/img/market/index/Personal/head_one.jpg\" alt=\"\">\r\n\t</div>\r\n\t<div class=\"link clear\">\r\n\t\t<label>追逐繁星的孩子</label>\r\n\t\t<span></span>\r\n\t</div>\r\n</div>\r\n<ul class=\"myInformation clear\">\r\n\t<li (click)=\"gotoPage('myBalance')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>163.86</strong>\r\n\t\t\t元\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的余额\r\n\t\t</p>\r\n\t</li>\r\n\t<li (click)=\"gotoPage('myCoupon')\">\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>1</strong>\r\n\t\t\t张\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的优惠券\r\n\t\t</p>\r\n\t</li>\r\n\t<li>\r\n\t\t<p class=\"View\">\r\n\t\t\t<strong>160</strong>\r\n\t\t\t分\r\n\t\t</p>\r\n\t\t<p class=\"Title\">\r\n\t\t\t我的积分\r\n\t\t</p>\r\n\t</li>\r\n</ul>\r\n<div class='myOrder'>\r\n\t<div class=\"orderHead clear\">\r\n\t\t\t<h2>我的订单</h2>\r\n\t\t\t<a (click)=\"gotoPage('myOrder/payment')\">查看全部</a>\r\n\t</div>\r\n\t<ul class=\"navOrder clear\">\r\n\t\t<li (click)=\"gotoPage('myOrder/payment')\">\r\n\t\t\t待付款\r\n\t\t</li>\r\n\t\t<li (click)=\"gotoPage('myOrder/deliverGoods')\">\r\n\t\t\t待发货\r\n\t\t</li>\r\n\t\t<li (click)=\"gotoPage('myOrder/goodsReceipt')\">\r\n\t\t\t待收货\r\n\t\t</li>\r\n\t\t<li (click)=\"gotoPage('myOrder/evaluate')\">\r\n\t\t\t待评价\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"jumpOptions\">\r\n\t<a (click)=\"gotoPage('deliveryAddress')\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t收货地址管理\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a (click)=\"gotoPage('myCollection')\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t我的收藏\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"division\"> \t\r\n\t</span>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t礼品卡\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a href=\"\" class=\"layout brBottom clear\">\r\n\t\t<p>\r\n\t\t\t兑换券\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<a (click)=\"gotoPage('setUp')\" class=\"layout clear\">\r\n\t\t<p>\r\n\t\t\t设置\r\n\t\t</p>\r\n\t\t<span>\r\n\t\t\t\r\n\t\t</span>\r\n\t</a>\r\n\t<span class=\"divisionTwo\"> \t\r\n\t</span>\r\n</div>"
 
 /***/ }),
 
@@ -2486,6 +3089,27 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAABaCAYAAAAL
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAAAdCAIAAAAlyBnXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzI4NDc3QUNCOTExRTdCRUU1OUNBRDU0MjIxQzlDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzI4NDc4QUNCOTExRTdCRUU1OUNBRDU0MjIxQzlDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMjg0NzVBQ0I5MTFFN0JFRTU5Q0FENTQyMjFDOUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMjg0NzZBQ0I5MTFFN0JFRTU5Q0FENTQyMjFDOUMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz505mcbAAADUklEQVR42uxaS0tyQRj+PFpGZJHdQBLDLgoR9YE7W0SCUK3tD0Took20DaJ+gdQq2rhzIdiiFm4MigqE6EIIikKE0D0+EkPLyu/BAwfRU805hRq9DyjOzHnH4X3mvc0ZRS6X+0P4UVDh43Q6lUrl6+urvCm0Wq0tD4VCQQotRTab9Xg8h4eHb29vhf0cxw0MDExNTanVasmcQdfj4+OdnZ0yFvTy8hKJRHw+HxZkt9uJoVLs7e0dHBxYLJampqbC/lQqFQqFtra2xsbGJHMG9whbGRoakrcmrAY2iv8mzkRxc3MDS5qeni4dikaj19fXcnzj19HT07O/v/+bidnc3Ly7u3uPM41GA/dYOoS9fn5+LjrU1tY2MTHBxFkymdzZ2WFMTIxGY39/P+9df7kxwWISicQHDxwfH4v2/8ujtL+lpYWVs4eHB8zOnkzynBHm5ubKmjcWQq/Xz8/PEwdfAdKx1dVVJNJ9fX3sUldXV0hVYFufOi2OVPztyGQy8FXwlpKkwuHwxsZGOp2WbGe3t7d+v5+xVhscHLRarUTSx3h6ekLEaW9v55sXFxcdHR0oiPH78fHx+fm5ublZ0oTFdpbLg90JECWfIhAILC0tCSne4uKikGN7vd7l5eWvxjNsB5fLRYr+XjvLZrPCmQi+YVt8Ez8wKnVCimc/D6pS33h5eckYz1BD1NfXkxIrzFkkEnG73YzCFotF9EiGUFbOzGbzwsICo521traSBivPGQo6nU5HeqlmUA5CnBHK7xsZS+nT01PU8HzTYDCQHquds7W1taOjo7q6Or45MjIiHMwQqpEzVPIgbHJycnR0VOj85S88qz2egTPU3YKR8WA5jSZUUQ4Sj8fX19dNJhNps6y+UfYJ/dnZ2crKitFonJmZIW2Kore3V7gq0tjYaDabu7q6+CY2ularlcMZxGKx2PDwMItATU2NWq1uaGjgCXO73cgbQVhtbS3RI4q/eQjam52dFYZsNptMO4Okz+dTqVTd3d0sMg6HI5VKbW9v+/1+IqwyvpG/AhwMBnd3dyUJw7SJMFEolcr7+3vhElwmkymKPugperfMcRz/8pqJMxDGX94mXX8LoE/s45OTE4EVpNmgpPAZxJeiHjwDP8dC238BBgDRs1qEzbjaPQAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/market/reallyIndex/invitation/bg.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "bg.84df477e57d011d9dada.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/market/reallyIndex/invitation/ico.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "ico.156d4ffb47edf46edb29.png";
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/market/reallyIndex/invitation/invitationIco.png":
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABACAIAAAAyKXZAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU1MTY3REIwQUQ5MzExRTdCNTc4QzE1RTQ2OTIzRDE4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU1MTY3REIxQUQ5MzExRTdCNTc4QzE1RTQ2OTIzRDE4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTUxNjdEQUVBRDkzMTFFN0I1NzhDMTVFNDY5MjNEMTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTUxNjdEQUZBRDkzMTFFN0I1NzhDMTVFNDY5MjNEMTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bv40iAAAEtUlEQVR42uyY2SusYRzHz9j3JY0wRAymbEUism9jyFaWscSFcsFf4EpcuFTKhQsuRJIlQsquXJDsJdmnsWUoxr6N8z3nqUmDTs55GY/z/C6envM+r/P6+G3f38N7enr68X1N58e3NobH8Bgew2N4DI/hMTw6TE+L34bcnZ6enpiYkMvlBgYGQqFQIpG4uLhw+AmetiQ1vtvQ0DAzM4O9vr7+4+OjSqXi8XgFBQWhoaHUe294eBhs1tbWRUVFnp6e9/f3cGNXV1dzc7Ozs7OjoyPFuQfXDQ4OwldlZWUikQgbBGdcXFxKSgp8CHK6S4tCoVAqlUgzDS+Fh4dj3draohvv4eEBq6GhocZz+BArApVuPD6fj3Kyubl5fn7+/PnS0hJWgUBAMR6QUD/uf1t9ff3FxQV5LpPJWltbsQkLC6OyMeBbU1NT7e3tl5eXRkZGFhYWR0dHCFE3N7fb21ukHF4ICQkpLCykDw8kLS0tq6ur2Pv7++fk5CDTgIrOTlLR1NRULBajfqKQ0oSHlo020N/fj2hEo5NKpX5+furTm5ubw8NDPT09BwcHHR2Ok4UDPPx+iLS3Tre3t5uamvb39+GT6Ojo1NTUlwXzy2lO/FHm5+ehM1D94BOEGZRHfHy8h4fHc+zu7u7x8XG87OTklJ+fz62e/CjvgaexsXFubo7IRVSIs7Mzkj8xMTGZmZlw1MLCAsrg6ekpXoAWiY2N5TzwPsp7CDawWVlZZWdnI4t0dXXBNjs7izoxMjICeJR++BZvenl55eXl2djYaEvZvtt7KH01NTXwWHl5OeqERm2srq6+urrC3tzcHPCBgYGUjbOTk5NY09LSNNhgtra2SUlJ2CDTKisrtc72N3iohFgDAgJePUVDI4XHxMSEyssICA5U9rc6gaWlJdbr62ta71qQVBBQaqGoYcfHx1jNzMxoxXN3d8cK6fjqKXlO3qESLyIiAmtvb+/e3p7G0fr6OsQXNkFBQV8ET7eiouJdP4B2BzmytrYGKQyhiJ6GPDw5ORkdHcWYQ5o7ejriE5M4h+L481SLSqXq6OhAB9f8v3g86P3d3d2VlRX8ExIMrc/V1ZUyPGI7OztEc6LMoN5AbUIx29vbk6EbCgZdHvvg4OCMjAxSUWnC++NtytjYWF9fHyIZjUQikUB2Ipi/CZ763qGnpwdCB1/h8/lZWVm+vr4a78D58DMEt0AggP6mCY+YXC5va2tDXSUiG5B2dnbYY57Ac9QhJDO5OEN4Jycnc+jkz7uMwEjR2dmJGgtHRUVFYXSCNFcoFMbGxshbCJ2NjQ1went7l5aWcjU9fepVEmaloaGhgYGBu7s7lFl8WiQSlZSUEIEKJ9fW1iqVSqlUGhkZqZ22/i+G1EKNqaqqQt8HG6KxuLhYLb4xZ+Tm5qqHEvrw1MIgPT0dG7REdJTnRz4+PlgPDg4oxoMRj70cLCDWf90gcFdatIOHsIRkk8lk0AYvZ2WhUEg3HiwxMRHpV1dXt7i4iIIJv0GOo0niSCwW09cYXhr6BJkw0AZI64OhK6JnfAc82PLyMkYNtAT0CUjwhIQEDiNT+3hfbpxleAyP4TE8hsfwGB7DY3gMj+H9R3g/BRgAhdBOf2xhZdIAAAAASUVORK5CYII="
 
 /***/ }),
 

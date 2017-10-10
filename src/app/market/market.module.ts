@@ -3,6 +3,8 @@ import { CommonModule }   from '@angular/common';
  
 //个人模块
 import {PersonalModule}  from './personal/persona.module';
+//首页模块
+import {IndexModule}  from "./index/index.modules";
 
 import {MarketRoutingModule} from './market-routing.module';
 //首页
@@ -40,7 +42,8 @@ import {headOneComponent} from './repeatComponent/headOne.component'
   	FormsModule,
     CommonModule,
     MarketRoutingModule,
-    PersonalModule
+    PersonalModule,
+    IndexModule
   ],
   declarations: [
     marKetComponent,
