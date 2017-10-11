@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody, h1, h2, input, ul, li, p, a {\n  margin: 0;\n  padding: 0; }\n\nli {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-user-select: none;\n  -moz-user-focus: none;\n  -moz-user-select: none; }\n\n.clear:after {\n  content: '';\n  display: block;\n  clear: both; }\n\n.clear {\n  *zoom: 1; }\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody, h1, h2, h3, input, ul, li, p, a {\n  margin: 0;\n  padding: 0; }\n\nli {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-user-select: none;\n  -moz-user-focus: none;\n  -moz-user-select: none; }\n\n.clear:after {\n  content: '';\n  display: block;\n  clear: both; }\n\n.clear {\n  *zoom: 1; }\n", ""]);
 
 // exports
 

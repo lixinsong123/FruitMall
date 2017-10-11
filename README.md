@@ -78,4 +78,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   
 邀请页面已完成。首页使用了子路由导航。把首页重构为了一个Module
 
+## 首页模块下的团购模块部分完成。(有psd的都做了)
+
+团购模块--》路由跳转--》相关交互完成。
+
 	

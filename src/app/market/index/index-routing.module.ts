@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 //邀请
 import {invitationComponent} from './invitation/invitation.component';
 import {groupPurchaseComponent} from './groupPurchase/groupPurchase.component';
+
+import {hotSellComponent} from "./groupPurchase/component/hotSell.component";
+
+import {groupPurchaseDetailsComponent} from './groupPurchase/groupPurchaseDetails.component';
+import {seckillComponent} from './seckill/seckill.component';
 const marketRoutes: Routes = [
   {
     path: 'index',
@@ -14,7 +19,21 @@ const marketRoutes: Routes = [
       },
       {
         path:'groupPurchase',
-        component:groupPurchaseComponent
+        component:groupPurchaseComponent,
+        children:[
+          {
+            path:'hotSell',
+            component:hotSellComponent
+          }
+        ]
+      },
+      {
+        path:"groupPurchaseDetails/:id",
+        component:groupPurchaseDetailsComponent,
+      },
+      {
+        path:"seckill",
+        component:seckillComponent,
       }
     ]
   },

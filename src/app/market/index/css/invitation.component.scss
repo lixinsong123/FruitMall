@@ -5,7 +5,9 @@ $rem:75;
 
 	@return  $var/$rem*1rem;
 }
-
+.division{
+	padding-top:getRem(80);
+}
 .bg{
 		width: 10rem;
 		height: getRem(764);

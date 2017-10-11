@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap,Router} from '@angular/router';
 @Component({
   template:`
 	  <index-header [title]='title'></index-header>
+	  <div class="division"></div>
 	  <div class="bg"> 
 	  </div>
 	  <div class="rewardDescription">

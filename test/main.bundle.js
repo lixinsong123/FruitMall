@@ -661,6 +661,67 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+/***/ "../../../../../src/app/market/directive/eject.directive.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EjectDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EjectDirective = (function () {
+    function EjectDirective(el, rr) {
+        this.el = el;
+        this.rr = rr;
+    }
+    EjectDirective.prototype.ngOnInit = function () {
+        //找到各自对应的对象
+        //querySelector
+        console.log(this.el.nativeElement);
+        this.clickStart = this.el.nativeElement;
+        this.popup = document.querySelector('.productParameter');
+        this.clickEnd = document.querySelector(".btn");
+        var This = this;
+        this.clickEnd.onclick = function () {
+            This.popup.style.top = "";
+            This.popup.style.opacity = "";
+            document.body.style.height = "";
+            document.body.style.overflow = "";
+        };
+    };
+    //监听点击事件
+    EjectDirective.prototype.onMousedown = function (event) {
+        this.popup.style.top = "0px";
+        this.popup.style.opacity = "1";
+        document.body.style.height = "667px";
+        document.body.style.overflow = "hidden";
+    };
+    return EjectDirective;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* HostListener */])('touchstart', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], EjectDirective.prototype, "onMousedown", null);
+EjectDirective = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Directive */])({ selector: '[myEject]' }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Renderer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Renderer */]) === "function" && _b || Object])
+], EjectDirective);
+
+var _a, _b;
+//# sourceMappingURL=eject.directive.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/market/directive/move.directive.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -826,7 +887,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".headParent {\n  border-bottom: 1px solid #eeeeee;\n  position: relative; }\n  .headParent .bgBack {\n    position: absolute;\n    left: 0;\n    width: 0.86666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0; }\n    .headParent .bgBack img {\n      float: left;\n      width: 100%;\n      height: 100%; }\n  .headParent .right {\n    position: absolute;\n    right: 0;\n    width: 1.26666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0;\n    color: #666666;\n    font-size: 0.34666667rem;\n    text-align: center;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/invitationIco.png") + ") no-repeat;\n    background-size: cover;\n    background-position: 0 0; }\n\n.currencyHead {\n  line-height: 1.06666667rem;\n  width: 7rem;\n  margin: 0 auto;\n  font-size: 0.48rem;\n  color: #333333;\n  text-align: center;\n  font-weight: bold; }\n", ""]);
+exports.push([module.i, ".headParent {\n  border-bottom: 1px solid #eeeeee;\n  position: fixed;\n  top: 0px;\n  background: #ffffff;\n  z-index: 9999;\n  width: 10rem; }\n  .headParent .bgBack {\n    position: absolute;\n    left: 0;\n    width: 0.86666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0; }\n    .headParent .bgBack img {\n      float: left;\n      width: 100%;\n      height: 100%; }\n  .headParent .right {\n    position: absolute;\n    right: 0;\n    width: 1.26666667rem;\n    height: 0.8rem;\n    padding: 0.13333333rem 0;\n    top: 0;\n    color: #666666;\n    font-size: 0.34666667rem;\n    text-align: center;\n    background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/invitationIco.png") + ") no-repeat;\n    background-size: cover;\n    background-position: 0 0; }\n\n.currencyHead {\n  line-height: 1.06666667rem;\n  width: 7rem;\n  margin: 0 auto;\n  font-size: 0.48rem;\n  color: #333333;\n  text-align: center;\n  font-weight: bold; }\n", ""]);
 
 // exports
 
@@ -1010,7 +1071,25 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".menu {\n  position: fixed;\n  top: 1.09333333rem;\n  background: #ffffff;\n  z-index: 9999; }\n  .menu li {\n    float: left;\n    width: 2rem;\n    line-height: 0.90666667rem;\n    font-size: 0.37333333rem;\n    color: #666666;\n    text-align: center; }\n  .menu li:focus {\n    border: none;\n    outline: none; }\n  .menu .active {\n    font-size: 0.42666667rem;\n    color: #fe5164;\n    font-weight: bold; }\n\n.routerPar {\n  padding-top: 2rem; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/css/groupPurchaseDetails.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".division {\n  padding: 1.06666667rem 0 1.33333333rem 0; }\n  .division .picBg {\n    height: 6.54666667rem;\n    width: 10rem; }\n    .division .picBg img {\n      width: 100%;\n      height: 100%; }\n  .division .itemInformation {\n    padding: 0 0.32rem;\n    position: relative; }\n    .division .itemInformation .name {\n      color: #333333;\n      font-size: 0.42666667rem;\n      line-height: 0.69333333rem; }\n    .division .itemInformation .link {\n      color: #979797;\n      font-size: 0.29333333rem;\n      line-height: 0.45333333rem; }\n    .division .itemInformation .itemLabel {\n      padding: 0.33333333rem 0; }\n      .division .itemInformation .itemLabel label {\n        float: left;\n        font-size: 0.29333333rem;\n        color: #fe5164;\n        text-align: center;\n        line-height: 0.50666667rem;\n        width: 1.6rem;\n        margin-right: 0.29333333rem;\n        border: 1px solid #fe5164; }\n    .division .itemInformation .price {\n      font-size: 0.34666667rem;\n      color: #666666;\n      line-height: 1.06666667rem; }\n      .division .itemInformation .price strong {\n        font-size: 0.50666667rem;\n        color: #fe5164;\n        margin-right: 0.13333333rem; }\n      .division .itemInformation .price b {\n        font-size: 0.34666667rem;\n        color: #979797;\n        text-decoration: line-through; }\n    .division .itemInformation .product {\n      position: absolute;\n      bottom: 0.85333333rem;\n      right: 0.32rem;\n      width: 1.28rem; }\n      .division .itemInformation .product span {\n        display: block;\n        width: 100%;\n        height: 0.76rem;\n        background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/hotsell/product.png") + ") no-repeat;\n        background-size: cover;\n        background-position: 0 -0.05333333rem; }\n      .division .itemInformation .product label {\n        display: block;\n        font-size: 0.29333333rem;\n        color: #969696;\n        line-height: 0.90666667rem; }\n  .division .feature {\n    border-top: 1px solid #eee;\n    border-bottom: 1px solid #eee; }\n    .division .feature li {\n      float: left;\n      width: 2.49333333rem; }\n      .division .feature li span {\n        background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/productDetail/small_ico.png") + ") no-repeat;\n        background-size: cover;\n        display: block;\n        width: 2.49333333rem;\n        height: 0.97333333rem; }\n      .division .feature li label {\n        font-size: 0.29333333rem;\n        color: #666666;\n        line-height: 0.8rem;\n        display: block;\n        text-align: center; }\n    .division .feature li:nth-of-type(1) span {\n      background-position: 0 0; }\n    .division .feature li:nth-of-type(2) span {\n      background-position: -2.10666667rem 0; }\n    .division .feature li:nth-of-type(3) span {\n      background-position: -4.26666667rem 0; }\n    .division .feature li:nth-of-type(4) span {\n      background-position: -6.4rem 0; }\n  .division .specification {\n    padding: 0 0.32rem; }\n    .division .specification h3 {\n      position: relative;\n      text-indent: 0.24rem;\n      font-size: 0.34666667rem;\n      color: #333333;\n      line-height: 0.93333333rem; }\n      .division .specification h3 span {\n        position: absolute;\n        display: block;\n        top: 0.34666667rem;\n        left: 0;\n        background: #fe5164;\n        width: 0.08rem;\n        height: 0.24rem; }\n    .division .specification .conmon {\n      border: 1px solid #eee;\n      border-top: none;\n      line-height: 1.01333333rem; }\n      .division .specification .conmon strong {\n        font-size: 0.29333333rem;\n        color: #666666;\n        float: left;\n        width: 1.86666667rem;\n        border-right: 1px solid #eee;\n        text-indent: 0.24rem; }\n      .division .specification .conmon b {\n        float: left;\n        width: 7.33333333rem;\n        text-indent: 1rem;\n        font-size: 0.29333333rem;\n        color: #979797;\n        font-weight: normal; }\n    .division .specification .specialTop {\n      border: 1px solid #eee; }\n\n.footer {\n  position: fixed;\n  bottom: 0;\n  z-index: 9999;\n  border-top: 1px solid #eee; }\n  .footer span {\n    float: left;\n    font-size: 0.42666667rem;\n    line-height: 1.33333333rem;\n    width: 5rem;\n    text-align: center; }\n  .footer .solo {\n    background: #ffffff;\n    color: #fe5164; }\n  .footer .team {\n    background: #fe5164;\n    color: #ffffff;\n    font-weight: bold; }\n\n.productParameter {\n  position: fixed;\n  top: 17.78666667rem;\n  left: 0;\n  z-index: 9999999;\n  height: 17.78666667rem;\n  width: 10rem;\n  transition: 1.5s all;\n  opacity: 0; }\n  .productParameter .mask {\n    width: 100%;\n    height: 6.04rem;\n    background: rgba(0, 0, 0, 0.3); }\n  .productParameter .core {\n    background: #ffffff;\n    padding: 0 0.32rem 0.66666667rem 0.32rem; }\n    .productParameter .core h3 {\n      position: relative;\n      text-indent: 0.24rem;\n      font-size: 0.34666667rem;\n      color: #333333;\n      line-height: 0.93333333rem; }\n      .productParameter .core h3 i {\n        position: absolute;\n        display: block;\n        top: 0.34666667rem;\n        left: 0;\n        background: #fe5164;\n        width: 0.08rem;\n        height: 0.24rem; }\n    .productParameter .core p {\n      line-height: 1.25333333rem;\n      font-size: 0.34666667rem;\n      color: #666666;\n      border-bottom: 1px solid #eee; }\n      .productParameter .core p strong {\n        float: left;\n        width: 1.86666667rem;\n        text-indent: 0.24rem; }\n      .productParameter .core p b {\n        float: left;\n        width: 7.33333333rem;\n        text-indent: 1rem;\n        font-weight: normal; }\n  .productParameter .btn {\n    line-height: 1.17333333rem;\n    text-align: center;\n    background: #fe5164;\n    font-size: 0.42666667rem;\n    color: #ffffff; }\n", ""]);
 
 // exports
 
@@ -1028,13 +1107,111 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".bg {\n  width: 10rem;\n  height: 10.18666667rem;\n  background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/bg.png") + ") no-repeat;\n  background-size: cover;\n  background-position: 0 0; }\n\n.rewardDescription {\n  font-size: 0.29333333rem;\n  color: #979797;\n  line-height: 1.08rem;\n  text-align: center; }\n\n.footer {\n  border-top: 1px solid #eeeeee;\n  line-height: 1.33333333rem;\n  text-align: center;\n  font-size: 0.34666667rem;\n  color: #666666; }\n\n.nav {\n  height: 3.49333333rem;\n  padding: 0 1.10666667rem; }\n  .nav p {\n    float: left;\n    width: 2.56rem; }\n    .nav p label {\n      font-size: 0.34666667rem;\n      color: #333333;\n      text-align: center;\n      line-height: 1.4rem;\n      display: block;\n      font-weight: bold; }\n    .nav p span {\n      display: block;\n      width: 2.56rem;\n      height: 2.09333333rem;\n      background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/ico.png") + ") no-repeat;\n      background-size: cover; }\n  .nav p:nth-of-type(1) span {\n    background-position: -1.44rem 0; }\n  .nav p:nth-of-type(2) span {\n    background-position: -4.4rem 0; }\n  .nav p:nth-of-type(3) span {\n    background-position: -7.49333333rem 0; }\n", ""]);
+exports.push([module.i, ".division {\n  padding-top: 1.06666667rem; }\n\n.bg {\n  width: 10rem;\n  height: 10.18666667rem;\n  background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/bg.png") + ") no-repeat;\n  background-size: cover;\n  background-position: 0 0; }\n\n.rewardDescription {\n  font-size: 0.29333333rem;\n  color: #979797;\n  line-height: 1.08rem;\n  text-align: center; }\n\n.footer {\n  border-top: 1px solid #eeeeee;\n  line-height: 1.33333333rem;\n  text-align: center;\n  font-size: 0.34666667rem;\n  color: #666666; }\n\n.nav {\n  height: 3.49333333rem;\n  padding: 0 1.10666667rem; }\n  .nav p {\n    float: left;\n    width: 2.56rem; }\n    .nav p label {\n      font-size: 0.34666667rem;\n      color: #333333;\n      text-align: center;\n      line-height: 1.4rem;\n      display: block;\n      font-weight: bold; }\n    .nav p span {\n      display: block;\n      width: 2.56rem;\n      height: 2.09333333rem;\n      background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/invitation/ico.png") + ") no-repeat;\n      background-size: cover; }\n  .nav p:nth-of-type(1) span {\n    background-position: -1.44rem 0; }\n  .nav p:nth-of-type(2) span {\n    background-position: -4.4rem 0; }\n  .nav p:nth-of-type(3) span {\n    background-position: -7.49333333rem 0; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/groupPurchase/component/css/hotSell.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".common {\n  border-bottom: 0.13333333rem solid #eeeeee; }\n  .common .picBg {\n    height: 5rem; }\n    .common .picBg img {\n      width: 100%;\n      height: 100%; }\n  .common .information {\n    padding: 0.13333333rem 0.32rem 0 0.32rem; }\n    .common .information .name {\n      font-size: 0.42666667rem;\n      color: #333333;\n      line-height: 0.57333333rem;\n      font-weight: bold; }\n    .common .information .introduce {\n      font-size: 0.29333333rem;\n      color: #979797;\n      line-height: 0.46666667rem; }\n    .common .information .footer {\n      padding: 0.16rem 0 0 0; }\n      .common .information .footer .btn {\n        float: right;\n        width: 2.05333333rem;\n        line-height: 0.66666667rem;\n        text-align: center;\n        font-size: 0.34666667rem;\n        color: #ffffff;\n        background: #fe5164;\n        border-radius: 0.08rem;\n        font-weight: bold; }\n      .common .information .footer .many {\n        float: left;\n        font-size: 0.29333333rem;\n        color: #666666;\n        line-height: 0.93333333rem; }\n        .common .information .footer .many span {\n          float: left;\n          width: 0.56rem;\n          height: 0.72rem;\n          background: url(" + __webpack_require__("../../../../../src/assets/img/market/reallyIndex/hotsell/user.png") + ") no-repeat;\n          background-size: cover;\n          background-position: 0rem -0.10666667rem; }\n        .common .information .footer .many label {\n          padding: 0 0 0 0.13333333rem; }\n      .common .information .footer .price {\n        float: right; }\n        .common .information .footer .price span {\n          line-height: 0.93333333rem;\n          float: left;\n          margin-right: 0.13333333rem; }\n        .common .information .footer .price .reality {\n          font-size: 0.50666667rem;\n          color: #fe5164;\n          font-weight: bold; }\n        .common .information .footer .price .origin {\n          font-size: 0.34666667rem;\n          color: #979797;\n          text-decoration: line-through; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/groupPurchase/component/hotSell.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return hotSellComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var hotSellComponent = (function () {
+    function hotSellComponent(router) {
+        this.router = router;
+        //热卖数据
+        this.hotSellData = [
+            {
+                imgUrl: '../../../../../assets/img/market/reallyIndex/hotsell/friut_one.png',
+                name: '意大利绿奇异果3200g/20个',
+                introduce: '享受清爽汁水融进齿间感觉',
+                peoples: 2,
+                reality: 35.9,
+                origin: 55.9,
+                id: '1'
+            },
+            {
+                imgUrl: '../../../../../assets/img/market/reallyIndex/hotsell/friut_two.png',
+                name: '湖南黔阳冰糖橙3200g/20个',
+                introduce: '享受清爽汁水融进齿间感觉',
+                peoples: 4,
+                reality: 45.9,
+                origin: 75.9,
+                id: '2'
+            },
+            {
+                imgUrl: '../../../../../assets/img/market/reallyIndex/hotsell/friut_two.png',
+                name: '湖南黔阳冰糖橙3200g/20个',
+                introduce: '享受清爽汁水融进齿间感觉',
+                peoples: 4,
+                reality: 45.9,
+                origin: 75.9,
+                id: '2'
+            },
+            {
+                imgUrl: '../../../../../assets/img/market/reallyIndex/hotsell/friut_one.png',
+                name: '湖南黔阳冰糖橙3200g/20个',
+                introduce: '享受清爽汁水融进齿间感觉',
+                peoples: 4,
+                reality: 45.9,
+                origin: 75.9,
+                id: '1'
+            },
+        ];
+    }
+    ;
+    hotSellComponent.prototype.goDeatil = function (item) {
+        this.router.navigate(['index/groupPurchaseDetails', item.id], { queryParams: { ceshi: 1 } });
+    };
+    return hotSellComponent;
+}());
+hotSellComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t\n\t <div class=\"common\" *ngFor=\"let item of hotSellData\">\n\t\t<div class=\"picBg\">\n\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t</div>\n\t\t<div class=\"information\">\n\t\t\t<p class='name'>{{item.name}}</p>\n\t\t\t<p class=\"introduce\">{{item.introduce}}</p>\n\t\t\t<div class=\"footer clear\">\n\t\t\t\t<p class=\"many clear\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<label for=\"\">{{item.peoples}}\u4EBA\u56E2</label>\n\t\t\t\t</p>\n\t\t\t\t<span class='btn' (click)=\"goDeatil(item)\">\n\t\t\t\t\t\u53BB\u5F00\u56E2\n\t\t\t\t</span>\n\t\t\t\t<p class=\"price clear\">\n\t\t\t\t\t<span class=\"reality\">\uFFE5{{item.reality}}</span>\n\t\t\t\t\t<span class=\"origin\">\uFFE5{{item.origin}}</span>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t </div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/index/groupPurchase/component/css/hotSell.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
+], hotSellComponent);
+
+var _a;
+//# sourceMappingURL=hotSell.component.js.map
 
 /***/ }),
 
@@ -1059,12 +1236,78 @@ var groupPurchaseComponent = (function () {
 }());
 groupPurchaseComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: "\n\t  <index-header [title]='title'></index-header>\n  ",
+        template: "\n\t  <index-header [title]='title'></index-header>\n\t  <ul class=\"menu clear\">\n\t\t <li routerLinkActive=\"active\" [routerLink]=\"['hotSell']\">\u70ED\u5356</li>\n\t\t <li>\u63A8\u8350</li>\n\t\t <li>\u4ECA\u65E5\u7206\u6B3E</li>\n\t\t <li>\u65B0\u54C1\u4E0A\u67B6</li>\n\t\t <li>\u65F6\u4EE4\u6C34\u679C</li> \n\t  </ul>\n\t  <div class=\"routerPar\">\n\t  \t<router-outlet></router-outlet>\n\t  </div>\n  ",
         styles: [__webpack_require__("../../../../../src/app/market/index/css/groupPurchase.component.scss")]
     })
 ], groupPurchaseComponent);
 
 //# sourceMappingURL=groupPurchase.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/groupPurchase/groupPurchaseDetails.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return groupPurchaseDetailsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var groupPurchaseDetailsComponent = (function () {
+    function groupPurchaseDetailsComponent(route) {
+        this.route = route;
+        this.title = "团购详情";
+        this.item = null;
+        //模拟数据
+        this.allDatas = [
+            {
+                imgUrl: '../../../../assets/img/market/reallyIndex/hotsell/friut_one.png',
+                name: '意大利绿奇异果3200g/20个',
+                link: '享受清爽汁水融进齿间感觉',
+                itemLabel: ['限每人2份', '今日特价'],
+                toPrice: 35.9,
+                oriPrice: 55.9,
+            },
+            {
+                imgUrl: '../../../../assets/img/market/reallyIndex/hotsell/friut_two.png',
+                name: '湖南黔阳冰糖橙3200g/20个',
+                link: '享受清爽汁水融进齿间感觉',
+                itemLabel: ['限每人2份'],
+                toPrice: 65.9,
+                oriPrice: 105.9,
+            }
+        ];
+    }
+    ;
+    groupPurchaseDetailsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.subscribe(function (params) {
+            _this.item = _this.allDatas[params.id - 1];
+        });
+    };
+    ;
+    return groupPurchaseDetailsComponent;
+}());
+groupPurchaseDetailsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t<index-header [title]='title'></index-header>\n\t<div>\n\t\t\n\t\t<div class=\"division\" >\n\t\t\t<div class=\"picBg\">\n\t\t\t\t<img [src]=\"item.imgUrl\" alt=\"\" />\n\t\t\t</div>\n\t\t\t<div class=\"itemInformation\">\n\t\t\t\t\t<p class=\"name\">{{item.name}}</p>\n\t\t\t\t\t<p class=\"link\">{{item.link}}</p>\n\t\t\t\t\t<p class=\"itemLabel clear\">\n\t\t\t\t\t\t<label for=\"\" *ngFor=\"let son of item.itemLabel\">{{son}}</label>\n\t\t\t\t\t</p>\n\t\t\t\t\t<p class=\"price\">\n\t\t\t\t\t\t\u4F1A\u5458\u4EF7: \n\t\t\t\t\t\t<strong>\uFFE5{{item.toPrice}}</strong>\n\t\t\t\t\t\t<b>\uFFE5{{item.oriPrice}}</b>\n\t\t\t\t\t</p>\n\t\t\t\t\t<div class=\"product\" myEject>\n\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t<label for=\"\">\u4EA7\u54C1\u53C2\u6570</label>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<ul class=\"feature clear\">\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<span>\n\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t2\u5C0F\u65F6\u9001\u8FBE\n\t\t\t\t\t\t</label>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<span>\n\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\u514D\u90AE\n\t\t\t\t\t\t</label>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<span>\n\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\u5065\u5EB7\u6709\u673A\n\t\t\t\t\t\t</label>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<span>\n\n\t\t\t\t\t\t</span>\n\t\t\t\t\t\t<label for=\"\">\n\t\t\t\t\t\t\t\u79D1\u5B66\u79CD\u690D\n\t\t\t\t\t\t</label>\n\t\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<div class=\"specification\">\n\t\t\t\t<h3>\u89C4\u683C\n\t\t\t\t\t<span></span>\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u89C4\u683C\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t1\u7BB1\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u91CD\u91CF\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t3200g\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u4FDD\u8D28\u671F\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t\u4E09\u5E74\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u50A8\u5B58\u65B9\u6CD5\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t\u5E38\u6E29\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u7B49\u7EA7\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t3\u7EA7\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u4EA7\u5730\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t\u9A6C\u6765\u897F\u4E9A\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u914D\u6599\u8868\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t\u65E0\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t\t<p class=\"conmon clear specialTop\">\n\t\t\t\t\t<strong>\n\t\t\t\t\t\t\u98DF\u54C1\u6DFB\u52A0\u5242\n\t\t\t\t\t</strong>\n\t\t\t\t\t<b>\n\t\t\t\t\t\t\u65E0\n\t\t\t\t\t</b>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"footer clear\"> \n\t\t\t<span class=\"solo\">\n\t\t\t\t\u5355\u4EBA\u8D2D\u4E70(\uFFE5{{item.toPrice}})\n\t\t\t</span>\n\t\t\t<span class=\"team\">\n\t\t\t\t\u70B9\u51FB\u5F00\u56E2\uFF08\uFFE5{{item.oriPrice}}\uFF09\n\t\t\t</span>\n\t\t</div>\n\t\t\t<div class=\"productParameter\">\n\t\t\t\t\t\t\t\t<div class=\"mask\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"core\">\n\t\t\t\t\t\t\t\t\t<h3>\u4EA7\u54C1\u53C2\u6570\n\t\t\t\t\t\t\t\t\t\t<i></i>\n\t\t\t\t\t\t\t\t\t</h3>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u51C0\u91CD\u91CF</strong>\n\t\t\t\t\t\t\t\t\t\t<b>2500g</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u5305\u88C5\u65B9\u5F0F</strong>\n\t\t\t\t\t\t\t\t\t\t<b>\u76D2\u88C5</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u4FDD\u5B58\u671F</strong>\n\t\t\t\t\t\t\t\t\t\t<b>1\u5468</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u54C1\u724C</strong>\n\t\t\t\t\t\t\t\t\t\t<b>\u9C9C\u4E30</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u552E\u5356\u65B9\u5F0F</strong>\n\t\t\t\t\t\t\t\t\t\t<b>\u5355\u54C1</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u6C34\u679C\u79CD\u7C7B</strong>\n\t\t\t\t\t\t\t\t\t\t<b>\u6838\u679C\u7C7B</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"clear\">\n\t\t\t\t\t\t\t\t\t\t<strong>\u4EA7\u5730</strong>\n\t\t\t\t\t\t\t\t\t\t<b>\u4E2D\u56FD\u6E58\u897F</b>\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"btn\">\n\t\t\t\t\t\t\t\t\t\t\u5173\u95ED\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\n\n\t</div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/index/css/groupPurchaseDetails.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object])
+], groupPurchaseDetailsComponent);
+
+var _a;
+//# sourceMappingURL=groupPurchaseDetails.component.js.map
 
 /***/ }),
 
@@ -1077,6 +1320,9 @@ groupPurchaseComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__invitation_invitation_component__ = __webpack_require__("../../../../../src/app/market/index/invitation/invitation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__groupPurchase_groupPurchase_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/groupPurchase.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__groupPurchase_component_hotSell_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/component/hotSell.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__groupPurchase_groupPurchaseDetails_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/groupPurchaseDetails.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__seckill_seckill_component__ = __webpack_require__("../../../../../src/app/market/index/seckill/seckill.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1086,6 +1332,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //邀请
+
+
+
 
 
 var marketRoutes = [
@@ -1098,7 +1347,21 @@ var marketRoutes = [
             },
             {
                 path: 'groupPurchase',
-                component: __WEBPACK_IMPORTED_MODULE_3__groupPurchase_groupPurchase_component__["a" /* groupPurchaseComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_3__groupPurchase_groupPurchase_component__["a" /* groupPurchaseComponent */],
+                children: [
+                    {
+                        path: 'hotSell',
+                        component: __WEBPACK_IMPORTED_MODULE_4__groupPurchase_component_hotSell_component__["a" /* hotSellComponent */]
+                    }
+                ]
+            },
+            {
+                path: "groupPurchaseDetails/:id",
+                component: __WEBPACK_IMPORTED_MODULE_5__groupPurchase_groupPurchaseDetails_component__["a" /* groupPurchaseDetailsComponent */],
+            },
+            {
+                path: "seckill",
+                component: __WEBPACK_IMPORTED_MODULE_6__seckill_seckill_component__["a" /* seckillComponent */],
             }
         ]
     },
@@ -1126,7 +1389,7 @@ indexRoutingModule = __decorate([
 /***/ "../../../../../src/app/market/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"index clear\">\r\n\t<div class=\"city\">\r\n\t\t<label>北京</label>\r\n\t\t<span id=\"SJX_DOWN\"></span>\r\n\t</div>\r\n\t<div class=\"search\">\r\n\t\t<div>\r\n\t\t\t<span class=\"search_ico\"></span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"customer\">\r\n\t\t<span class=\"customer_ico\">\t\r\n\t\t</span>\r\n\t</div>\r\n</header>\r\n <!-- myMove 移动指令 -->\r\n<div class=\"bar\" myMove>\r\n\t<ul class=\"view\" >\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_1.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_2.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_3.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t</ul>\r\n\t<ul class=\"controller\">\r\n\t\t<li class=\"active\"></li>\r\n\t\t<li></li>\r\n\t\t<li></li>\r\n\t</ul>\r\n</div>\r\n<div class=\"navWrapper\">\r\n\t<ul class=\"clear\">\r\n\t\t<li [routerLink]=\"['groupPurchase']\">\r\n\t\t\t<label>团购</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>秒杀</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>进口</label>\r\n\t\t</li>\r\n\t\t<li [routerLink]=\"['invitation']\">\r\n\t\t\t<label>邀请</label>\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"componentParent\">\r\n\t<!-- 秒杀活动组件-->\r\n\t<spike-activity></spike-activity>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n</div>\r\n"
+module.exports = "<header class=\"index clear\">\r\n\t<div class=\"city\">\r\n\t\t<label>北京</label>\r\n\t\t<span id=\"SJX_DOWN\"></span>\r\n\t</div>\r\n\t<div class=\"search\">\r\n\t\t<div>\r\n\t\t\t<span class=\"search_ico\"></span>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"customer\">\r\n\t\t<span class=\"customer_ico\">\t\r\n\t\t</span>\r\n\t</div>\r\n</header>\r\n <!-- myMove 移动指令 -->\r\n<div class=\"bar\">\r\n\t<ul class=\"view\"  >\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_1.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_2.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t\t\r\n\t\t\t<li>\r\n\t\t\t\t<img src=\"../../../assets/img/market/index/bar_3.png\" alt=\"\">\r\n\t\t\t</li>\r\n\t</ul>\r\n\t<ul class=\"controller\">\r\n\t\t<li class=\"active\"></li>\r\n\t\t<li></li>\r\n\t\t<li></li>\r\n\t</ul>\r\n</div>\r\n<div class=\"navWrapper\">\r\n\t<ul class=\"clear\">\r\n\t\t<li [routerLink]=\"['groupPurchase/hotSell']\">\r\n\t\t\t<label>团购</label>\r\n\t\t</li>\r\n\t\t<li [routerLink]=\"['seckill']\" >\r\n\t\t\t<label>秒杀</label>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<label>进口</label>\r\n\t\t</li>\r\n\t\t<li [routerLink]=\"['invitation']\">\r\n\t\t\t<label>邀请</label>\r\n\t\t</li>\r\n\t</ul>\r\n</div>\r\n<div class=\"componentParent\">\r\n\t<!-- 秒杀活动组件-->\r\n\t<spike-activity></spike-activity>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n\t<!-- 今日上新组件 -->\r\n\t<new-today></new-today>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1169,7 +1432,11 @@ indexComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_routing_module__ = __webpack_require__("../../../../../src/app/market/index/index-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__invitation_invitation_component__ = __webpack_require__("../../../../../src/app/market/index/invitation/invitation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__groupPurchase_groupPurchase_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/groupPurchase.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_header_component__ = __webpack_require__("../../../../../src/app/market/index/component/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__groupPurchase_component_hotSell_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/component/hotSell.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__component_header_component__ = __webpack_require__("../../../../../src/app/market/index/component/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__groupPurchase_groupPurchaseDetails_component__ = __webpack_require__("../../../../../src/app/market/index/groupPurchase/groupPurchaseDetails.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__seckill_seckill_component__ = __webpack_require__("../../../../../src/app/market/index/seckill/seckill.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directive_eject_directive__ = __webpack_require__("../../../../../src/app/market/directive/eject.directive.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1184,6 +1451,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //团购
 
 
+
+
+//秒杀
+
+//弹出层移动指令
+
 var IndexModule = (function () {
     function IndexModule() {
     }
@@ -1196,9 +1469,13 @@ IndexModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__index_routing_module__["a" /* indexRoutingModule */],
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__component_header_component__["a" /* indexHeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__component_header_component__["a" /* indexHeaderComponent */],
             __WEBPACK_IMPORTED_MODULE_3__invitation_invitation_component__["a" /* invitationComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__groupPurchase_groupPurchase_component__["a" /* groupPurchaseComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__groupPurchase_groupPurchase_component__["a" /* groupPurchaseComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__groupPurchase_component_hotSell_component__["a" /* hotSellComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__groupPurchase_groupPurchaseDetails_component__["a" /* groupPurchaseDetailsComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__directive_eject_directive__["a" /* EjectDirective */],
+            __WEBPACK_IMPORTED_MODULE_8__seckill_seckill_component__["a" /* seckillComponent */]
         ]
     })
 ], IndexModule);
@@ -1228,12 +1505,42 @@ var invitationComponent = (function () {
 }());
 invitationComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        template: "\n\t  <index-header [title]='title'></index-header>\n\t  <div class=\"bg\"> \n\t  </div>\n\t  <div class=\"rewardDescription\">\n\t\t\t\u5956\u52B1\u8BF4\u660E >\n\t  </div>\n\t  <div class='nav clear'>\n\t\t  <p>\n\t\t  \t<span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\t\u5FAE\u535A\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t\t  <p>\n\t\t \t <span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\t\u5FAE\u4FE1\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t\t  <p>\n\t\t  \t<span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\tqq\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t  </div>\n\t  <div class=\"footer\">\n\t\t\u60A8\u5DF2\u6210\u529F\u9080\u8BF7<span>2</span>\u4EBA\uFF0C\u7D2F\u8BA1\u83B7\u5F97\u73B0\u91D1<span>50.0</span>\u5143\uFF0C<span>1</span>\u5F20\u5151\u6362\u5238\n\t  </div>\n  ",
+        template: "\n\t  <index-header [title]='title'></index-header>\n\t  <div class=\"division\"></div>\n\t  <div class=\"bg\"> \n\t  </div>\n\t  <div class=\"rewardDescription\">\n\t\t\t\u5956\u52B1\u8BF4\u660E >\n\t  </div>\n\t  <div class='nav clear'>\n\t\t  <p>\n\t\t  \t<span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\t\u5FAE\u535A\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t\t  <p>\n\t\t \t <span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\t\u5FAE\u4FE1\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t\t  <p>\n\t\t  \t<span>\n\t\t  \t</span>\n\t\t\t<label for=\"\">\n\t\t\t\tqq\u597D\u53CB\n\t\t\t</label>\n\t\t  </p>\n\t  </div>\n\t  <div class=\"footer\">\n\t\t\u60A8\u5DF2\u6210\u529F\u9080\u8BF7<span>2</span>\u4EBA\uFF0C\u7D2F\u8BA1\u83B7\u5F97\u73B0\u91D1<span>50.0</span>\u5143\uFF0C<span>1</span>\u5F20\u5151\u6362\u5238\n\t  </div>\n  ",
         styles: [__webpack_require__("../../../../../src/app/market/index/css/invitation.component.scss")]
     })
 ], invitationComponent);
 
 //# sourceMappingURL=invitation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/market/index/seckill/seckill.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return seckillComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var seckillComponent = (function () {
+    function seckillComponent() {
+        this.title = "秒杀";
+    }
+    return seckillComponent;
+}());
+seckillComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        template: "\n\t  <index-header [title]='title'></index-header>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/market/index/css/invitation.component.scss")]
+    })
+], seckillComponent);
+
+//# sourceMappingURL=seckill.component.js.map
 
 /***/ }),
 
@@ -3092,6 +3399,20 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJEAAAAdCAIAAAAl
 
 /***/ }),
 
+/***/ "../../../../../src/assets/img/market/reallyIndex/hotsell/product.png":
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAA5CAIAAADMVCARAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNFMjg3QjdGQUU0OTExRTdBRUQ1RUYxRDJDRDFCMzE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNFMjg3QjgwQUU0OTExRTdBRUQ1RUYxRDJDRDFCMzE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0UyODdCN0RBRTQ5MTFFN0FFRDVFRjFEMkNEMUIzMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0UyODdCN0VBRTQ5MTFFN0FFRDVFRjFEMkNEMUIzMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7BBsg+AAADGklEQVR42uybS0hUURjH/8eZq/iY5qWroiiohQshyAwjDRdJLcJyEYhRiyCwBy6iICmCIkICi4qoSIsk0oUKlhW9zOxhborS0iIJ0ZKmLJ3xyfh1DmOOI0ZN3anxzvdxuRzOcA+H373f//zPYwQRIeIjihEwBabAFJgCU2AKTIEpMAWmwBSYAlNgCkzhL8McqoY7Oqn6Olra8bUPuizkmExIdCA1RaxfDZtV386KkKw11T+mUxfh9cKSAKddnzZpDB8/YXgEVovYV4gFc8Obwvsu2nUQmlls24T0JRBCt5ZHRtX3VVErPwpx8hCitfDVBaq5Kb8CsTUfy1P1RCAjWhMb1mJVJlxfUP8ovNWxtR1xsVixNESCI7IzFOtXb8ObgmcA8XGICtnok+RU98GhyB4p9c0y9gtMgSn8O+84JSprqccVTL9MIm+dNEiGokDX7qLfHdwzK9ONRkGcPgz3QBAPaGbYrYbLCOmj5MXqyOoINDZT14fpk0XTkJ2p7KbhKdCJMoyOTv+TBJHoQEaa8SmI4r1qdeAnM0WkJEdGRsyboy5WRz1nU3JaqauVMM88CnGx4swRHilnri78foyNoe4eeTz+DIiJwZostaxyq4G8Xn99UiKy0g1KwdVLpVemDqUL56PHRZdrptYbloLvPe8pQNpiVXrZRvuPTuxoiEvHx/3V1dtUWsG6wOpofHX05fydRrS0qdLn3oD68io16ZbxrtPQFOQEXJqi1jfq8oXNCodNFSwJePB0kh+drZsM6b5DR/k7pYDpbmwiLCOGhqnkHAYG/TWaJrZvxrd+ulCp3MREOO2icItB1bHPjebn6u4LzyCetaC7Bx2dePEa3h8UpF40NBlcHUVeToBfmKgv2jFD/IIlHm6P/6VFqF9IXqQ8//0nEa2OIiebGprobLnaVc1c9meb11RWoU5rKLEM2JumouLxBvv69exzSE70PGymY+fViR6Zw057ECAcVrG7QI0FwyP+SlOUyM+VWUZVdZjcWdsssTE3jCnI6Oym6htS2wLGvF9GkkOUHPgPYsz/JOTZ1Hh8F2AAIEH/icLYEEYAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/market/reallyIndex/hotsell/user.png":
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABGCAIAAAArXqGeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYwMDZEQ0VCQUUyQTExRTc4OEE5QUUzMkQ1MThCMTI4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjYwMDZEQ0VDQUUyQTExRTc4OEE5QUUzMkQ1MThCMTI4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjAwNkRDRTlBRTJBMTFFNzg4QTlBRTMyRDUxOEIxMjgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjAwNkRDRUFBRTJBMTFFNzg4QTlBRTMyRDUxOEIxMjgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7ck5GZAAACxElEQVR42uyY20sqURTGm0kzLwgWYj54QzQPgiAJIVEg/QH+keKzLz6IIqIvYg+GSuAFtFLSh1LB1Lyf75wB8YzTHjXrvOz1MOhc/O291re+vR1msVgc/FSwBz8YFEZhFEZhFEZhFEZh/wMmEb1jPp8XCoVyudzpdPD58PDw9PT019/YFsaIbuUikcjj4+P6eafTeX19vc80Pj8/C5IQDw8Pr6+v+4R9RkLIZLJer7fPmrXbbUHM1dWVzWZjGGafsOFwuE7y+/0nJyeTyeTp6ent7W06nUI1Go3GbDbj6u4wyI93xuv1gtRsNqPRKG8oUqn09vYWyB1rxoNh4Ha7fTwer5MQmGssFnt/f98RxmsMk8nEsixUs07iYjabVSqVHWFKpXL1K9oZR+SQ8Ajhqgjs7Oxs9atKpcKRrPjd04gK8SQgqBpe5XaEabXaVXVJJH/UC61/l+vf3NzwKgcVfMvMEAqFAl3MSWM0GuF4fHxMuJ/Q1xutZ2q12uVy4UO328URTU24mXBVBDYYDKrVajabLZVKS1kbjUbCIwQHEbarj48P/DoWTFjf6vlGo4F2NhgMGL6gRyPnVqt105lB1phHMBhMp9M8Enc1l8txqhG0fCynnGLFYRh1KBS6u7sjKCqfz2NOaHafz8fjXV5eWiyWjVwf3RMOh9dnsxpyuRwlgRFz/Q5YPB5fktxu96br2f39PYGk0+nwWzDi5WzQbTybxnAJOfxnwxMIBPr9/vod6CpUgis7ALVarV6vv7y8CDok2l+v10NByOfR0dGnsEQiIVBSlr24uID/InWYOjY5XA7FdwASyfn5ucfjQea32MohsPxjKOiHbc0Qxo3disPh2BRWLBaTyeRX3hQutcOK7q5SqdQX30lmMhm4gTgMdSKvXhsGjEIc1mq19vKXgjNVhr62pTAKozAKozAKozAufgswACcqWGs8fnmtAAAAAElFTkSuQmCC"
+
+/***/ }),
+
 /***/ "../../../../../src/assets/img/market/reallyIndex/invitation/bg.png":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3110,6 +3431,13 @@ module.exports = __webpack_require__.p + "ico.156d4ffb47edf46edb29.png";
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABACAIAAAAyKXZAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU1MTY3REIwQUQ5MzExRTdCNTc4QzE1RTQ2OTIzRDE4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU1MTY3REIxQUQ5MzExRTdCNTc4QzE1RTQ2OTIzRDE4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTUxNjdEQUVBRDkzMTFFN0I1NzhDMTVFNDY5MjNEMTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTUxNjdEQUZBRDkzMTFFN0I1NzhDMTVFNDY5MjNEMTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bv40iAAAEtUlEQVR42uyY2SusYRzHz9j3JY0wRAymbEUism9jyFaWscSFcsFf4EpcuFTKhQsuRJIlQsquXJDsJdmnsWUoxr6N8z3nqUmDTs55GY/z/C6envM+r/P6+G3f38N7enr68X1N58e3NobH8Bgew2N4DI/hMTw6TE+L34bcnZ6enpiYkMvlBgYGQqFQIpG4uLhw+AmetiQ1vtvQ0DAzM4O9vr7+4+OjSqXi8XgFBQWhoaHUe294eBhs1tbWRUVFnp6e9/f3cGNXV1dzc7Ozs7OjoyPFuQfXDQ4OwldlZWUikQgbBGdcXFxKSgp8CHK6S4tCoVAqlUgzDS+Fh4dj3draohvv4eEBq6GhocZz+BArApVuPD6fj3Kyubl5fn7+/PnS0hJWgUBAMR6QUD/uf1t9ff3FxQV5LpPJWltbsQkLC6OyMeBbU1NT7e3tl5eXRkZGFhYWR0dHCFE3N7fb21ukHF4ICQkpLCykDw8kLS0tq6ur2Pv7++fk5CDTgIrOTlLR1NRULBajfqKQ0oSHlo020N/fj2hEo5NKpX5+furTm5ubw8NDPT09BwcHHR2Ok4UDPPx+iLS3Tre3t5uamvb39+GT6Ojo1NTUlwXzy2lO/FHm5+ehM1D94BOEGZRHfHy8h4fHc+zu7u7x8XG87OTklJ+fz62e/CjvgaexsXFubo7IRVSIs7Mzkj8xMTGZmZlw1MLCAsrg6ekpXoAWiY2N5TzwPsp7CDawWVlZZWdnI4t0dXXBNjs7izoxMjICeJR++BZvenl55eXl2djYaEvZvtt7KH01NTXwWHl5OeqERm2srq6+urrC3tzcHPCBgYGUjbOTk5NY09LSNNhgtra2SUlJ2CDTKisrtc72N3iohFgDAgJePUVDI4XHxMSEyssICA5U9rc6gaWlJdbr62ta71qQVBBQaqGoYcfHx1jNzMxoxXN3d8cK6fjqKXlO3qESLyIiAmtvb+/e3p7G0fr6OsQXNkFBQV8ET7eiouJdP4B2BzmytrYGKQyhiJ6GPDw5ORkdHcWYQ5o7ejriE5M4h+L481SLSqXq6OhAB9f8v3g86P3d3d2VlRX8ExIMrc/V1ZUyPGI7OztEc6LMoN5AbUIx29vbk6EbCgZdHvvg4OCMjAxSUWnC++NtytjYWF9fHyIZjUQikUB2Ipi/CZ763qGnpwdCB1/h8/lZWVm+vr4a78D58DMEt0AggP6mCY+YXC5va2tDXSUiG5B2dnbYY57Ac9QhJDO5OEN4Jycnc+jkz7uMwEjR2dmJGgtHRUVFYXSCNFcoFMbGxshbCJ2NjQ1went7l5aWcjU9fepVEmaloaGhgYGBu7s7lFl8WiQSlZSUEIEKJ9fW1iqVSqlUGhkZqZ22/i+G1EKNqaqqQt8HG6KxuLhYLb4xZ+Tm5qqHEvrw1MIgPT0dG7REdJTnRz4+PlgPDg4oxoMRj70cLCDWf90gcFdatIOHsIRkk8lk0AYvZ2WhUEg3HiwxMRHpV1dXt7i4iIIJv0GOo0niSCwW09cYXhr6BJkw0AZI64OhK6JnfAc82PLyMkYNtAT0CUjwhIQEDiNT+3hfbpxleAyP4TE8hsfwGB7DY3gMj+H9R3g/BRgAhdBOf2xhZdIAAAAASUVORK5CYII="
+
+/***/ }),
+
+/***/ "../../../../../src/assets/img/market/reallyIndex/productDetail/small_ico.png":
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAABSCAIAAACE6Ma6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ4OUVEODE5QUU0RjExRTdBMTBDQUM0OTcwMkRBRTdDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ4OUVEODFBQUU0RjExRTdBMTBDQUM0OTcwMkRBRTdDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDg5RUQ4MTdBRTRGMTFFN0ExMENBQzQ5NzAyREFFN0MiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDg5RUQ4MThBRTRGMTFFN0ExMENBQzQ5NzAyREFFN0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6XodxMAAAUA0lEQVR42uyd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"
 
 /***/ }),
 

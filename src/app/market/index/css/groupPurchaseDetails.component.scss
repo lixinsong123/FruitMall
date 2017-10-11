@@ -1,0 +1,241 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.division{
+	padding:getRem(80) 0 getRem(100) 0;
+	.picBg{
+		height: getRem(491);
+		width: 10rem;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.itemInformation{
+		padding:0 getRem(24);
+		position:relative;
+		.name{
+			color: #333333;
+			font-size:getRem(32);
+			line-height: getRem(52);
+		}
+		.link{
+			color: #979797;
+			font-size:getRem(22);
+			line-height: getRem(34);
+		}
+		.itemLabel{
+			padding:getRem(25) 0;
+			label{
+				float: left;
+				font-size: getRem(22);
+				color: #fe5164;
+				text-align: center;
+				line-height: getRem(38);
+				width: getRem(120);
+				margin-right: getRem(22);
+				border:1px solid #fe5164; 
+			}
+		}
+		.price{
+			font-size:getRem(26);
+			color: #666666;
+			line-height: getRem(80);
+			strong{
+				font-size: getRem(38);
+				color: #fe5164;
+				margin-right: getRem(10);
+			}
+			b{
+				font-size: getRem(26);
+				color: #979797;
+				text-decoration: line-through;
+			}
+		}
+		.product{
+			position:absolute;
+			bottom: getRem(32*2);
+			right: getRem(12*2);	
+			width: getRem(48*2);
+			span{
+				display: block;
+				width: 100%;
+				height: getRem(57);
+				background: url(../../../../assets/img/market/reallyIndex/hotsell/product.png) no-repeat;
+				background-size:cover;
+				background-position:0 getRem(-4);
+			}
+			label{
+				display: block;
+				font-size: getRem(22);
+				color: #969696;
+				line-height: getRem(68);
+			}
+		}
+	}
+	.feature{
+		border-top:1px solid #eee;
+		border-bottom:1px solid #eee;
+		li{
+			float: left;
+			width: getRem(187);
+			span{
+				background: url(../../../../assets/img/market/reallyIndex/productDetail/small_ico.png) no-repeat;
+				background-size:cover;
+				display: block;
+				width: getRem(187);
+				height: getRem(73);
+			}
+			label{
+				font-size: getRem(22);
+				color: #666666;
+				line-height: getRem(60);
+				display: block;
+				text-align: center;
+			}
+		}
+		li:nth-of-type(1) span{
+			background-position:0 0;
+		}
+		li:nth-of-type(2) span{
+			background-position:getRem(-79*2) 0;
+		}
+		li:nth-of-type(3) span{
+			background-position:getRem(-160*2) 0;
+		}
+		li:nth-of-type(4) span{
+			background-position:getRem(-240*2) 0;
+		}
+	}
+	.specification{
+		padding:0 getRem(24);
+		h3{
+			position:relative;
+			text-indent: getRem(18);
+			font-size: getRem(26);
+			color: #333333;
+			line-height: getRem(70);
+			span{
+				position:absolute;
+				display: block;
+				top: getRem(13*2);
+				left:0;
+				background: #fe5164;
+				width: getRem(6);
+				height: getRem(18);
+			}
+		}
+		.conmon{
+			border:1px solid #eee;
+			border-top:none;
+			line-height: getRem(76);
+			strong{
+				font-size: getRem(22);
+				color: #666666;
+				float: left;
+				width: getRem(140);
+				border-right:1px solid #eee;
+				text-indent: getRem(18);
+			}
+			b{
+				float: left;
+				width: getRem(275*2);
+				text-indent: getRem(75);
+				font-size: getRem(22);
+				color: #979797;
+				font-weight: normal;
+			}
+		}
+		.specialTop{
+			border:1px solid #eee;
+		}
+	}
+}
+.footer{
+	position:fixed;
+	bottom:0;
+	z-index:9999;
+	border-top:1px solid #eee;
+	span{
+		float: left;
+		font-size: getRem(32);
+		line-height: getRem(100);
+		width: 5rem;
+		text-align: center;
+	}
+	.solo{
+		background: #ffffff;
+		color:#fe5164;
+	}
+	.team{
+		background: #fe5164;
+		color: #ffffff;
+		font-weight: bold;
+	}
+}
+.productParameter{
+	position:fixed;
+	top:getRem(667*2);
+	left:0;
+	z-index:9999999;
+	height:getRem(667*2);
+	width:10rem;
+	transition:1.5s all;
+	opacity:0;
+	.mask{
+		width: 100%;
+		height: getRem(453);
+		background:rgba(0,0,0,0.3)
+	}
+	.core{
+		background: #ffffff;
+		padding: 0 getRem(24) getRem(50) getRem(24);
+		h3{
+			position:relative;
+			text-indent: getRem(18);
+			font-size: getRem(26);
+			color: #333333;
+			line-height: getRem(70);
+			i{
+				position:absolute;
+				display: block;
+				top: getRem(13*2);
+				left:0;
+				background: #fe5164;
+				width: getRem(6);
+				height: getRem(18);
+			}
+		}
+		p{
+			line-height: getRem(47*2);
+			font-size: getRem(26);
+			color: #666666;
+			border-bottom:1px solid #eee;
+			strong{
+			
+				float: left;
+				width: getRem(140);
+				text-indent: getRem(18);
+			}
+			b{
+				float: left;
+				width: getRem(275*2);
+				text-indent: getRem(75);
+				
+				
+				font-weight: normal;
+			}
+		}
+	}
+	.btn{
+		line-height: getRem(88);
+		text-align: center;
+		background: #fe5164;
+		font-size:getRem(32);
+		color: #ffffff;
+	}
+}

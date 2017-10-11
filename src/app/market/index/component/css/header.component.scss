@@ -7,7 +7,11 @@ $rem:75;
 }
 .headParent{
 	border-bottom:1px solid #eeeeee;
-	position:relative;
+	position:fixed;
+	top:0px;
+	background: #ffffff;
+	z-index:9999;
+	width:10rem;
 	.bgBack{
 		position:absolute;
 		left:0;

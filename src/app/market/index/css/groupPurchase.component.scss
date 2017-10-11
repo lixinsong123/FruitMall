@@ -1,0 +1,34 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.menu{
+	position:fixed;
+	top:getRem(41*2);
+	background: #ffffff;
+	z-index:9999;
+	li{
+		float: left;
+		width: getRem(150);
+		line-height: getRem(68);
+		font-size: getRem(28);
+		color: #666666;
+		text-align: center;
+	}
+	li:focus{
+		border:none;
+		outline: none;
+	}
+	.active{
+		font-size: getRem(32);
+		color: #fe5164;
+		font-weight: bold;
+	}
+
+}
+.routerPar{
+		padding-top: getRem(75*2);
+}

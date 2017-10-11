@@ -7,7 +7,13 @@ import {indexRoutingModule} from './index-routing.module';
 import {invitationComponent} from './invitation/invitation.component';
 //团购
 import {groupPurchaseComponent} from './groupPurchase/groupPurchase.component'; 
+import {hotSellComponent} from "./groupPurchase/component/hotSell.component";
  import {indexHeaderComponent} from './component/header.component'
+ import {groupPurchaseDetailsComponent} from './groupPurchase/groupPurchaseDetails.component';
+//秒杀
+import {seckillComponent} from './seckill/seckill.component';
+ //弹出层移动指令
+import {EjectDirective} from '../directive/eject.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +22,11 @@ import {groupPurchaseComponent} from './groupPurchase/groupPurchase.component';
   declarations: [ 
   indexHeaderComponent, 
    invitationComponent,
-   groupPurchaseComponent
+   groupPurchaseComponent,
+   hotSellComponent,
+   groupPurchaseDetailsComponent,
+   EjectDirective,
+   seckillComponent
   ]
 })
 export class IndexModule {}
