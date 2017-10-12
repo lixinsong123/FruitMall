@@ -1,0 +1,131 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.menu{
+			top:getRem(82);
+			display: -webkit-box;
+	         overflow-x: auto;
+	         -webkit-overflow-scrolling:touch;
+	         white-space: nowrap;   
+	         position:fixed;
+	         z-index: 9999;
+			li{
+				position:relative;
+				height: getRem(100-42);
+				padding:getRem(21) 0;		
+				background: pink;
+				width: getRem(150);
+				background: #353740;
+				strong{
+					display: block;
+					line-height: getRem(29);
+					text-align: center;
+					font-size: getRem(26);
+					color: #ffffff;
+				}
+				span{
+					display: block;
+					font-size: getRem(22);
+					color: #ffffff;
+					line-height: getRem(29);
+					text-align: center;
+				}
+			}
+			.active{
+				background: url(../../../../assets/img/market/reallyIndex/skill/menu_bg.png) no-repeat;
+				background-size:cover;
+				background-position:0 0;
+				padding-bottom:getRem(17*2);
+			}
+	}
+	.menu::-webkit-scrollbar {
+   		 display: none;
+	}
+.division{
+	padding:getRem(182) 0 0 0;
+	.common{
+		padding:getRem(32) getRem(24) getRem(24) getRem(24);
+		border-bottom:1px solid #eee;
+		.picShow{
+			float: left;
+			width: getRem(323);
+			height: getRem(224);
+		}
+		.content{
+			float: right;
+			.name{
+				font-size: getRem(28);
+				color: #333333;
+				line-height: getRem(40);
+				width: getRem(180*2);
+			}
+			.link{
+				font-size: getRem(22);
+				color: #979797;
+				line-height: getRem(34);
+			}
+			.price{
+				line-height: getRem(47);
+				.tod{
+					font-size: getRem(38);
+					color: #fe5164;
+					font-weight: bold;
+				}
+				.ori{
+					font-size: getRem(26);
+					color: #979797;
+					text-decoration: line-through;
+				}
+			}
+			.operation{
+				padding:getRem(30) 0;
+				position:relative;
+				.progressBar{
+					float: left;
+					border-radius:getRem(26);
+					width: getRem(200);
+					height: getRem(25);
+					background: #fec5cb;
+					border:1px solid #fe5164;
+					span{
+						display: block;
+						font-size: getRem(22);
+						color: #ffffff;
+						width: 48%;
+						height: 100%;
+						text-align: center;
+						background: #fe5164;
+						border-radius:getRem(26);
+					}
+					strong{
+						display: block;
+						font-size: getRem(22);
+						color: #ffffff;
+						width: getRem(200);
+						height: getRem(25);
+						text-align: center;
+						position:absolute;
+						left:0;
+						top:getRem(14*2);
+						z-index: 10;
+					}
+				}
+				.btn{
+					position:absolute;
+					right: 0;
+					top:0;
+					width: getRem(78);
+					height: getRem(83);
+					background:url(../../../../assets/img/market/index/Personal/collection/sunbtn.png) no-repeat;
+					background-size:cover;
+					background-position:0 0;
+				}
+			}
+			
+		}
+	}
+}

@@ -82,4 +82,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 团购模块--》路由跳转--》相关交互完成。
 
+## 秒杀模块部分完成。
+
+## 项目到这基本，页面部分基本结束了。后面等把数据这一块研究一下。后面在完善这个项目。
 	

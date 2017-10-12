@@ -12,6 +12,9 @@ import {hotSellComponent} from "./groupPurchase/component/hotSell.component";
  import {groupPurchaseDetailsComponent} from './groupPurchase/groupPurchaseDetails.component';
 //秒杀
 import {seckillComponent} from './seckill/seckill.component';
+//进口
+import {importedFruitComponent} from './importedFruit/importedFruit.component';
+import {forceTodayComponent} from './importedFruit/component/forceToday.component';
  //弹出层移动指令
 import {EjectDirective} from '../directive/eject.directive';
 @NgModule({
@@ -26,7 +29,9 @@ import {EjectDirective} from '../directive/eject.directive';
    hotSellComponent,
    groupPurchaseDetailsComponent,
    EjectDirective,
-   seckillComponent
+   seckillComponent,
+   importedFruitComponent,
+   forceTodayComponent
   ]
 })
 export class IndexModule {}

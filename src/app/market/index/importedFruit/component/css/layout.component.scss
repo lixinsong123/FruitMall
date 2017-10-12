@@ -1,0 +1,58 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.parent{
+	padding:0 getRem(24);
+	border-bottom:getRem(10) solid #eeeeee;
+}
+h2{
+	
+	line-height:getRem(60);
+	text-indent:getRem(18);
+	font-size:getRem(28);
+	color:#666666;
+	position:relative;
+	span{
+		position:absolute;
+		top:getRem(10*2);
+		left:0;
+		background: #fe5164;
+		width: getRem(7);
+		height: getRem(18);
+	}
+}
+.slide-box{
+    display: -webkit-box;
+    overflow-x: auto;
+    /*适应苹果*/
+    -webkit-overflow-scrolling:touch;
+}
+.slide-item{
+    width: getRem(215);
+    margin-right: getRem(29);
+    img{
+    	height: getRem(200);
+    	width: 100%;
+    }
+    .name{
+    	line-height: getRem(36);
+    	font-size: getRem(22);
+    	color: #979797;
+    	text-align: center;
+    }
+    .piece{
+		line-height: getRem(40);
+		font-size: getRem(26);
+		color: #fe5164;
+		text-align: center;
+		padding-bottom:getRem(13);
+    }
+}
+/*隐藏掉滚动条*/
+.slide-box::-webkit-scrollbar {
+ display: none;
+}

@@ -9,6 +9,7 @@ import {hotSellComponent} from "./groupPurchase/component/hotSell.component";
 
 import {groupPurchaseDetailsComponent} from './groupPurchase/groupPurchaseDetails.component';
 import {seckillComponent} from './seckill/seckill.component';
+import {importedFruitComponent} from './importedFruit/importedFruit.component';
 const marketRoutes: Routes = [
   {
     path: 'index',
@@ -34,6 +35,10 @@ const marketRoutes: Routes = [
       {
         path:"seckill",
         component:seckillComponent,
+      },
+      {
+        path:'importFruit',
+        component:importedFruitComponent
       }
     ]
   },

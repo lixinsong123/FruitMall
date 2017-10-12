@@ -1,0 +1,182 @@
+$rem:75;
+
+//宽度rem换算
+@function getRem($var){
+
+	@return  $var/$rem*1rem;
+}
+.nav{
+	background: #ffffff;
+	border-bottom:1px solid #eeeeee;
+	position:fixed;
+	top:getRem(80);
+	z-index:999999;	
+	li{
+		width: getRem(148);
+		height: getRem(100);
+		float: left;
+		border-right:1px solid #eeeeee;
+		span{
+			height: getRem(46);
+			width: 100%;
+			display: block;
+			background: url(../../../../assets/img/market/reallyIndex/skill/menu.png) no-repeat;
+			background-size:cover;
+			background-position:0 0;
+		}
+		label{
+			line-height: getRem(54);
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: getRem(26);
+			color: #969696;
+		}
+	}
+	li:nth-of-type(1) span{
+		background-position:0 0;
+	}
+	li:nth-of-type(2) span{
+		background-position:getRem(-77*2) getRem(-2*2);
+	}
+	li:nth-of-type(3) span{
+		background-position:getRem(-153*2) getRem(-2*2);
+	}
+	li:nth-of-type(4) span{
+		background-position:getRem(-231*2) getRem(-2*2);
+	}
+	li:nth-of-type(5) span{
+		background-position:getRem(-308*2) getRem(-2*2);
+	}
+	.end{
+		border-right:none;
+	}
+	.active{
+		position:relative;
+		border:1px solid #fea8b1;
+		label{
+			color: #fe5164;
+			font-weight: bold;
+		}
+	}
+}
+.divsion{
+	padding:getRem(186) 0 0 0;
+}
+.newGoods{
+	border-bottom:getRem(10) solid #eeeeee;
+	div:nth-of-type(1) span {
+		background-position:getRem(-97*2) 0;
+	}
+	div:nth-of-type(2) span {
+		background-position:getRem(-271*2) 0;
+	}
+}
+.newGoods>div{
+	float:left;
+	width:getRem(373);
+	height:getRem(200-65-67);
+	padding:getRem(65) 0 getRem(67) 0;
+	position:relative;
+	p{
+		width: getRem(169);
+		line-height: getRem(34);
+		text-align:center;
+		font-size: getRem(26);
+		color: #979797;
+	}
+	.title{
+		font-weight: bold;
+	}
+	span{
+		position:absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		background: url(../../../../assets/img/market/reallyIndex/skill/newGoods.png) no-repeat;
+		background-size:cover;
+		width: getRem(176);
+		height: getRem(200);
+	}
+}
+.common{
+		padding:getRem(32) getRem(24) getRem(24) getRem(24);
+		border-bottom:1px solid #eee;
+		.picShow{
+			float: left;
+			width: getRem(323);
+			height: getRem(224);
+		}
+		.content{
+			float: right;
+			.name{
+				font-size: getRem(28);
+				color: #333333;
+				line-height: getRem(40);
+				width: getRem(180*2);
+			}
+			.link{
+				font-size: getRem(22);
+				color: #979797;
+				line-height: getRem(34);
+			}
+			.price{
+				line-height: getRem(47);
+				.tod{
+					font-size: getRem(38);
+					color: #fe5164;
+					font-weight: bold;
+				}
+				.ori{
+					font-size: getRem(26);
+					color: #979797;
+					text-decoration: line-through;
+				}
+			}
+			.operation{
+				padding:getRem(30) 0;
+				position:relative;
+				.progressBar{
+					float: left;
+					border-radius:getRem(26);
+					width: getRem(200);
+					height: getRem(25);
+					background: #fec5cb;
+					border:1px solid #fe5164;
+					span{
+						display: block;
+						font-size: getRem(22);
+						color: #ffffff;
+						width: 48%;
+						height: 100%;
+						text-align: center;
+						background: #fe5164;
+						border-radius:getRem(26);
+					}
+					strong{
+						display: block;
+						font-size: getRem(22);
+						color: #ffffff;
+						width: getRem(200);
+						height: getRem(25);
+						text-align: center;
+						position:absolute;
+						left:0;
+						top:getRem(14*2);
+						z-index: 10;
+					}
+				}
+				.btn{
+					position:absolute;
+					right: 0;
+					top:0;
+					width: getRem(78);
+					height: getRem(83);
+					background:url(../../../../assets/img/market/index/Personal/collection/sunbtn.png) no-repeat;
+					background-size:cover;
+					background-position:0 0;
+				}
+			}
+			
+		}
+	}

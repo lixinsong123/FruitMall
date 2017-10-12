@@ -3,30 +3,46 @@ import { ActivatedRoute, ParamMap,Router} from '@angular/router';
 @Component({
   template:`
 	  <index-header [title]='title'></index-header>
-	  <ul class="menu clear">
-				<li>
-					<strong>11:00</strong>
-					<span>已开抢</span>
+	  <section class="nav">
+			<ul class="clear">
+				<li>	
+					<span></span>
+					<label for="">美国</label>
 				</li>
 				<li>
-					<strong>12:00</strong>
-					<span>已开抢</span>
+					<span></span>
+					<label for="">新西兰</label>
 				</li>
 				<li class="active">
-					<strong>13:00</strong>
-					<span>抢购进行中</span>
+					<span></span>
+					<label for="">英国</label>
 				</li>
 				<li>
-					<strong>14:00</strong>
-					<span>即将开抢</span>
+					<span></span>
+					<label for="">越南</label>
 				</li>
-				<li>
-					<strong>15:00</strong>
-					<span>即将开抢</span>
+				<li class="end">
+					<span></span>
+					<label for="">菲律宾</label>
 				</li>
 			</ul>
-	  <div class="division">
-	  		<div class="common clear" *ngFor="let itam of seckillData">
+	  </section>
+	  <div class="divsion">
+	  </div>
+	  <force-today></force-today>
+	  <div class="newGoods clear">
+			<div style="border-right:1px solid #eee">
+				<p class="title" style="color:#fd6446">今日上新</p>
+				<p class="name">章姬奶草莓</p>
+				<span></span>
+			</div>
+			<div>
+				<p class="title" style="color:#fa477d">有鲜货</p>
+				<p class="name">高颜值美果</p>
+				<span></span>
+			</div>
+	  </div>
+	  <div class="common clear" *ngFor="let itam of seckillData">
 				<img class="picShow" [src]="itam.imgUrl" alt="" />
 				<div class="content">
 					<p class="name">{{itam.name}}</p>
@@ -36,23 +52,18 @@ import { ActivatedRoute, ParamMap,Router} from '@angular/router';
 						<span class="ori">￥{{itam.ori}}</span>
 					</p>
 					<div class="operation clear">
-						<p class="progressBar">
-							<span></span>
-							<strong>48%</strong>
-						</p>
+						
 						<p class="btn">
 
 						</p>
 					</div>
 	  			</div>
 	  		</div>
-	  </div>
   `,
-  styleUrls: ['../css/seckill.component.scss']
+  styleUrls: ['../css/importedFruit.component.scss']
 })
-export class seckillComponent {
-	title="秒杀";
-
+export class importedFruitComponent {
+	title="进口水果";
 	// 数据
 	seckillData=[
 		{
